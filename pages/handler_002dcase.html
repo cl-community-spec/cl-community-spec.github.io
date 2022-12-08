@@ -42,8 +42,6 @@
                             </a>
                         </div>
                     
-<a name="handler_002dcase"></a>
-<a name="handler_002dcase-_005bMacro_005d"></a>
 <div class="section top-most">
 <div class="node-type">Macro</div>
 <h4 class="subsection">handler-case                                                        </h4>
@@ -52,15 +50,14 @@
 		   [[{!<i>error-clause</i>}*</i> | !<i>no-error-clause</i>]] &rArr;  <i>{<i>result</i>}*</i>
 </p>
 <table>
-<tr><td><i>clause</i></td><td>::=!<i><span class="nolinebreak">error-clause</span></i></td><td>|</td><td>!<i><span class="nolinebreak">no-error-clause</span></i></td></tr>
+<tr><td><i>clause</i>&nbsp;::=!<i><span class="nolinebreak">error-clause</span></i>&nbsp;|&nbsp;!<i><span class="nolinebreak">no-error-clause</span></i></td></tr>
 </table>
 <table>
-<tr><td><i><span class="nolinebreak">error-clause</span></i></td><td>::=<span class="roman">(</span>typespec</td><td><span class="roman">(</span><tt>[</tt>var<tt>]</tt><span class="roman">)</span></td><td>{<i>declaration</i>}* {<i>form</i>}*<span class="roman">)</span></td></tr>
+<tr><td><i><span class="nolinebreak">error-clause</span></i>&nbsp;::=<span class="roman">(</span>typespec&nbsp;<span class="roman">(</span><tt>[</tt>var<tt>]</tt><span class="roman">)</span>&nbsp;{<i>declaration</i>}* {<i>form</i>}*<span class="roman">)</span></td></tr>
 </table>
 <table>
-<tr><td><i><span class="nolinebreak">no-error-clause</span></i></td><td>::=<span class="roman">(</span><tt><span class="nolinebreak">:no-error</span></tt></td><td><i><span class="nolinebreak">lambda-list</span></i></td><td>{<i>declaration</i>}* {<i>form</i>}*<span class="roman">)</span></td></tr>
+<tr><td><i><span class="nolinebreak">no-error-clause</span></i>&nbsp;::=<span class="roman">(</span><tt><span class="nolinebreak">:no-error</span></tt>&nbsp;<i><span class="nolinebreak">lambda-list</span></i>&nbsp;{<i>declaration</i>}* {<i>form</i>}*<span class="roman">)</span></td></tr>
 </table>
-<a name="Arguments-and-Values_003a_003a-144"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Arguments and Values</h4>
@@ -82,7 +79,6 @@
    in the exceptional situation when control is transferred to a <i>clause</i>,
    the value of the last <i>form</i> in that <i>clause</i> is returned.
 </p>
-<a name="Description_003a_003a-197"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Description</h4>
@@ -146,7 +142,6 @@ returns normally and no <i>no-error-clause</i>
    returned by <b>handler-case</b>.
 The handlers which were established around the <i>expression</i> are no longer active at the time of this call.
 </p>
-<a name="Examples_003a_003a-126"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Examples</h4>
@@ -174,7 +169,6 @@ The handlers which were established around the <i>expression</i> are no longer a
 </code>
 </pre></div>
 
-<a name="See-Also_003a_003a-172"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">See Also</h4>
@@ -185,7 +179,6 @@ The handlers which were established around the <i>expression</i> are no longer a
 ,
 <a href="Condition-System-Concepts.html#Condition-System-Concepts">Condition System Concepts</a>
 </p>
-<a name="Notes_003a_003a-105"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Notes</h4>
@@ -240,8 +233,13 @@ The handlers which were established around the <i>expression</i> are no longer a
 
 
 
+</div>
+
+                    <div class="section">
+                        <h3>Backlinks</h3>
+                        <a href="Conditions-Dictionary.html">Conditions Dictionary</a>, <a href="handler_002dbind.html">handler-bind</a>, <a href="ignore_002derrors.html">ignore-errors</a>, <a href="unwind_002dprotect.html">unwind-protect</a>
+                    </div>
+                
 </body>
 <script type="text/javascript" src="/highlight-lisp/highlight-lisp.js"></script>
 </html>
-
-</div>

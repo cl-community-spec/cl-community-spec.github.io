@@ -42,8 +42,6 @@
                             </a>
                         </div>
                     
-<a name="Processing-of-Top-Level-Forms"></a>
-<a name="Processing-of-Top-Level-Forms-1"></a>
 <div class="section top-most">
 <h4 class="subsubsection">Processing of Top Level Forms</h4>
 
@@ -87,23 +85,23 @@ is not necessarily the <i>null lexical environment</i>.)
 </dd>
 <dt>5.</dt>
 <dd><p>If the form is an <b>eval-when</b>
-<a name="index-eval_002dwhen"></a>
  form, it is
 handled according to Figure 3&ndash;7.
 </p>
 <p>plus .5 fil
 \offinterlineskip
-</p><p>&nbsp;&nbsp;<b>CT</b>&nbsp;&nbsp;&nbsp;<b>LT</b>&nbsp;&nbsp;&nbsp;<b>E</b>&nbsp;&nbsp;&nbsp;&nbsp;<b>Mode</b>&nbsp;&nbsp;<b>Action</b>&nbsp;&nbsp;&nbsp;&nbsp;<b>New&nbsp;Mode</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- /@w -->
-&nbsp;&nbsp;<span class="nolinebreak">_________________________________________________</span><!-- /@w -->
-&nbsp;&nbsp;Yes&nbsp;&nbsp;Yes&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;Process&nbsp;&nbsp;&nbsp;<span class="nolinebreak">compile-time-too</span>&nbsp;&nbsp;<!-- /@w -->
-&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;Yes&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;CTT&nbsp;&nbsp;Process&nbsp;&nbsp;&nbsp;<span class="nolinebreak">compile-time-too</span>&nbsp;&nbsp;<!-- /@w -->
-&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;Yes&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;NCT&nbsp;&nbsp;Process&nbsp;&nbsp;&nbsp;<span class="nolinebreak">not-compile-time</span>&nbsp;&nbsp;<!-- /@w -->
-&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;Yes&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;Process&nbsp;&nbsp;&nbsp;<span class="nolinebreak">not-compile-time</span>&nbsp;&nbsp;<!-- /@w -->
-&nbsp;&nbsp;Yes&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;Evaluate&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- /@w -->
-&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;CTT&nbsp;&nbsp;Evaluate&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- /@w -->
-&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;NCT&nbsp;&nbsp;Discard&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- /@w -->
-&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;Discard&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- /@w -->
-</p>
+<table>
+<tr><td></p></td><td><b>CT</b></td><td><b>LT</b></td><td><b>E</b></td><td><b>Mode</b></td><td><b>Action</b></td><td><b>New&nbsp;Mode</b></td></tr>
+&nbsp;&nbsp;
+<tr><td>Yes</td><td>Yes</td><td>&mdash;</td><td>&mdash;</td><td>Process</td><td><span class="nolinebreak">compile-time-too</span></td></tr>
+<tr><td>No</td><td>Yes</td><td>Yes</td><td>CTT</td><td>Process</td><td><span class="nolinebreak">compile-time-too</span></td></tr>
+<tr><td>No</td><td>Yes</td><td>Yes</td><td>NCT</td><td>Process</td><td><span class="nolinebreak">not-compile-time</span></td></tr>
+<tr><td>No</td><td>Yes</td><td>No</td><td>&mdash;</td><td>Process</td><td><span class="nolinebreak">not-compile-time</span></td></tr>
+<tr><td>Yes</td><td>No</td><td>&mdash;</td><td>&mdash;</td><td>Evaluate</td><td>&mdash;</td></tr>
+<tr><td>No</td><td>No</td><td>Yes</td><td>CTT</td><td>Evaluate</td><td>&mdash;</td></tr>
+<tr><td>No</td><td>No</td><td>Yes</td><td>NCT</td><td>Discard</td><td>&mdash;</td></tr>
+<tr><td>No</td><td>No</td><td>No</td><td>&mdash;</td><td>Discard</td><td>&mdash;</td></tr>
+</table>
 <div class="table-subcaption"> Figure 3&ndash;7: <span class="nolinebreak">EVAL-WHEN</span> processing</div>
 <p>Column <b>CT</b>   indicates whether <tt>:compile-toplevel</tt> is specified.
 Column <b>LT</b>   indicates whether <tt>:load-toplevel</tt> is specified.
@@ -165,8 +163,13 @@ otherwise, the <i>forms</i> in the body are ignored.
 
 
 
+</div>
+
+                    <div class="section">
+                        <h3>Backlinks</h3>
+                        <a href="Glossary.html">Glossary</a>, <a href="load.html">load</a>, <a href="Purpose-of-Compiler-Macros.html">Purpose of Compiler Macros</a>
+                    </div>
+                
 </body>
 <script type="text/javascript" src="/highlight-lisp/highlight-lisp.js"></script>
 </html>
-
-</div>

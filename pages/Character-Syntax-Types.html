@@ -42,8 +42,6 @@
                             </a>
                         </div>
                     
-<a name="Character-Syntax-Types"></a>
-<a name="Character-Syntax-Types-1"></a>
 <div class="section top-most">
 <h4 class="subsection">Character Syntax Types</h4>
 
@@ -59,14 +57,13 @@ for a more general user-written parser.
 <p>When the <i>Lisp reader</i> is invoked, it reads a single character from 
 the <i>input</i> <i>stream</i> and dispatches according to the
 <i>syntax type</i>
-<a name="index-syntax-type"></a>
  of that <i>character</i>.
 Every <i>character</i> that can appear in the <i>input</i> <i>stream</i>
 is of one of the <i>syntax types</i> shown in <i>Figure~2&ndash;6</i>.
 </p>
 <table>
-<tr><td><i>constituent</i></td><td><i>macro</td><td>character</i></td><td><i>single</td><td>escape</i></td></tr>
-<tr><td><i>invalid</i></td><td><i>multiple</td><td>escape</i></td><td><i>whitespace</i><span class="nolinebreak">_2</span></td></tr>
+<tr><td><i>constituent</i></td><td><i>macro&nbsp;character</i></td><td><i>single&nbsp;escape</i></td></tr>
+<tr><td><i>invalid</i></td><td><i>multiple&nbsp;escape</i></td><td><i>whitespace</i><span class="nolinebreak">_2</span></td></tr>
 </table>
 <div class="table-subcaption"> Figure 2&ndash;6: Possible Character Syntax Types </div>
 
@@ -81,26 +78,26 @@ lists the <i>syntax type</i> of each <i>character</i> in <i>standard syntax</i>.
 
 
 <table>
-<tr><td>character</td><td>syntax</td><td>type</td><td>character</td><td>syntax</td><td>type</td></tr>
+<tr><td>character</td><td>syntax&nbsp;type</td><td>character</td><td>syntax&nbsp;type</td></tr>
 <tr><td>Backspace</td><td><i>constituent</i></td><td>0&ndash;9</td><td><i>constituent</i></td></tr>
 <tr><td>Tab</td><td><i>whitespace</i><span class="nolinebreak">_2</span></td><td>:</td><td><i>constituent</i></td></tr>
-<tr><td>Newline</td><td><i>whitespace</i><span class="nolinebreak">_2</span></td><td>;</td><td><i>terminating</i></td><td><i>macro</td><td>char</i></td></tr>
+<tr><td>Newline</td><td><i>whitespace</i><span class="nolinebreak">_2</span></td><td>;</td><td><i>terminating</i>&nbsp;<i>macro&nbsp;char</i></td></tr>
 <tr><td>Linefeed</td><td><i>whitespace</i><span class="nolinebreak">_2</span></td><td><tt>&lt;</tt></td><td><i>constituent</i></td></tr>
 <tr><td>Page</td><td><i>whitespace</i><span class="nolinebreak">_2</span></td><td>=</td><td><i>constituent</i></td></tr>
 <tr><td>Return</td><td><i>whitespace</i><span class="nolinebreak">_2</span></td><td><tt>&gt;</tt></td><td><i>constituent</i></td></tr>
 <tr><td>Space</td><td><i>whitespace</i><span class="nolinebreak">_2</span></td><td>?</td><td><i>constituent</i>*</td></tr>
 <tr><td>!</td><td><i>constituent</i>*</td><td><tt>@</tt></td><td><i>constituent</i></td></tr>
-<tr><td><tt>&quot;</tt></td><td><i>terminating</i></td><td><i>macro</td><td>char</i></td><td>A&ndash;Z</td><td><i>constituent</i></td></tr>
-<tr><td>#</td><td><i><span class="nolinebreak">non-terminating</span></i></td><td><i>macro</td><td>char</i></td><td><tt>[</tt></td><td><i>constituent</i>*</td></tr>
-<tr><td>$</td><td><i>constituent</i></td><td><tt>\</tt></td><td><i>single</td><td>escape</i></td></tr>
+<tr><td><tt>&quot;</tt></td><td><i>terminating</i>&nbsp;<i>macro&nbsp;char</i></td><td>A&ndash;Z</td><td><i>constituent</i></td></tr>
+<tr><td>#</td><td><i><span class="nolinebreak">non-terminating</span></i>&nbsp;<i>macro&nbsp;char</i></td><td><tt>[</tt></td><td><i>constituent</i>*</td></tr>
+<tr><td>$</td><td><i>constituent</i></td><td><tt>\</tt></td><td><i>single&nbsp;escape</i></td></tr>
 <tr><td>%</td><td><i>constituent</i></td><td><tt>]</tt></td><td><i>constituent</i>*</td></tr>
 <tr><td>&amp;</td><td><i>constituent</i></td><td><tt>^</tt></td><td><i>constituent</i></td></tr>
-<tr><td>&rsquo;</td><td><i>terminating</i></td><td><i>macro</td><td>char</i></td><td><tt><span class="nolinebreak">_</span></tt></td><td><i>constituent</i></td></tr>
-<tr><td>(</td><td><i>terminating</i></td><td><i>macro</td><td>char</i></td><td>&lsquo;</td><td><i>terminating</i></td><td><i>macro</td><td>char</i></td></tr>
-<tr><td>)</td><td><i>terminating</i></td><td><i>macro</td><td>char</i></td><td>a&ndash;z</td><td><i>constituent</i></td></tr>
+<tr><td>&rsquo;</td><td><i>terminating</i>&nbsp;<i>macro&nbsp;char</i></td><td><tt><span class="nolinebreak">_</span></tt></td><td><i>constituent</i></td></tr>
+<tr><td>(</td><td><i>terminating</i>&nbsp;<i>macro&nbsp;char</i></td><td>&lsquo;</td><td><i>terminating</i>&nbsp;<i>macro&nbsp;char</i></td></tr>
+<tr><td>)</td><td><i>terminating</i>&nbsp;<i>macro&nbsp;char</i></td><td>a&ndash;z</td><td><i>constituent</i></td></tr>
 <tr><td><tt>*</tt></td><td><i>constituent</i></td><td><tt>{</tt></td><td><i>constituent</i>*</td></tr>
-<tr><td>+</td><td><i>constituent</i></td><td><tt>|</tt></td><td><i>multiple</td><td>escape</i></td></tr>
-<tr><td>,</td><td><i>terminating</i></td><td><i>macro</td><td>char</i></td><td><tt>}</tt></td><td><i>constituent</i>*</td></tr>
+<tr><td>+</td><td><i>constituent</i></td><td><tt>|</tt></td><td><i>multiple&nbsp;escape</i></td></tr>
+<tr><td>,</td><td><i>terminating</i>&nbsp;<i>macro&nbsp;char</i></td><td><tt>}</tt></td><td><i>constituent</i>*</td></tr>
 <tr><td><span class="nolinebreak">-</span></td><td><i>constituent</i></td><td><tt>~</tt></td><td><i>constituent</i></td></tr>
 <tr><td>.</td><td><i>constituent</i></td><td>Rubout</td><td><i>constituent</i></td></tr>
 <tr><td>/</td><td><i>constituent</i></td></tr>
@@ -151,8 +148,13 @@ The following are descriptions of each kind of <i>syntax type</i>.
 
 
 
+</div>
+
+                    <div class="section">
+                        <h3>Backlinks</h3>
+                        <a href="Glossary.html">Glossary</a>, <a href="set_002dsyntax_002dfrom_002dchar.html">set-syntax-from-char</a>
+                    </div>
+                
 </body>
 <script type="text/javascript" src="/highlight-lisp/highlight-lisp.js"></script>
 </html>
-
-</div>

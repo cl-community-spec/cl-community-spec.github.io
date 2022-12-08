@@ -42,8 +42,6 @@
                             </a>
                         </div>
                     
-<a name="Restrictions-on-Examining-a-Pathname-Directory-Component"></a>
-<a name="Restrictions-on-Examining-a-Pathname-Directory-Component-1"></a>
 <div class="section top-most">
 <h4 class="subsubsection">Restrictions on Examining a Pathname Directory Component</h4>
 
@@ -53,10 +51,8 @@
 <p>The directory can be a <i>list</i> of <i>strings</i> and <i>symbols</i>. 
 </p>
 <p>The <i>car</i> of the <i>list</i> is one of the symbols <tt>:absolute</tt>
-<a name="index-absolute-1"></a>
  or 
 <tt>:relative</tt>
-<a name="index-relative-1"></a>
 , meaning:
 </p>
 <dl compact="compact">
@@ -97,20 +93,16 @@ to a file system for which it does not make sense
 signals an error of <i>type</i> <b>file-error</b>.
 For example, Unix does not support <tt>:wild-inferiors</tt> in most implementations.
 </p>
-<a name="index-wild-2"></a>
 
-<a name="index-wild_002dinferiors-1"></a>
 
-<a name="index-up"></a>
 
-<a name="index-back"></a>
 
 <table>
 <tr><td>Symbol</td><td>Meaning</td></tr>
-<tr><td><tt>:wild</tt></td><td>Wildcard</td><td>match</td><td>of</td><td>one</td><td>level</td><td>of</td><td>directory</td><td>structure</td></tr>
-<tr><td><tt><span class="nolinebreak">:wild-inferiors</span></tt></td><td>Wildcard</td><td>match</td><td>of</td><td>any</td><td>number</td><td>of</td><td>directory</td><td>levels</td></tr>
-<tr><td><tt>:up</tt></td><td>Go</td><td>upward</td><td>in</td><td>directory</td><td>structure</td><td>(semantic)</td></tr>
-<tr><td><tt>:back</tt></td><td>Go</td><td>upward</td><td>in</td><td>directory</td><td>structure</td><td>(syntactic)</td></tr>
+<tr><td><tt>:wild</tt></td><td>Wildcard&nbsp;match&nbsp;of&nbsp;one&nbsp;level&nbsp;of&nbsp;directory&nbsp;structure</td></tr>
+<tr><td><tt><span class="nolinebreak">:wild-inferiors</span></tt></td><td>Wildcard&nbsp;match&nbsp;of&nbsp;any&nbsp;number&nbsp;of&nbsp;directory&nbsp;levels</td></tr>
+<tr><td><tt>:up</tt></td><td>Go&nbsp;upward&nbsp;in&nbsp;directory&nbsp;structure&nbsp;(semantic)</td></tr>
+<tr><td><tt>:back</tt></td><td>Go&nbsp;upward&nbsp;in&nbsp;directory&nbsp;structure&nbsp;(syntactic)</td></tr>
 </table>
 <div class="table-subcaption"> Figure 19&ndash;3: Special Markers In Directory Component </div>
 
@@ -159,8 +151,13 @@ Then
 
 
 
+</div>
+
+                    <div class="section">
+                        <h3>Backlinks</h3>
+                        <a href="Interpreting-Pathname-Component-Values.html">Interpreting Pathname Component Values</a>
+                    </div>
+                
 </body>
 <script type="text/javascript" src="/highlight-lisp/highlight-lisp.js"></script>
 </html>
-
-</div>

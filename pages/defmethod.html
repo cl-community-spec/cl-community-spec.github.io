@@ -42,8 +42,6 @@
                             </a>
                         </div>
                     
-<a name="defmethod"></a>
-<a name="defmethod-_005bMacro_005d"></a>
 <div class="section top-most">
 <div class="node-type">Macro</div>
 <h4 class="subsection">defmethod                                                           </h4>
@@ -60,17 +58,16 @@
 <p><i>method-qualifier</i>::= <i>non-list</i>
 </p>
 <table>
-<tr><td><i><span class="nolinebreak">specialized-lambda-list</span></i>::=</td><td>({<i>var</i></td><td>|</td><td><span class="roman">(</span><i>var</i></td><td><i><span class="nolinebreak">parameter-specializer-name</span></i><span class="roman">)</span>}*<br></td></tr>
+<tr><td>&nbsp;<i><span class="nolinebreak">specialized-lambda-list</span></i>::=&nbsp;({<i>var</i>&nbsp;|&nbsp;<span class="roman">(</span><i>var</i>&nbsp;<i><span class="nolinebreak">parameter-specializer-name</span></i><span class="roman">)</span>}*<br></td></tr>
 <tr><td><tt>[</tt>&amp;optional {<i>var</i> | <span class="roman">(</span>var <tt>[</tt><i>initform</i> <span class="roman">[</span><i>supplied-p-parameter</i><span class="roman">]</span> <tt>]</tt><span class="roman">)</span>}*<tt>]</tt><br></td></tr>
-<tr><td><tt>[</tt><tt>&amp;rest</tt></td><td><i>var</i><tt>]</tt><br></td></tr>
+<tr><td><tt>[</tt><tt>&amp;rest</tt>&nbsp;<i>var</i><tt>]</tt><br></td></tr>
 <tr><td><tt>[</tt>&amp;key{<i>var</i> | <span class="roman">(</span>{<i>var</i> | <span class="roman">(</span><i>keyword</i><i>var</i><span class="roman">)</span>} <tt>[</tt><i>initform</i> <span class="roman">[</span><i>supplied-p-parameter</i><span class="roman">]</span> <tt>]</tt><span class="roman">)</span>}*<br></td></tr>
-<tr><td><span class="roman">[</span><b><span class="nolinebreak">&amp;allow-other-keys</span></b><span class="roman">]</span></td><td><tt>]</tt><br></td></tr>
-<tr><td><tt>[</tt><tt>&amp;aux</tt></td><td>{<i>var</i></td><td>|</td><td><span class="roman">(</span><i>var</i></td><td><span class="roman">[</span><i>initform</i><span class="roman">]</span></td><td><span class="roman">)</span>}*<tt>]</tt> <span class="roman">)</span><br></td></tr>
+<tr><td><span class="roman">[</span><b><span class="nolinebreak">&amp;allow-other-keys</span></b><span class="roman">]</span>&nbsp;<tt>]</tt><br></td></tr>
+<tr><td><tt>[</tt><tt>&amp;aux</tt>&nbsp;{<i>var</i>&nbsp;|&nbsp;<span class="roman">(</span><i>var</i>&nbsp;<span class="roman">[</span><i>initform</i><span class="roman">]</span>&nbsp;<span class="roman">)</span>}*<tt>]</tt> <span class="roman">)</span><br></td></tr>
 </table>
 <table>
-<tr><td><i><span class="nolinebreak">parameter-specializer-name</span></i>::=</td><td><i>symbol</i></td><td>|</td><td><span class="roman">(</span><tt>eql</tt></td><td><i><span class="nolinebreak">eql-specializer-form</span></i><span class="roman">)</span><br></td></tr>
+<tr><td>&nbsp;<i><span class="nolinebreak">parameter-specializer-name</span></i>::=&nbsp;<i>symbol</i>&nbsp;|&nbsp;<span class="roman">(</span><tt>eql</tt>&nbsp;<i><span class="nolinebreak">eql-specializer-form</span></i><span class="roman">)</span><br></td></tr>
 </table>
-<a name="Arguments-and-Values_003a_003a-115"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Arguments and Values</h4>
@@ -91,7 +88,6 @@
 </p>
 <p><i>new-method</i>&mdash;the new <i>method</i> <i>object</i>.
 </p>
-<a name="Description_003a_003a-154"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Description</h4>
@@ -211,14 +207,12 @@ the <i>generic function</i> for the purposes of compile-time error-checking
 <p><i>Documentation</i> is attached as a <i>documentation string</i>
 to the <i>method</i> <i>object</i>.
 </p>
-<a name="Affected-By_003a_003a-14"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Affected By</h4>
 
 <p>The definition of the referenced <i>generic function</i>.
 </p>
-<a name="Exceptional-Situations_003a_003a-39"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Exceptional Situations</h4>
@@ -233,7 +227,6 @@ the <i>lambda list</i> of the
 <i>generic function</i>, or
 an error of <i>type</i> <b>error</b> is signaled.
 </p>
-<a name="See-Also_003a_003a-136"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">See Also</h4>
@@ -250,8 +243,13 @@ an error of <i>type</i> <b>error</b> is signaled.
 
 
 
+</div>
+
+                    <div class="section">
+                        <h3>Backlinks</h3>
+                        <a href="add_002dmethod.html">add-method</a>, <a href="call_002dnext_002dmethod.html">call-next-method</a>, <a href="defgeneric.html">defgeneric</a>, <a href="function_002dkeywords.html">function-keywords</a>, <a href="next_002dmethod_002dp.html">next-method-p</a>, <a href="Objects-Dictionary.html">Objects Dictionary</a>
+                    </div>
+                
 </body>
 <script type="text/javascript" src="/highlight-lisp/highlight-lisp.js"></script>
 </html>
-
-</div>

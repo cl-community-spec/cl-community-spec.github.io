@@ -42,15 +42,12 @@
                             </a>
                         </div>
                     
-<a name="subtypep"></a>
-<a name="subtypep-_005bFunction_005d"></a>
 <div class="section top-most">
 <div class="node-type">Function</div>
 <h4 class="subsection">subtypep                                                         </h4>
 
 <p><code>subtypep</code>  <i>type-1 type-2 &amp;optional</i> environment &rArr;  <i>subtype-p, valid-p</i>
 </p>
-<a name="Arguments-and-Values_003a_003a-21"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Arguments and Values</h4>
@@ -67,7 +64,6 @@
 </p>
 <p><i>valid-p</i>&mdash;a <i>generalized boolean</i>.
 </p>
-<a name="Description_003a_003a-48"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Description</h4>
@@ -90,11 +86,11 @@ value is an accurate indication of the <i>subtype</i> relationship.
 that might result.
 </p>
 <table>
-<tr><td>Value</td><td>1</td><td>Value</td><td>2</td><td>Meaning</td></tr>
-<tr><td><i>true</i></td><td><i>true</i></td><td><i><span class="nolinebreak">type-1</span></i></td><td>is</td><td>definitely</td><td>a</td><td><i>subtype</i></td><td>of</td><td><i><span class="nolinebreak">type-2</span></i>.</td></tr>
-<tr><td><i>false</i></td><td><i>true</i></td><td><i><span class="nolinebreak">type-1</span></i></td><td>is</td><td>definitely</td><td>not</td><td>a</td><td><i>subtype</i></td><td>of</td><td><i><span class="nolinebreak">type-2</span></i>.</td></tr>
-<tr><td><i>false</i></td><td><i>false</i></td><td><b>subtypep</b></td><td>could</td><td>not</td><td>determine</td><td>the</td><td>relationship,</td></tr>
-<tr><td>so</td><td><i><span class="nolinebreak">type-1</span></i></td><td>might</td><td>or</td><td>might</td><td>not</td><td>be</td><td>a</td><td><i>subtype</i></td><td>of</td><td><i><span class="nolinebreak">type-2</span></i>.</td></tr>
+<tr><td>Value&nbsp;1</td><td>Value&nbsp;2</td><td>Meaning</td></tr>
+<tr><td><i>true</i></td><td><i>true</i></td><td><i><span class="nolinebreak">type-1</span></i>&nbsp;is&nbsp;definitely&nbsp;a&nbsp;<i>subtype</i>&nbsp;of&nbsp;<i><span class="nolinebreak">type-2</span></i>.</td></tr>
+<tr><td><i>false</i></td><td><i>true</i></td><td><i><span class="nolinebreak">type-1</span></i>&nbsp;is&nbsp;definitely&nbsp;not&nbsp;a&nbsp;<i>subtype</i>&nbsp;of&nbsp;<i><span class="nolinebreak">type-2</span></i>.</td></tr>
+<tr><td><i>false</i></td><td><i>false</i></td><td><b>subtypep</b>&nbsp;could&nbsp;not&nbsp;determine&nbsp;the&nbsp;relationship,</td></tr>
+<tr><td>so&nbsp;<i><span class="nolinebreak">type-1</span></i>&nbsp;might&nbsp;or&nbsp;might&nbsp;not&nbsp;be&nbsp;a&nbsp;<i>subtype</i>&nbsp;of&nbsp;<i><span class="nolinebreak">type-2</span></i>.</td></tr>
 </table>
 <div class="table-subcaption"> Figure 4&ndash;9: Result possibilities for subtypep </div>
 
@@ -220,7 +216,6 @@ distinct specialized representations.
 <p>returns <i>true</i> only in implementations that do not have a specialized <i>array</i>
 representation for <i>single floats</i> distinct from that for other <i>floats</i>.
 </p>
-<a name="Examples_003a_003a-28"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Examples</h4>
@@ -273,14 +268,12 @@ these names should always refer to the same sets of
 </code>
 </pre></div>
 
-<a name="See-Also_003a_003a-35"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">See Also</h4>
 
 <p><a href="Types.html#Types">Types</a>
 </p>
-<a name="Notes_003a_003a-21"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Notes</h4>
@@ -300,8 +293,13 @@ as well as <i>type</i> <b>float</b>.
 
 
 
+</div>
+
+                    <div class="section">
+                        <h3>Backlinks</h3>
+                        <a href="array_002delement_002dtype.html">array-element-type</a>, <a href="defstruct.html">defstruct</a>, <a href="Types-and-Classes-Dictionary.html">Types and Classes Dictionary</a>
+                    </div>
+                
 </body>
 <script type="text/javascript" src="/highlight-lisp/highlight-lisp.js"></script>
 </html>
-
-</div>

@@ -42,13 +42,10 @@
                             </a>
                         </div>
                     
-<a name="Macro-Lambda-Lists"></a>
-<a name="Macro-Lambda-Lists-1"></a>
 <div class="section top-most">
 <h4 class="subsection">Macro Lambda Lists</h4>
 
 <p>A <i>macro lambda list</i>
-<a name="index-macro-lambda-list"></a>
  is used in describing <i>macros</i> 
 defined by the <i>operators</i> in Figure 3&ndash;17.
 </p>
@@ -65,17 +62,17 @@ a <i>macro lambda list</i> has the following syntax:
 </p>
 
 <table>
-<tr><td><i>reqvars</i></td><td>::={<i>var</i></td><td>|</td><td>!<i>pattern</i>}*</td></tr>
+<tr><td><i>reqvars</i>&nbsp;::={<i>var</i>&nbsp;|&nbsp;!<i>pattern</i>}*</td></tr>
 </table>
 <table>
-<tr><td><i>optvars</i></td><td>::=<tt>[</tt>&amp;optional {<i>var</i> |</td></tr>
+<tr><td><i>optvars</i>&nbsp;::=<tt>[</tt>&amp;optional {<i>var</i> |</td></tr>
 		       <span class="roman">(</span>{<i>var</i> | !<i>pattern</i>} <span class="roman">[</span>init-form <span class="roman">[</span>supplied-p-parameter<span class="roman">]</span><span class="roman">]</span><span class="roman">)</span>}*<tt>]</tt>
 </table>
 <table>
-<tr><td><i>restvar</i></td><td>::=<tt>[</tt>{<tt>&amp;rest</tt> | &amp;body} <i>{<i>var</i> | !<i>pattern</i>}</i><tt>]</tt></td></tr>
+<tr><td><i>restvar</i>&nbsp;::=<tt>[</tt>{<tt>&amp;rest</tt> | &amp;body} <i>{<i>var</i> | !<i>pattern</i>}</i><tt>]</tt></td></tr>
 </table>
 <table>
-<tr><td><i>keyvars</i></td><td>::=<span class="roman">[</span>&amp;key {<i>var</i> |</td></tr>
+<tr><td><i>keyvars</i>&nbsp;::=<span class="roman">[</span>&amp;key {<i>var</i> |</td></tr>
 		          	 <span class="roman">(</span>{<i>var</i> | 
 					       <span class="roman">(</span><i>keyword-name</i> {<i>var</i> | !<i>pattern</i>}<span class="roman">)</span>}
 				 	<span class="roman">[</span>init-form <span class="roman">[</span>supplied-p-parameter<span class="roman">]</span><span class="roman">]</span><span class="roman">)</span>}*
@@ -83,21 +80,21 @@ a <i>macro lambda list</i> has the following syntax:
 </table>
 
 <table>
-<tr><td><i>auxvars</i></td><td>::=<tt>[</tt>&amp;aux {<i>var</i> | <span class="roman">(</span><i>var</i> <span class="roman">[</span><i>init-form</i><span class="roman">]</span><span class="roman">)</span>}*<tt>]</tt></td></tr>
+<tr><td><i>auxvars</i>&nbsp;::=<tt>[</tt>&amp;aux {<i>var</i> | <span class="roman">(</span><i>var</i> <span class="roman">[</span><i>init-form</i><span class="roman">]</span><span class="roman">)</span>}*<tt>]</tt></td></tr>
 
-<tr><td><i>envvar</i></td><td>::=<tt>[</tt>&amp;environment <i>var</i><tt>]</tt></td></tr>
+<tr><td><i>envvar</i>&nbsp;::=<tt>[</tt>&amp;environment <i>var</i><tt>]</tt></td></tr>
 </table>
 <table>
-<tr><td><i>wholevar</i></td><td>::=<tt>[</tt>&amp;whole <i>var</i><tt>]</tt></td></tr>
+<tr><td><i>wholevar</i>&nbsp;::=<tt>[</tt>&amp;whole <i>var</i><tt>]</tt></td></tr>
 </table>
 <table>
-<tr><td><i><span class="nolinebreak">lambda-list</span></i></td><td>::=<span class="roman">(</span>!<i>wholevar</i></td><td>!<i>envvar</i></td><td>!<i>reqvars</i></td><td>!<i>envvar</i></td><td>!<i>optvars</i></td><td>!<i>envvar</i></td></tr>
-<tr><td>!<i>restvar</i></td><td>!<i>envvar</i></td><td>!<i>keyvars</i></td><td>!<i>envvar</i></td><td>!<i>auxvars</i></td><td>!<i>envvar</i><span class="roman">)</span></td><td>|</td></tr>
-<tr><td><span class="roman">(</span>!<i>wholevar</i></td><td>!<i>envvar</i></td><td>!<i>reqvars</i></td><td>!<i>envvar</i></td><td>!<i>optvars</i></td><td>!<i>envvar</i></td><td><tt>.</tt></td><td><i>var</i><span class="roman">)</span></td></tr>
+<tr><td><i><span class="nolinebreak">lambda-list</span></i>&nbsp;::=<span class="roman">(</span>!<i>wholevar</i>&nbsp;!<i>envvar</i>&nbsp;!<i>reqvars</i>&nbsp;!<i>envvar</i>&nbsp;!<i>optvars</i>&nbsp;!<i>envvar</i></td></tr>
+<tr><td>!<i>restvar</i>&nbsp;!<i>envvar</i>&nbsp;!<i>keyvars</i>&nbsp;!<i>envvar</i>&nbsp;!<i>auxvars</i>&nbsp;!<i>envvar</i><span class="roman">)</span>&nbsp;|</td></tr>
+<tr><td><span class="roman">(</span>!<i>wholevar</i>&nbsp;!<i>envvar</i>&nbsp;!<i>reqvars</i>&nbsp;!<i>envvar</i>&nbsp;!<i>optvars</i>&nbsp;!<i>envvar</i>&nbsp;<tt>.</tt>&nbsp;<i>var</i><span class="roman">)</span></td></tr>
 </table>
 <table>
-<tr><td><i>pattern</i></td><td>::=<span class="roman">(</span>!<i>wholevar</i></td><td>!<i>reqvars</i></td><td>!<i>optvars</i></td><td>!<i>restvar</i></td><td>!<i>keyvars</i></td><td>!<i>auxvars</i><span class="roman">)</span></td><td>|</td></tr>
-<tr><td><span class="roman">(</span>!<i>wholevar</i></td><td>!<i>reqvars</i></td><td>!<i>optvars</i></td><td><tt>.</tt></td><td><i>var</i><span class="roman">)</span></td></tr>
+<tr><td><i>pattern</i>&nbsp;::=<span class="roman">(</span>!<i>wholevar</i>&nbsp;!<i>reqvars</i>&nbsp;!<i>optvars</i>&nbsp;!<i>restvar</i>&nbsp;!<i>keyvars</i>&nbsp;!<i>auxvars</i><span class="roman">)</span>&nbsp;|</td></tr>
+<tr><td><span class="roman">(</span>!<i>wholevar</i>&nbsp;!<i>reqvars</i>&nbsp;!<i>optvars</i>&nbsp;<tt>.</tt>&nbsp;<i>var</i><span class="roman">)</span></td></tr>
 </table>
 
 
@@ -118,7 +115,6 @@ just as in an <i>ordinary lambda list</i>.
 Both may contain default initialization forms and <i>supplied-p parameters</i>.
 </p>
 <p><b>&amp;body</b>
-<a name="index-_0026body"></a>
 </p>
 <p>is identical in function to <b>&amp;rest</b>,
 but it can be used to inform certain output-formatting 
@@ -132,7 +128,6 @@ see <a href="Destructuring-by-Lambda-Lists.html#Destructuring-by-Lambda-Lists">D
 for details, see <a href="Destructuring-by-Lambda-Lists.html#Destructuring-by-Lambda-Lists">Destructuring by Lambda Lists</a>.
 </p>
 <p><b>&amp;whole</b>
-<a name="index-_0026whole"></a>
 </p>
 <p>is followed by a single variable that is bound to the
 entire macro-call form; this is the value that the <i>macro function</i>
@@ -151,7 +146,6 @@ The use of <b>&amp;whole</b> does not affect the pattern of arguments
      specified.
 </p>
 <p><b>&amp;environment</b>
-<a name="index-_0026environment"></a>
 </p>
 <p>is followed by a single variable that is bound
 to an <i>environment</i> representing the <i>lexical environment</i> in which the
@@ -231,8 +225,13 @@ only  when <tt>(... &amp;rest var)</tt> or <tt>(... . var)</tt> is used to match
 
 
 
+</div>
+
+                    <div class="section">
+                        <h3>Backlinks</h3>
+                        <a href="define_002dsetf_002dexpander.html">define-setf-expander</a>, <a href="defmacro.html">defmacro</a>, <a href="Destructuring-Lambda-Lists.html">Destructuring Lambda Lists</a>, <a href="Destructuring-Mismatch.html">Destructuring Mismatch</a>, <a href="Glossary.html">Glossary</a>
+                    </div>
+                
 </body>
 <script type="text/javascript" src="/highlight-lisp/highlight-lisp.js"></script>
 </html>
-
-</div>

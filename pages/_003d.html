@@ -42,8 +42,6 @@
                             </a>
                         </div>
                     
-<a name="g_t_003d"></a>
-<a name="g_t_003d_002c-_002f_003d_002c-_003c_002c-_003e_002c-_003c_003d_002c-_003e_003d-_005bFunction_005d"></a>
 <div class="section top-most">
 <div class="node-type">Function</div>
 <h4 class="subsection">=, /=, &lt;, &gt;, &lt;=, &gt;=                                              </h4>
@@ -60,7 +58,6 @@
 </p>
 <p><code>&gt;=</code>  <i>&amp;rest</i> numbers^+ &rArr;  <i>generalized-boolean</i>
 </p>
-<a name="Arguments-and-Values_003a_003a-201"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Arguments and Values</h4>
@@ -70,7 +67,6 @@
 </p>
 <p><i>generalized-boolean</i>&mdash;a <i>generalized boolean</i>.
 </p>
-<a name="Description_003a_003a-280"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Description</h4>
@@ -117,7 +113,6 @@ otherwise it is <i>false</i>.
 <p><b>=</b>, <b>/=</b>, <b>&lt;</b>, <b>&gt;</b>, <b>&lt;=</b>, and <b>&gt;=</b> 
 perform necessary type conversions. 
 </p>
-<a name="Examples_003a_003a-184"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Examples</h4>
@@ -125,34 +120,33 @@ perform necessary type conversions.
 <p>The uses of these functions are illustrated in Figure 12&ndash;12.
 </p>
 <table>
-<tr><td><tt>(=</td><td>3</td><td>3)</tt></td><td>is</td><td><i>true</i>.</td><td><tt>(/=</td><td>3</td><td>3)</tt></td><td>is</td><td><i>false</i>.</td></tr>
-<tr><td><tt>(=</td><td>3</td><td>5)</tt></td><td>is</td><td><i>false</i>.</td><td><tt>(/=</td><td>3</td><td>5)</tt></td><td>is</td><td><i>true</i>.</td></tr>
-<tr><td><tt>(=</td><td>3</td><td>3</td><td>3</td><td>3)</tt></td><td>is</td><td><i>true</i>.</td><td><tt>(/=</td><td>3</td><td>3</td><td>3</td><td>3)</tt></td><td>is</td><td><i>false</i>.</td></tr>
-<tr><td><tt>(=</td><td>3</td><td>3</td><td>5</td><td>3)</tt></td><td>is</td><td><i>false</i>.</td><td><tt>(/=</td><td>3</td><td>3</td><td>5</td><td>3)</tt></td><td>is</td><td><i>false</i>.</td></tr>
-<tr><td><tt>(=</td><td>3</td><td>6</td><td>5</td><td>2)</tt></td><td>is</td><td><i>false</i>.</td><td><tt>(/=</td><td>3</td><td>6</td><td>5</td><td>2)</tt></td><td>is</td><td><i>true</i>.</td></tr>
-<tr><td><tt>(=</td><td>3</td><td>2</td><td>3)</tt></td><td>is</td><td><i>false</i>.</td><td><tt>(/=</td><td>3</td><td>2</td><td>3)</tt></td><td>is</td><td><i>false</i>.</td></tr>
-<tr><td><tt>(&lt;</td><td>3</td><td>5)</tt></td><td>is</td><td><i>true</i>.</td><td><tt>(&lt;=</td><td>3</td><td>5)</tt></td><td>is</td><td><i>true</i>.</td></tr>
-<tr><td><tt>(&lt;</td><td>3</td><td><span class="nolinebreak">-5)</span></tt></td><td>is</td><td><i>false</i>.</td><td><tt>(&lt;=</td><td>3</td><td><span class="nolinebreak">-5)</span></tt></td><td>is</td><td><i>false</i>.</td></tr>
-<tr><td><tt>(&lt;</td><td>3</td><td>3)</tt></td><td>is</td><td><i>false</i>.</td><td><tt>(&lt;=</td><td>3</td><td>3)</tt></td><td>is</td><td><i>true</i>.</td></tr>
-<tr><td><tt>(&lt;</td><td>0</td><td>3</td><td>4</td><td>6</td><td>7)</tt></td><td>is</td><td><i>true</i>.</td><td><tt>(&lt;=</td><td>0</td><td>3</td><td>4</td><td>6</td><td>7)</tt></td><td>is</td><td><i>true</i>.</td></tr>
-<tr><td><tt>(&lt;</td><td>0</td><td>3</td><td>4</td><td>4</td><td>6)</tt></td><td>is</td><td><i>false</i>.</td><td><tt>(&lt;=</td><td>0</td><td>3</td><td>4</td><td>4</td><td>6)</tt></td><td>is</td><td><i>true</i>.</td></tr>
-<tr><td><tt>(&gt;</td><td>4</td><td>3)</tt></td><td>is</td><td><i>true</i>.</td><td><tt>(&gt;=</td><td>4</td><td>3)</tt></td><td>is</td><td><i>true</i>.</td></tr>
-<tr><td><tt>(&gt;</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0)</tt></td><td>is</td><td><i>true</i>.</td><td><tt>(&gt;=</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0)</tt></td><td>is</td><td><i>true</i>.</td></tr>
-<tr><td><tt>(&gt;</td><td>4</td><td>3</td><td>3</td><td>2</td><td>0)</tt></td><td>is</td><td><i>false</i>.</td><td><tt>(&gt;=</td><td>4</td><td>3</td><td>3</td><td>2</td><td>0)</tt></td><td>is</td><td><i>true</i>.</td></tr>
-<tr><td><tt>(&gt;</td><td>4</td><td>3</td><td>1</td><td>2</td><td>0)</tt></td><td>is</td><td><i>false</i>.</td><td><tt>(&gt;=</td><td>4</td><td>3</td><td>1</td><td>2</td><td>0)</tt></td><td>is</td><td><i>false</i>.</td></tr>
-<tr><td><tt>(=</td><td>3)</tt></td><td>is</td><td><i>true</i>.</td><td><tt>(/=</td><td>3)</tt></td><td>is</td><td><i>true</i>.</td></tr>
-<tr><td><tt>(&lt;</td><td>3)</tt></td><td>is</td><td><i>true</i>.</td><td><tt>(&lt;=</td><td>3)</tt></td><td>is</td><td><i>true</i>.</td></tr>
-<tr><td><tt>(=</td><td>3.0</td><td>#c(3.0</td><td>0.0))</tt></td><td>is</td><td><i>true</i>.</td><td><tt>(/=</td><td>3.0</td><td>#c(3.0</td><td>1.0))</tt></td><td>is</td><td><i>true</i>.</td></tr>
-<tr><td><tt>(=</td><td>3</td><td>3.0)</tt></td><td>is</td><td><i>true</i>.</td><td><tt>(=</td><td>3.0s0</td><td>3.0d0)</tt></td><td>is</td><td><i>true</i>.</td></tr>
-<tr><td><tt>(=</td><td>0.0</td><td><span class="nolinebreak">-0.0)</span></tt></td><td>is</td><td><i>true</i>.</td><td><tt>(=</td><td>5/2</td><td>2.5)</tt></td><td>is</td><td><i>true</i>.</td></tr>
-<tr><td><tt>(&gt;</td><td>0.0</td><td><span class="nolinebreak">-0.0)</span></tt></td><td>is</td><td><i>false</i>.</td><td><tt>(=</td><td>0</td><td><span class="nolinebreak">-0.0)</span></tt></td><td>is</td><td><i>true</i>.</td></tr>
-<tr><td><tt>(&lt;=</td><td>0</td><td>x</td><td>9)</tt></td><td>is</td><td><i>true</i></td><td>if</td><td><tt>x</tt></td><td>is</td><td>between</td><td><tt>0</tt></td><td>and</td><td><tt>9</tt>,</td><td>inclusive</td></tr>
-<tr><td><tt>(&lt;</td><td>0.0</td><td>x</td><td>1.0)</tt></td><td>is</td><td><i>true</i></td><td>if</td><td><tt>x</tt></td><td>is</td><td>between</td><td><tt>0.0</tt></td><td>and</td><td><tt>1.0</tt>,</td><td>exclusive</td></tr>
-<tr><td><tt>(&lt;</td><td><span class="nolinebreak">-1</span></td><td>j</td><td>(length</td><td>v))</tt></td><td>is</td><td><i>true</i></td><td>if</td><td><tt>j</tt></td><td>is</td><td>a</td><td><i>valid</td><td>array</td><td>index</i></td><td>for</td><td>a</td><td><i>vector</i></td><td><tt>v</tt></td></tr>
+<tr><td><tt>(=&nbsp;3&nbsp;3)</tt>&nbsp;is&nbsp;<i>true</i>.</td><td><tt>(/=&nbsp;3&nbsp;3)</tt>&nbsp;is&nbsp;<i>false</i>.</td></tr>
+<tr><td><tt>(=&nbsp;3&nbsp;5)</tt>&nbsp;is&nbsp;<i>false</i>.</td><td><tt>(/=&nbsp;3&nbsp;5)</tt>&nbsp;is&nbsp;<i>true</i>.</td></tr>
+<tr><td><tt>(=&nbsp;3&nbsp;3&nbsp;3&nbsp;3)</tt>&nbsp;is&nbsp;<i>true</i>.</td><td><tt>(/=&nbsp;3&nbsp;3&nbsp;3&nbsp;3)</tt>&nbsp;is&nbsp;<i>false</i>.</td></tr>
+<tr><td><tt>(=&nbsp;3&nbsp;3&nbsp;5&nbsp;3)</tt>&nbsp;is&nbsp;<i>false</i>.</td><td><tt>(/=&nbsp;3&nbsp;3&nbsp;5&nbsp;3)</tt>&nbsp;is&nbsp;<i>false</i>.</td></tr>
+<tr><td><tt>(=&nbsp;3&nbsp;6&nbsp;5&nbsp;2)</tt>&nbsp;is&nbsp;<i>false</i>.</td><td><tt>(/=&nbsp;3&nbsp;6&nbsp;5&nbsp;2)</tt>&nbsp;is&nbsp;<i>true</i>.</td></tr>
+<tr><td><tt>(=&nbsp;3&nbsp;2&nbsp;3)</tt>&nbsp;is&nbsp;<i>false</i>.</td><td><tt>(/=&nbsp;3&nbsp;2&nbsp;3)</tt>&nbsp;is&nbsp;<i>false</i>.</td></tr>
+<tr><td><tt>(&lt;&nbsp;3&nbsp;5)</tt>&nbsp;is&nbsp;<i>true</i>.</td><td><tt>(&lt;=&nbsp;3&nbsp;5)</tt>&nbsp;is&nbsp;<i>true</i>.</td></tr>
+<tr><td><tt>(&lt;&nbsp;3&nbsp;<span class="nolinebreak">-5)</span></tt>&nbsp;is&nbsp;<i>false</i>.</td><td><tt>(&lt;=&nbsp;3&nbsp;<span class="nolinebreak">-5)</span></tt>&nbsp;is&nbsp;<i>false</i>.</td></tr>
+<tr><td><tt>(&lt;&nbsp;3&nbsp;3)</tt>&nbsp;is&nbsp;<i>false</i>.</td><td><tt>(&lt;=&nbsp;3&nbsp;3)</tt>&nbsp;is&nbsp;<i>true</i>.</td></tr>
+<tr><td><tt>(&lt;&nbsp;0&nbsp;3&nbsp;4&nbsp;6&nbsp;7)</tt>&nbsp;is&nbsp;<i>true</i>.</td><td><tt>(&lt;=&nbsp;0&nbsp;3&nbsp;4&nbsp;6&nbsp;7)</tt>&nbsp;is&nbsp;<i>true</i>.</td></tr>
+<tr><td><tt>(&lt;&nbsp;0&nbsp;3&nbsp;4&nbsp;4&nbsp;6)</tt>&nbsp;is&nbsp;<i>false</i>.</td><td><tt>(&lt;=&nbsp;0&nbsp;3&nbsp;4&nbsp;4&nbsp;6)</tt>&nbsp;is&nbsp;<i>true</i>.</td></tr>
+<tr><td><tt>(&gt;&nbsp;4&nbsp;3)</tt>&nbsp;is&nbsp;<i>true</i>.</td><td><tt>(&gt;=&nbsp;4&nbsp;3)</tt>&nbsp;is&nbsp;<i>true</i>.</td></tr>
+<tr><td><tt>(&gt;&nbsp;4&nbsp;3&nbsp;2&nbsp;1&nbsp;0)</tt>&nbsp;is&nbsp;<i>true</i>.</td><td><tt>(&gt;=&nbsp;4&nbsp;3&nbsp;2&nbsp;1&nbsp;0)</tt>&nbsp;is&nbsp;<i>true</i>.</td></tr>
+<tr><td><tt>(&gt;&nbsp;4&nbsp;3&nbsp;3&nbsp;2&nbsp;0)</tt>&nbsp;is&nbsp;<i>false</i>.</td><td><tt>(&gt;=&nbsp;4&nbsp;3&nbsp;3&nbsp;2&nbsp;0)</tt>&nbsp;is&nbsp;<i>true</i>.</td></tr>
+<tr><td><tt>(&gt;&nbsp;4&nbsp;3&nbsp;1&nbsp;2&nbsp;0)</tt>&nbsp;is&nbsp;<i>false</i>.</td><td><tt>(&gt;=&nbsp;4&nbsp;3&nbsp;1&nbsp;2&nbsp;0)</tt>&nbsp;is&nbsp;<i>false</i>.</td></tr>
+<tr><td><tt>(=&nbsp;3)</tt>&nbsp;is&nbsp;<i>true</i>.</td><td><tt>(/=&nbsp;3)</tt>&nbsp;is&nbsp;<i>true</i>.</td></tr>
+<tr><td><tt>(&lt;&nbsp;3)</tt>&nbsp;is&nbsp;<i>true</i>.</td><td><tt>(&lt;=&nbsp;3)</tt>&nbsp;is&nbsp;<i>true</i>.</td></tr>
+<tr><td><tt>(=&nbsp;3.0&nbsp;#c(3.0&nbsp;0.0))</tt>&nbsp;is&nbsp;<i>true</i>.</td><td><tt>(/=&nbsp;3.0&nbsp;#c(3.0&nbsp;1.0))</tt>&nbsp;is&nbsp;<i>true</i>.</td></tr>
+<tr><td><tt>(=&nbsp;3&nbsp;3.0)</tt>&nbsp;is&nbsp;<i>true</i>.</td><td><tt>(=&nbsp;3.0s0&nbsp;3.0d0)</tt>&nbsp;is&nbsp;<i>true</i>.</td></tr>
+<tr><td><tt>(=&nbsp;0.0&nbsp;<span class="nolinebreak">-0.0)</span></tt>&nbsp;is&nbsp;<i>true</i>.</td><td><tt>(=&nbsp;5/2&nbsp;2.5)</tt>&nbsp;is&nbsp;<i>true</i>.</td></tr>
+<tr><td><tt>(&gt;&nbsp;0.0&nbsp;<span class="nolinebreak">-0.0)</span></tt>&nbsp;is&nbsp;<i>false</i>.</td><td><tt>(=&nbsp;0&nbsp;<span class="nolinebreak">-0.0)</span></tt>&nbsp;is&nbsp;<i>true</i>.</td></tr>
+<tr><td><tt>(&lt;=&nbsp;0&nbsp;x&nbsp;9)</tt>&nbsp;is&nbsp;<i>true</i>&nbsp;if&nbsp;<tt>x</tt>&nbsp;is&nbsp;between&nbsp;<tt>0</tt>&nbsp;and&nbsp;<tt>9</tt>,&nbsp;inclusive</td></tr>
+<tr><td><tt>(&lt;&nbsp;0.0&nbsp;x&nbsp;1.0)</tt>&nbsp;is&nbsp;<i>true</i>&nbsp;if&nbsp;<tt>x</tt>&nbsp;is&nbsp;between&nbsp;<tt>0.0</tt>&nbsp;and&nbsp;<tt>1.0</tt>,&nbsp;exclusive</td></tr>
+<tr><td><tt>(&lt;&nbsp;<span class="nolinebreak">-1</span>&nbsp;j&nbsp;(length&nbsp;v))</tt>&nbsp;is&nbsp;<i>true</i>&nbsp;if&nbsp;<tt>j</tt>&nbsp;is&nbsp;a&nbsp;<i>valid&nbsp;array&nbsp;index</i>&nbsp;for&nbsp;a&nbsp;<i>vector</i>&nbsp;<tt>v</tt></td></tr>
 </table>
 <div class="table-subcaption"> Figure 12&ndash;12: Uses of /=, =, &lt;, &gt;, &lt;=, and &gt;= </div>
 
-<a name="Exceptional-Situations_003a_003a-77"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Exceptional Situations</h4>
@@ -160,7 +154,6 @@ perform necessary type conversions.
 <p>Might signal <b>type-error</b> if some <i>argument</i> is not a <i>real</i>.
 Might signal <b>arithmetic-error</b> if otherwise unable to fulfill its contract.
 </p>
-<a name="Notes_003a_003a-141"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Notes</h4>
@@ -173,8 +166,13 @@ whereas <b>eql</b> compares the representational values, so to speak.
 
 
 
+</div>
+
+                    <div class="section">
+                        <h3>Backlinks</h3>
+                        <a href="Numbers-Dictionary.html">Numbers Dictionary</a>
+                    </div>
+                
 </body>
 <script type="text/javascript" src="/highlight-lisp/highlight-lisp.js"></script>
 </html>
-
-</div>

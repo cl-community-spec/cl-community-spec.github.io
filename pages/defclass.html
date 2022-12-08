@@ -42,8 +42,6 @@
                             </a>
                         </div>
                     
-<a name="defclass"></a>
-<a name="defclass-_005bMacro_005d"></a>
 <div class="section top-most">
 <div class="node-type">Macro</div>
 <h4 class="subsection">defclass                                                            </h4>
@@ -54,13 +52,13 @@
    &rArr;  <i>new-class</i>
 </p>
 <table>
-<tr><td><span class="nolinebreak">slot-specifier::=</span><i><span class="nolinebreak">slot-name</span></i></td><td>|</td><td>(<i><span class="nolinebreak">slot-name</span></i></td><td>[[!<i><span class="nolinebreak">slot-option</span></i>]])<br></td></tr>
+<tr><td>&nbsp;<span class="nolinebreak">slot-specifier::=</span><i><span class="nolinebreak">slot-name</span></i>&nbsp;|&nbsp;(<i><span class="nolinebreak">slot-name</span></i>&nbsp;[[!<i><span class="nolinebreak">slot-option</span></i>]])<br></td></tr>
 </table>
 <table>
-<tr><td><i><span class="nolinebreak">slot-name</span></i>::=</td><td><i>symbol</i><br></td></tr>
+<tr><td>&nbsp;<i><span class="nolinebreak">slot-name</span></i>::=&nbsp;<i>symbol</i><br></td></tr>
 </table>
 <table>
-<tr><td><span class="nolinebreak">slot-option::=</span>{:reader <i>reader-function-name</i>}* |<br></td></tr>
+<tr><td>&nbsp;<span class="nolinebreak">slot-option::=</span>{:reader <i>reader-function-name</i>}* |<br></td></tr>
 <tr><td>{:writer <i>writer-function-name</i>}* |<br></td></tr>
 <tr><td>{:accessor <i>reader-function-name</i>}* |<br></td></tr>
 <tr><td>{:allocation <i>allocation-type</i>} |<br></td></tr>
@@ -70,14 +68,13 @@
 <tr><td>{:documentation <i>string</i>}<br></td></tr>
 </table>
 <table>
-<tr><td><i><span class="nolinebreak">function-name</span></i>::=</td><td>{<i>symbol</i></td><td>|</td><td><tt>(setf</td><td><i>symbol</i>)</tt>}<br></td></tr>
+<tr><td>&nbsp;<i><span class="nolinebreak">function-name</span></i>::=&nbsp;{<i>symbol</i>&nbsp;|&nbsp;<tt>(setf&nbsp;<i>symbol</i>)</tt>}<br></td></tr>
 </table>
 <table>
-<tr><td><span class="nolinebreak">class-option::=(</span><tt><span class="nolinebreak">:default-initargs</span></tt></td><td><tt>.</tt></td><td><i><span class="nolinebreak">initarg-list</span></i>)</td><td>|<br></td></tr>
-<tr><td>(<tt>:documentation</tt></td><td><i>string</i>)</td><td>|<br></td></tr>
-<tr><td>(<tt>:metaclass</tt></td><td><i><span class="nolinebreak">class-name</span></i>)<br></td></tr>
+<tr><td>&nbsp;<span class="nolinebreak">class-option::=(</span><tt><span class="nolinebreak">:default-initargs</span></tt>&nbsp;<tt>.</tt>&nbsp;<i><span class="nolinebreak">initarg-list</span></i>)&nbsp;|<br></td></tr>
+<tr><td>(<tt>:documentation</tt>&nbsp;<i>string</i>)&nbsp;|<br></td></tr>
+<tr><td>(<tt>:metaclass</tt>&nbsp;<i><span class="nolinebreak">class-name</span></i>)<br></td></tr>
 </table>
-<a name="Arguments-and-Values_003a_003a-113"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Arguments and Values</h4>
@@ -122,7 +119,6 @@
 </p>
 <p><i>new-class</i>&mdash;the new <i>class</i> <i>object</i>.
 </p>
-<a name="Description_003a_003a-152"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Description</h4>
@@ -372,7 +368,6 @@ the <i>class</i> definition
 available to be returned by <b>find-class</b> when its <i>environment</i>
 <i>argument</i> is a value received as the <i>environment parameter</i> of a <i>macro</i>.
 </p>
-<a name="Exceptional-Situations_003a_003a-37"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Exceptional Situations</h4>
@@ -393,7 +388,6 @@ is signaled: <tt>:allocation</tt>,
 an error of <i>type</i> <b>program-error</b> if they observe a class option 
 or a slot option that is not implemented locally.
 </p>
-<a name="See-Also_003a_003a-134"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">See Also</h4>
@@ -415,8 +409,13 @@ or a slot option that is not implemented locally.
 
 
 
+</div>
+
+                    <div class="section">
+                        <h3>Backlinks</h3>
+                        <a href="allocate_002dinstance.html">allocate-instance</a>, <a href="define_002dcondition.html">define-condition</a>, <a href="make_002dinstance.html">make-instance</a>, <a href="Objects-Dictionary.html">Objects Dictionary</a>, <a href="slot_002dexists_002dp.html">slot-exists-p</a>, <a href="slot_002dmissing.html">slot-missing</a>
+                    </div>
+                
 </body>
 <script type="text/javascript" src="/highlight-lisp/highlight-lisp.js"></script>
 </html>
-
-</div>

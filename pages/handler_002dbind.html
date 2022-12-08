@@ -42,8 +42,6 @@
                             </a>
                         </div>
                     
-<a name="handler_002dbind"></a>
-<a name="handler_002dbind-_005bMacro_005d"></a>
 <div class="section top-most">
 <div class="node-type">Macro</div>
 <h4 class="subsection">handler-bind                                                        </h4>
@@ -52,9 +50,8 @@
 		   {<i>form</i>}* &rArr;  <i>{<i>result</i>}*</i>
 </p>
 <table>
-<tr><td><i>binding</i></td><td>::=<span class="roman">(</span>type</td><td>handler<span class="roman">)</span></td></tr>
+<tr><td><i>binding</i>&nbsp;::=<span class="roman">(</span>type&nbsp;handler<span class="roman">)</span></td></tr>
 </table>
-<a name="Arguments-and-Values_003a_003a-143"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Arguments and Values</h4>
@@ -69,7 +66,6 @@
 </p>
 <p><i>results</i>&mdash;the <i>values</i> returned by the <i>forms</i>.
 </p>
-<a name="Description_003a_003a-196"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Description</h4>
@@ -94,7 +90,6 @@ If the <i>handler</i> <i>declines</i>, the search continues for another <i>handl
 from dynamically enclosing contours.  If no <i>handler</i> is found outside, 
 then <b>signal</b> returns or <b>error</b> enters the debugger. 
 </p>
-<a name="Examples_003a_003a-125"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Examples</h4>
@@ -136,7 +131,6 @@ in the associated function.
 by <b>signal</b> is a <i>simple condition</i>, which is not of <i>type</i> <b>error</b>, 
 so it doesn&rsquo;t trigger the handler for <b>error</b> set up by <tt>trap-errors</tt>.
 </p>
-<a name="See-Also_003a_003a-171"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">See Also</h4>
@@ -146,8 +140,13 @@ so it doesn&rsquo;t trigger the handler for <b>error</b> set up by <tt>trap-erro
 
 
 
+</div>
+
+                    <div class="section">
+                        <h3>Backlinks</h3>
+                        <a href="cerror.html">cerror</a>, <a href="Conditions-Dictionary.html">Conditions Dictionary</a>, <a href="error.html">error</a>, <a href="handler_002dcase.html">handler-case</a>
+                    </div>
+                
 </body>
 <script type="text/javascript" src="/highlight-lisp/highlight-lisp.js"></script>
 </html>
-
-</div>

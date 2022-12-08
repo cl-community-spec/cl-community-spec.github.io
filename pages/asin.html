@@ -42,8 +42,6 @@
                             </a>
                         </div>
                     
-<a name="asin"></a>
-<a name="asin_002c-acos_002c-atan-_005bFunction_005d"></a>
 <div class="section top-most">
 <div class="node-type">Function</div>
 <h4 class="subsection">asin, acos, atan                                                 </h4>
@@ -54,7 +52,6 @@
 </p>
 <p><code>atan</code>  <i>number1 &amp;optional</i> number2 &rArr;  <i>radians</i>
 </p>
-<a name="Arguments-and-Values_003a_003a-207"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Arguments and Values</h4>
@@ -68,7 +65,6 @@
 </p>
 <p><i>radians</i>&mdash;a <i>number</i> (of radians).
 </p>
-<a name="Description_003a_003a-286"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Description</h4>
@@ -82,9 +78,9 @@ functions can be defined mathematically for
 </p>
 <table>
 <tr><td>Function</td><td>Definition</td></tr>
-<tr><td>Arc</td><td>sine</td><td><span class="nolinebreak">-i</span></td><td><tt>log</tt></td><td>(ix+</td><td><span class="nolinebreak">\sqrt1-x^2</span> )          </td></tr>
-<tr><td>Arc</td><td>cosine</td><td>(\pi/2)</td><td><span class="nolinebreak">-</span></td><td><tt>arcsin</tt></td><td>x</td></tr>
-<tr><td>Arc</td><td>tangent</td><td><span class="nolinebreak">-i</span></td><td><tt>log</tt></td><td>((1+ix)</td><td>\sqrt1/(1+x^2) )   </td></tr>
+<tr><td>Arc&nbsp;sine</td><td><span class="nolinebreak">-i</span>&nbsp;<tt>log</tt></td><td>(ix+&nbsp;<span class="nolinebreak">\sqrt1-x^2</span> )          </td></tr>
+<tr><td>Arc&nbsp;cosine</td><td>(\pi/2)&nbsp;<span class="nolinebreak">-</span>&nbsp;<tt>arcsin</tt></td><td>x</td></tr>
+<tr><td>Arc&nbsp;tangent</td><td><span class="nolinebreak">-i</span>&nbsp;<tt>log</tt></td><td>((1+ix)&nbsp;\sqrt1/(1+x^2) )   </td></tr>
 </table>
 <div class="table-subcaption"> Figure 12&ndash;13: Mathematical definition of arc sine, arc cosine, and arc tangent</div>
 
@@ -187,28 +183,27 @@ information. Figure 12&ndash;14 details various special cases.
 implementations that support minus zero.
 </p>
 <table>
-<tr><td>to</td><td>1pc<i>y</i> Condition  <i>x</i> Condition  Cartesian locus  Range of result          </td></tr>
-<tr><td>to</td><td>1pc y = 0        x &gt; 0       Positive x-axis   0                       </td></tr>
-<tr><td>to</td><td>1pc* y = +0      x &gt; 0       Positive x-axis  +0                       </td></tr>
-<tr><td>to</td><td>1pc* y = -0      x &gt; 0       Positive x-axis  -0                       </td></tr>
-<tr><td>to</td><td>1pc y &gt; 0        x &gt; 0       Quadrant I       0 &lt; result &lt; \pi/2      </td></tr>
-<tr><td>to</td><td>1pc y &gt; 0        x = 0       Positive y-axis  \pi/2                    </td></tr>
-<tr><td>to</td><td>1pc y &gt; 0        x &lt; 0       Quadrant II      \pi/2 &lt; result &lt; \pi    </td></tr>
-<tr><td>to</td><td>1pc y = 0        x &lt; 0       Negative x-axis   \pi                     </td></tr>
-<tr><td>to</td><td>1pc* y = +0      x &lt; 0       Negative x-axis  +\pi                     </td></tr>
-<tr><td>to</td><td>1pc* y = -0      x &lt; 0       Negative x-axis  -\pi                     </td></tr>
-<tr><td>to</td><td>1pc y &lt; 0        x &lt; 0       Quadrant III     -\pi &lt; result &lt; -\pi/2  </td></tr>
-<tr><td>to</td><td>1pc y &lt; 0        x = 0       Negative y-axis  -\pi/2                   </td></tr>
-<tr><td>to</td><td>1pc y &lt; 0        x &gt; 0       Quadrant IV      -\pi/2 &lt; result &lt; 0     </td></tr>
-<tr><td>to</td><td>1pc y = 0        x = 0       Origin           undefined consequences   </td></tr>
-<tr><td>to</td><td>1pc* y = +0      x = +0      Origin           +0                       </td></tr>
-<tr><td>to</td><td>1pc* y = -0      x = +0      Origin           -0                       </td></tr>
-<tr><td>to</td><td>1pc* y = +0      x = -0      Origin           +\pi                     </td></tr>
-<tr><td>to</td><td>1pc* y = -0      x = -0      Origin           -\pi                     </td></tr>
+<tr><td>to&nbsp;1pc<i>y</i> Condition  <i>x</i> Condition  Cartesian locus  Range of result          </td></tr>
+<tr><td>to&nbsp;1pc y = 0        x &gt; 0       Positive x-axis   0                       </td></tr>
+<tr><td>to&nbsp;1pc* y = +0      x &gt; 0       Positive x-axis  +0                       </td></tr>
+<tr><td>to&nbsp;1pc* y = -0      x &gt; 0       Positive x-axis  -0                       </td></tr>
+<tr><td>to&nbsp;1pc y &gt; 0        x &gt; 0       Quadrant I       0 &lt; result &lt; \pi/2      </td></tr>
+<tr><td>to&nbsp;1pc y &gt; 0        x = 0       Positive y-axis  \pi/2                    </td></tr>
+<tr><td>to&nbsp;1pc y &gt; 0        x &lt; 0       Quadrant II      \pi/2 &lt; result &lt; \pi    </td></tr>
+<tr><td>to&nbsp;1pc y = 0        x &lt; 0       Negative x-axis   \pi                     </td></tr>
+<tr><td>to&nbsp;1pc* y = +0      x &lt; 0       Negative x-axis  +\pi                     </td></tr>
+<tr><td>to&nbsp;1pc* y = -0      x &lt; 0       Negative x-axis  -\pi                     </td></tr>
+<tr><td>to&nbsp;1pc y &lt; 0        x &lt; 0       Quadrant III     -\pi &lt; result &lt; -\pi/2  </td></tr>
+<tr><td>to&nbsp;1pc y &lt; 0        x = 0       Negative y-axis  -\pi/2                   </td></tr>
+<tr><td>to&nbsp;1pc y &lt; 0        x &gt; 0       Quadrant IV      -\pi/2 &lt; result &lt; 0     </td></tr>
+<tr><td>to&nbsp;1pc y = 0        x = 0       Origin           undefined consequences   </td></tr>
+<tr><td>to&nbsp;1pc* y = +0      x = +0      Origin           +0                       </td></tr>
+<tr><td>to&nbsp;1pc* y = -0      x = +0      Origin           -0                       </td></tr>
+<tr><td>to&nbsp;1pc* y = +0      x = -0      Origin           +\pi                     </td></tr>
+<tr><td>to&nbsp;1pc* y = -0      x = -0      Origin           -\pi                     </td></tr>
 </table>
 <div class="table-subcaption"> Figure 12&ndash;14: Quadrant information for arc tangent </div>
 
-<a name="Examples_003a_003a-190"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Examples</h4>
@@ -221,7 +216,6 @@ implementations that support minus zero.
 </code>
 </pre></div>
 
-<a name="Exceptional-Situations_003a_003a-82"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Exceptional Situations</h4>
@@ -234,7 +228,6 @@ implementations that support minus zero.
 </p>
 <p><b>acos</b>, <b>asin</b>, and <b>atan</b> might signal <b>arithmetic-error</b>.
 </p>
-<a name="See-Also_003a_003a-241"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">See Also</h4>
@@ -245,7 +238,6 @@ implementations that support minus zero.
 ,
 <a href="Rule-of-Float-Substitutability.html#Rule-of-Float-Substitutability">Rule of Float Substitutability</a>
 </p>
-<a name="Notes_003a_003a-144"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Notes</h4>
@@ -257,8 +249,13 @@ absolute value of <i>number</i> is greater than one.
 
 
 
+</div>
+
+                    <div class="section">
+                        <h3>Backlinks</h3>
+                        <a href="Numbers-Dictionary.html">Numbers Dictionary</a>
+                    </div>
+                
 </body>
 <script type="text/javascript" src="/highlight-lisp/highlight-lisp.js"></script>
 </html>
-
-</div>

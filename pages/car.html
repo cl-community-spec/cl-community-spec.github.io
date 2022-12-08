@@ -42,23 +42,17 @@
                             </a>
                         </div>
                     
-<a name="car"></a>
-<a name="car_002c-cdr_002c"></a>
 <div class="section top-most">
 <h4 class="subsection">car,    cdr,</h4>
-<a name="caar_002c-cadr_002c-cdar_002c-cddr_002c"></a>
 </div>
 <div class="section">
 <h4 class="subheading">caar,   cadr,   cdar,   cddr,</h4>
-<a name="caaar_002c-caadr_002c-cadar_002c-caddr_002c-cdaar_002c-cdadr_002c-cddar_002c-cdddr_002c"></a>
 </div>
 <div class="section">
 <h4 class="subheading">caaar,  caadr,  cadar,  caddr,  cdaar,  cdadr,  cddar,  cdddr,</h4>
-<a name="caaaar_002c-caaadr_002c-caadar_002c-caaddr_002c-cadaar_002c-cadadr_002c-caddar_002c-cadddr_002c"></a>
 </div>
 <div class="section">
 <h4 class="subheading">caaaar, caaadr, caadar, caaddr, cadaar, cadadr, caddar, cadddr,</h4>
-<a name="cdaaar_002c-cdaadr_002c-cdadar_002c-cdaddr_002c-cddaar_002c-cddadr_002c-cdddar_002c-cddddr"></a>
 </div>
 <div class="section">
 <h4 class="subheading">cdaaar, cdaadr, cdadar, cdaddr, cddaar, cddadr, cdddar, cddddr</h4>
@@ -163,7 +157,6 @@
 <p><code>cddddr</code>  <i>x</i> &rArr;  <i>object</i>
 (setf (<code>cddddr</code> <i>x</i>) new-object)<br>
 </p>
-<a name="Pronunciation_003a_003a-8"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Pronunciation</h4>
@@ -178,7 +171,6 @@
 <p><b>cddr</b>: pronounced &rsquo;kud e ,de r 
   	    or pronounced &rsquo;ke ,dude r 
 </p>
-<a name="Arguments-and-Values_003a_003a-278"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Arguments and Values</h4>
@@ -189,7 +181,6 @@
 </p>
 <p><i>new-object</i>&mdash;an <i>object</i>.
 </p>
-<a name="Description_003a_003a-379"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Description</h4>
@@ -211,35 +202,35 @@ order in which the corresponding operations are performed.  Figure 14&ndash;6
 defines the relationships precisely.
 </p>
 <table>
-<tr><td>This</td><td><i>place</i></td><td>...</td><td>Is</td><td>equivalent</td><td>to</td><td>this</td><td><i>place</i></td><td>...</td></tr>
-<tr><td><tt>(caar</td><td><i>x</i>)</tt></td><td><tt>(car</td><td>(car</td><td><i>x</i>))</tt></td></tr>
-<tr><td><tt>(cadr</td><td><i>x</i>)</tt></td><td><tt>(car</td><td>(cdr</td><td><i>x</i>))</tt></td></tr>
-<tr><td><tt>(cdar</td><td><i>x</i>)</tt></td><td><tt>(cdr</td><td>(car</td><td><i>x</i>))</tt></td></tr>
-<tr><td><tt>(cddr</td><td><i>x</i>)</tt></td><td><tt>(cdr</td><td>(cdr</td><td><i>x</i>))</tt></td></tr>
-<tr><td><tt>(caaar</td><td><i>x</i>)</tt></td><td><tt>(car</td><td>(car</td><td>(car</td><td><i>x</i>)))</tt></td></tr>
-<tr><td><tt>(caadr</td><td><i>x</i>)</tt></td><td><tt>(car</td><td>(car</td><td>(cdr</td><td><i>x</i>)))</tt></td></tr>
-<tr><td><tt>(cadar</td><td><i>x</i>)</tt></td><td><tt>(car</td><td>(cdr</td><td>(car</td><td><i>x</i>)))</tt></td></tr>
-<tr><td><tt>(caddr</td><td><i>x</i>)</tt></td><td><tt>(car</td><td>(cdr</td><td>(cdr</td><td><i>x</i>)))</tt></td></tr>
-<tr><td><tt>(cdaar</td><td><i>x</i>)</tt></td><td><tt>(cdr</td><td>(car</td><td>(car</td><td><i>x</i>)))</tt></td></tr>
-<tr><td><tt>(cdadr</td><td><i>x</i>)</tt></td><td><tt>(cdr</td><td>(car</td><td>(cdr</td><td><i>x</i>)))</tt></td></tr>
-<tr><td><tt>(cddar</td><td><i>x</i>)</tt></td><td><tt>(cdr</td><td>(cdr</td><td>(car</td><td><i>x</i>)))</tt></td></tr>
-<tr><td><tt>(cdddr</td><td><i>x</i>)</tt></td><td><tt>(cdr</td><td>(cdr</td><td>(cdr</td><td><i>x</i>)))</tt></td></tr>
-<tr><td><tt>(caaaar</td><td><i>x</i>)</tt></td><td><tt>(car</td><td>(car</td><td>(car</td><td>(car</td><td><i>x</i>))))</tt></td></tr>
-<tr><td><tt>(caaadr</td><td><i>x</i>)</tt></td><td><tt>(car</td><td>(car</td><td>(car</td><td>(cdr</td><td><i>x</i>))))</tt></td></tr>
-<tr><td><tt>(caadar</td><td><i>x</i>)</tt></td><td><tt>(car</td><td>(car</td><td>(cdr</td><td>(car</td><td><i>x</i>))))</tt></td></tr>
-<tr><td><tt>(caaddr</td><td><i>x</i>)</tt></td><td><tt>(car</td><td>(car</td><td>(cdr</td><td>(cdr</td><td><i>x</i>))))</tt></td></tr>
-<tr><td><tt>(cadaar</td><td><i>x</i>)</tt></td><td><tt>(car</td><td>(cdr</td><td>(car</td><td>(car</td><td><i>x</i>))))</tt></td></tr>
-<tr><td><tt>(cadadr</td><td><i>x</i>)</tt></td><td><tt>(car</td><td>(cdr</td><td>(car</td><td>(cdr</td><td><i>x</i>))))</tt></td></tr>
-<tr><td><tt>(caddar</td><td><i>x</i>)</tt></td><td><tt>(car</td><td>(cdr</td><td>(cdr</td><td>(car</td><td><i>x</i>))))</tt></td></tr>
-<tr><td><tt>(cadddr</td><td><i>x</i>)</tt></td><td><tt>(car</td><td>(cdr</td><td>(cdr</td><td>(cdr</td><td><i>x</i>))))</tt></td></tr>
-<tr><td><tt>(cdaaar</td><td><i>x</i>)</tt></td><td><tt>(cdr</td><td>(car</td><td>(car</td><td>(car</td><td><i>x</i>))))</tt></td></tr>
-<tr><td><tt>(cdaadr</td><td><i>x</i>)</tt></td><td><tt>(cdr</td><td>(car</td><td>(car</td><td>(cdr</td><td><i>x</i>))))</tt></td></tr>
-<tr><td><tt>(cdadar</td><td><i>x</i>)</tt></td><td><tt>(cdr</td><td>(car</td><td>(cdr</td><td>(car</td><td><i>x</i>))))</tt></td></tr>
-<tr><td><tt>(cdaddr</td><td><i>x</i>)</tt></td><td><tt>(cdr</td><td>(car</td><td>(cdr</td><td>(cdr</td><td><i>x</i>))))</tt></td></tr>
-<tr><td><tt>(cddaar</td><td><i>x</i>)</tt></td><td><tt>(cdr</td><td>(cdr</td><td>(car</td><td>(car</td><td><i>x</i>))))</tt></td></tr>
-<tr><td><tt>(cddadr</td><td><i>x</i>)</tt></td><td><tt>(cdr</td><td>(cdr</td><td>(car</td><td>(cdr</td><td><i>x</i>))))</tt></td></tr>
-<tr><td><tt>(cdddar</td><td><i>x</i>)</tt></td><td><tt>(cdr</td><td>(cdr</td><td>(cdr</td><td>(car</td><td><i>x</i>))))</tt></td></tr>
-<tr><td><tt>(cddddr</td><td><i>x</i>)</tt></td><td><tt>(cdr</td><td>(cdr</td><td>(cdr</td><td>(cdr</td><td><i>x</i>))))</tt></td></tr>
+<tr><td>This&nbsp;<i>place</i>&nbsp;...</td><td>Is&nbsp;equivalent&nbsp;to&nbsp;this&nbsp;<i>place</i>&nbsp;...</td></tr>
+<tr><td><tt>(caar&nbsp;<i>x</i>)</tt></td><td><tt>(car&nbsp;(car&nbsp;<i>x</i>))</tt></td></tr>
+<tr><td><tt>(cadr&nbsp;<i>x</i>)</tt></td><td><tt>(car&nbsp;(cdr&nbsp;<i>x</i>))</tt></td></tr>
+<tr><td><tt>(cdar&nbsp;<i>x</i>)</tt></td><td><tt>(cdr&nbsp;(car&nbsp;<i>x</i>))</tt></td></tr>
+<tr><td><tt>(cddr&nbsp;<i>x</i>)</tt></td><td><tt>(cdr&nbsp;(cdr&nbsp;<i>x</i>))</tt></td></tr>
+<tr><td><tt>(caaar&nbsp;<i>x</i>)</tt></td><td><tt>(car&nbsp;(car&nbsp;(car&nbsp;<i>x</i>)))</tt></td></tr>
+<tr><td><tt>(caadr&nbsp;<i>x</i>)</tt></td><td><tt>(car&nbsp;(car&nbsp;(cdr&nbsp;<i>x</i>)))</tt></td></tr>
+<tr><td><tt>(cadar&nbsp;<i>x</i>)</tt></td><td><tt>(car&nbsp;(cdr&nbsp;(car&nbsp;<i>x</i>)))</tt></td></tr>
+<tr><td><tt>(caddr&nbsp;<i>x</i>)</tt></td><td><tt>(car&nbsp;(cdr&nbsp;(cdr&nbsp;<i>x</i>)))</tt></td></tr>
+<tr><td><tt>(cdaar&nbsp;<i>x</i>)</tt></td><td><tt>(cdr&nbsp;(car&nbsp;(car&nbsp;<i>x</i>)))</tt></td></tr>
+<tr><td><tt>(cdadr&nbsp;<i>x</i>)</tt></td><td><tt>(cdr&nbsp;(car&nbsp;(cdr&nbsp;<i>x</i>)))</tt></td></tr>
+<tr><td><tt>(cddar&nbsp;<i>x</i>)</tt></td><td><tt>(cdr&nbsp;(cdr&nbsp;(car&nbsp;<i>x</i>)))</tt></td></tr>
+<tr><td><tt>(cdddr&nbsp;<i>x</i>)</tt></td><td><tt>(cdr&nbsp;(cdr&nbsp;(cdr&nbsp;<i>x</i>)))</tt></td></tr>
+<tr><td><tt>(caaaar&nbsp;<i>x</i>)</tt></td><td><tt>(car&nbsp;(car&nbsp;(car&nbsp;(car&nbsp;<i>x</i>))))</tt></td></tr>
+<tr><td><tt>(caaadr&nbsp;<i>x</i>)</tt></td><td><tt>(car&nbsp;(car&nbsp;(car&nbsp;(cdr&nbsp;<i>x</i>))))</tt></td></tr>
+<tr><td><tt>(caadar&nbsp;<i>x</i>)</tt></td><td><tt>(car&nbsp;(car&nbsp;(cdr&nbsp;(car&nbsp;<i>x</i>))))</tt></td></tr>
+<tr><td><tt>(caaddr&nbsp;<i>x</i>)</tt></td><td><tt>(car&nbsp;(car&nbsp;(cdr&nbsp;(cdr&nbsp;<i>x</i>))))</tt></td></tr>
+<tr><td><tt>(cadaar&nbsp;<i>x</i>)</tt></td><td><tt>(car&nbsp;(cdr&nbsp;(car&nbsp;(car&nbsp;<i>x</i>))))</tt></td></tr>
+<tr><td><tt>(cadadr&nbsp;<i>x</i>)</tt></td><td><tt>(car&nbsp;(cdr&nbsp;(car&nbsp;(cdr&nbsp;<i>x</i>))))</tt></td></tr>
+<tr><td><tt>(caddar&nbsp;<i>x</i>)</tt></td><td><tt>(car&nbsp;(cdr&nbsp;(cdr&nbsp;(car&nbsp;<i>x</i>))))</tt></td></tr>
+<tr><td><tt>(cadddr&nbsp;<i>x</i>)</tt></td><td><tt>(car&nbsp;(cdr&nbsp;(cdr&nbsp;(cdr&nbsp;<i>x</i>))))</tt></td></tr>
+<tr><td><tt>(cdaaar&nbsp;<i>x</i>)</tt></td><td><tt>(cdr&nbsp;(car&nbsp;(car&nbsp;(car&nbsp;<i>x</i>))))</tt></td></tr>
+<tr><td><tt>(cdaadr&nbsp;<i>x</i>)</tt></td><td><tt>(cdr&nbsp;(car&nbsp;(car&nbsp;(cdr&nbsp;<i>x</i>))))</tt></td></tr>
+<tr><td><tt>(cdadar&nbsp;<i>x</i>)</tt></td><td><tt>(cdr&nbsp;(car&nbsp;(cdr&nbsp;(car&nbsp;<i>x</i>))))</tt></td></tr>
+<tr><td><tt>(cdaddr&nbsp;<i>x</i>)</tt></td><td><tt>(cdr&nbsp;(car&nbsp;(cdr&nbsp;(cdr&nbsp;<i>x</i>))))</tt></td></tr>
+<tr><td><tt>(cddaar&nbsp;<i>x</i>)</tt></td><td><tt>(cdr&nbsp;(cdr&nbsp;(car&nbsp;(car&nbsp;<i>x</i>))))</tt></td></tr>
+<tr><td><tt>(cddadr&nbsp;<i>x</i>)</tt></td><td><tt>(cdr&nbsp;(cdr&nbsp;(car&nbsp;(cdr&nbsp;<i>x</i>))))</tt></td></tr>
+<tr><td><tt>(cdddar&nbsp;<i>x</i>)</tt></td><td><tt>(cdr&nbsp;(cdr&nbsp;(cdr&nbsp;(car&nbsp;<i>x</i>))))</tt></td></tr>
+<tr><td><tt>(cddddr&nbsp;<i>x</i>)</tt></td><td><tt>(cdr&nbsp;(cdr&nbsp;(cdr&nbsp;(cdr&nbsp;<i>x</i>))))</tt></td></tr>
 </table>
 <div class="table-subcaption"> Figure 14&ndash;6: CAR and CDR variants </div>
 
@@ -256,7 +247,6 @@ with <b>setf</b> of <b>caar</b>.
 <p>The argument <i>x</i> is permitted to be a <i>dotted list</i> 
 or a <i>circular list</i>.
 </p>
-<a name="Examples_003a_003a-262"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Examples</h4>
@@ -271,7 +261,6 @@ or a <i>circular list</i>.
 </code>
 </pre></div>
 
-<a name="Exceptional-Situations_003a_003a-118"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Exceptional Situations</h4>
@@ -283,7 +272,6 @@ should signal <b>type-error</b> if they receive an argument which is not a
 error checking as if defined by appropriate calls to <b>car</b> and
 <b>cdr</b>.
 </p>
-<a name="See-Also_003a_003a-305"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">See Also</h4>
@@ -294,7 +282,6 @@ error checking as if defined by appropriate calls to <b>car</b> and
 , 
 <a href="rest.html#rest">rest</a>
 </p>
-<a name="Notes_003a_003a-200"></a>
 </div>
 <div class="section">
 <h4 class="subsubheading">Notes</h4>
@@ -313,8 +300,8 @@ and the <i>cdr</i> of a <i>cons</i> can be altered by using <b>rplacd</b>.
 
 
 
+</div>
+<div class="bl-placeholder"></div>
 </body>
 <script type="text/javascript" src="/highlight-lisp/highlight-lisp.js"></script>
 </html>
-
-</div>
