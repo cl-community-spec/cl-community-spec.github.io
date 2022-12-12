@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="stylesheet" href="/styles.css">
 <link rel="stylesheet" href="/highlight-lisp/themes/github.css">
@@ -17,15 +18,17 @@
 
 <body lang="en">
 
-                        <div class="top">
-                            <div class="search">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
-                                <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
-                                <div id="search__drop" onblur="hideSearch()"></div>
+                        <div class="top-wrapper">
+                            <div class="top">
+                                <div class="search">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+                                    <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
+                                    <div id="search__drop" onblur="hideSearch()"></div>
+                                </div>
+                                <a class="index-btn" href="index.html">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                                </a>
                             </div>
-                            <a class="index-btn" href="index.html">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-                            </a>
                         </div>
                         <div class="nav">
                             <a href="pprint_002dnewline.html" class="nav-btn nav__prev ">
@@ -58,7 +61,7 @@
 
 <p><i>object</i>&mdash;an <i>element</i> of the <i>list</i> 
 		 being printed in the <i>lexically current logical block</i>,
-		 or <b>nil</b>.
+		 or <a href="NILv.html">nil</a>.
 </p>
 </div>
 <div class="section">
@@ -103,11 +106,11 @@ printed on the <i>pretty printing stream</i> created by the immediately containi
 <b>pprint-logical-block</b> and the execution of the immediately containing
 <b>pprint-logical-block</b> is terminated except for the printing of the suffix.
 </p>
-<p>If <b>pprint-logical-block</b> is given a &lsquo;list&rsquo; argument of <b>nil</b>&mdash;because
+<p>If <b>pprint-logical-block</b> is given a &lsquo;list&rsquo; argument of <a href="NILv.html">nil</a>&mdash;because
 it is not processing a list&mdash;<b>pprint-pop</b> can still be used to obtain 
 support for <b>*print-length*</b>.  
 In this situation, the first and third tests above are disabled and
-<b>pprint-pop</b> always returns <b>nil</b>.
+<b>pprint-pop</b> always returns <a href="NILv.html">nil</a>.
 See <a href="Examples-of-using-the-Pretty-Printer.html#Examples-of-using-the-Pretty-Printer">Examples of using the Pretty Printer</a>&mdash;specifically, the <b>pprint-vector</b> example.
 </p>
 <p>Whether or not <b>pprint-pop</b> is <i>fbound</i> in the
@@ -146,8 +149,8 @@ of the <i>dynamic extent</i> of this <b>pprint-logical-block</b>.
 <div class="section">
 <h4 class="subsubheading">See Also</h4>
 
-<p><a href="pprint_002dexit_002dif_002dlist_002dexhausted.html#pprint_002dexit_002dif_002dlist_002dexhausted">pprint-exit-if-list-exhausted</a>
-, 
+<p><a href="pprint_002dexit_002dif_002dlist_002dexhausted.html#pprint_002dexit_002dif_002dlist_002dexhausted">pprint-exit-if-list-exhausted</a>, 
+ 
 <a href="pprint_002dlogical_002dblock.html#pprint_002dlogical_002dblock">pprint-logical-block</a>
 .
 </p>

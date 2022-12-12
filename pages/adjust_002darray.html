@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="stylesheet" href="/styles.css">
 <link rel="stylesheet" href="/highlight-lisp/themes/github.css">
@@ -17,15 +18,17 @@
 
 <body lang="en">
 
-                        <div class="top">
-                            <div class="search">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
-                                <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
-                                <div id="search__drop" onblur="hideSearch()"></div>
+                        <div class="top-wrapper">
+                            <div class="top">
+                                <div class="search">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+                                    <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
+                                    <div id="search__drop" onblur="hideSearch()"></div>
+                                </div>
+                                <a class="index-btn" href="index.html">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                                </a>
                             </div>
-                            <a class="index-btn" href="index.html">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-                            </a>
                         </div>
                         <div class="nav">
                             <a href="make_002darray.html" class="nav-btn nav__prev ">
@@ -78,10 +81,10 @@
  <i>initial-element</i> or <i>displaced-to</i> is given.
 </p>
 <p><i>fill-pointer</i>&mdash;a <i>valid fill pointer</i> for the
- <i>array</i> to be created, or <b>t</b>, or <b>nil</b>.
- The default is <b>nil</b>.
+ <i>array</i> to be created, or <a href="t.html">t</a>, or <a href="NILv.html">nil</a>.
+ The default is <a href="NILv.html">nil</a>.
 </p>
-<p><i>displaced-to</i>&mdash;an <i>array</i> or <b>nil</b>.
+<p><i>displaced-to</i>&mdash;an <i>array</i> or <a href="NILv.html">nil</a>.
  <i>initial-elements</i> and <i>initial-contents</i> must not be supplied
  if <i>displaced-to</i> is supplied.
 </p>
@@ -116,10 +119,10 @@ is not the same as the <i>actual array element type</i> of <i>array</i>.
 </p>
 <p>If <i>fill-pointer</i> is an <i>integer</i>,
 it becomes the <i>fill pointer</i> for the resulting <i>array</i>.
-If <i>fill-pointer</i> is the symbol <b>t</b>,
+If <i>fill-pointer</i> is the symbol <a href="t.html">t</a>,
 it indicates that the size of the resulting <i>array</i> 
 should be used as the <i>fill pointer</i>.
-If <i>fill-pointer</i> is <b>nil</b>,
+If <i>fill-pointer</i> is <a href="NILv.html">nil</a>,
 it indicates that the <i>fill pointer</i> should be left as it is.
 </p>
 <p>If <i>displaced-to</i>
@@ -128,14 +131,14 @@ is created. The resulting <i>array</i> shares its contents with the <i>array</i>
 <i>displaced-to</i>.
 The resulting <i>array</i> cannot contain more elements than the <i>array</i>
 it is displaced to.  
-If <i>displaced-to</i> is not supplied or <b>nil</b>,
+If <i>displaced-to</i> is not supplied or <a href="NILv.html">nil</a>,
 the resulting <i>array</i> is not a <i>displaced array</i>.
 If array A is created displaced to array B and subsequently
 array B is given to <b>adjust-array</b>, array A will still be
 displaced to array B.
 Although <i>array</i> might be a <i>displaced array</i>, 
 the resulting <i>array</i> is not a <i>displaced array</i> unless
-<i>displaced-to</i> is supplied and not <b>nil</b>.
+<i>displaced-to</i> is supplied and not <a href="NILv.html">nil</a>.
 </p>
 <p>The interaction between <b>adjust-array</b> and 
 displaced <i>arrays</i> 
@@ -310,14 +313,14 @@ and <i>non-nil</i> but <i>array</i> has no <i>fill pointer</i>.
 <div class="section">
 <h4 class="subsubheading">See Also</h4>
 
-<p><a href="adjustable_002darray_002dp.html#adjustable_002darray_002dp">adjustable-array-p</a>
-,    
-<a href="make_002darray.html#make_002darray">make-array</a>
-,
-<a href="array_002ddimension_002dlimit.html#array_002ddimension_002dlimit">array-dimension-limit</a>
-, 
-<a href="array_002dtotal_002dsize_002dlimit.html#array_002dtotal_002dsize_002dlimit">array-total-size-limit</a>
-,
+<p><a href="adjustable_002darray_002dp.html#adjustable_002darray_002dp">adjustable-array-p</a>, 
+    
+<a href="make_002darray.html#make_002darray">make-array</a>, 
+
+<a href="array_002ddimension_002dlimit.html#array_002ddimension_002dlimit">array-dimension-limit</a>, 
+ 
+<a href="array_002dtotal_002dsize_002dlimit.html#array_002dtotal_002dsize_002dlimit">array-total-size-limit</a>, 
+
 <b>array</b>
 </p>
 

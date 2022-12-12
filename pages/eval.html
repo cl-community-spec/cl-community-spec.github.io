@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="stylesheet" href="/styles.css">
 <link rel="stylesheet" href="/highlight-lisp/themes/github.css">
@@ -17,15 +18,17 @@
 
 <body lang="en">
 
-                        <div class="top">
-                            <div class="search">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
-                                <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
-                                <div id="search__drop" onblur="hideSearch()"></div>
+                        <div class="top-wrapper">
+                            <div class="top">
+                                <div class="search">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+                                    <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
+                                    <div id="search__drop" onblur="hideSearch()"></div>
+                                </div>
+                                <a class="index-btn" href="index.html">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                                </a>
                             </div>
-                            <a class="index-btn" href="index.html">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-                            </a>
                         </div>
                         <div class="nav">
                             <a href="compile.html" class="nav-btn nav__prev ">
@@ -63,14 +66,14 @@
 <p>Evaluates <i>form</i> in the current <i>dynamic environment</i>
 and the <i>null lexical environment</i>.
 </p>
-<p><b>eval</b> is a user interface to the evaluator.
+<p><a href="eval.html">eval</a> is a user interface to the evaluator.
 </p>
-<p>The evaluator expands macro calls as if through the use of <b>macroexpand-1</b>.
+<p>The evaluator expands macro calls as if through the use of <a href="macroexpand.html">macroexpand-1</a>.
 </p>
 <p>Constants appearing in code
-processed by <b>eval</b> are
+processed by <a href="eval.html">eval</a> are
 not copied nor coalesced. The code resulting from the execution of 
-<b>eval</b>
+<a href="eval.html">eval</a>
 references <i>objects</i> 
 that are <b>eql</b> to the corresponding <i>objects</i> in
 the source code.  
@@ -92,7 +95,7 @@ the source code.
 <div class="section">
 <h4 class="subsubheading">See Also</h4>
 
-<p><b>macroexpand-1</b>,
+<p><a href="macroexpand.html">macroexpand-1</a>,
 <a href="The-Evaluation-Model.html#The-Evaluation-Model">The Evaluation Model</a>
 </p>
 </div>
@@ -101,14 +104,14 @@ the source code.
 
 <p>To obtain the current dynamic value of a <i>symbol</i>, 
 use of <b>symbol-value</b> is equivalent (and usually preferable) 
-to use of <b>eval</b>.
+to use of <a href="eval.html">eval</a>.
 </p>
-<p>Note that an <b>eval</b> <i>form</i> involves two levels of <i>evaluation</i> 
+<p>Note that an <a href="eval.html">eval</a> <i>form</i> involves two levels of <i>evaluation</i> 
 for its <i>argument</i>.  First, <i>form</i> is <i>evaluated</i> by the
 normal argument evaluation mechanism as would occur with any <i>call</i>.
 The <i>object</i> that results from this normal <i>argument</i> <i>evaluation</i> 
 becomes the <i>value</i> of the <i>form</i> <i>parameter</i>, and is then
-<i>evaluated</i> as part of the <b>eval</b> <i>form</i>.
+<i>evaluated</i> as part of the <a href="eval.html">eval</a> <i>form</i>.
 For example:
 </p>
 <div class="example">
@@ -118,10 +121,10 @@ For example:
 
 <p>The <i>argument</i> <i>form</i> <tt>(list 'cdr (car '((quote (a . b)) c)))</tt> is evaluated
 in the usual way to produce the <i>argument</i> <tt>(cdr (quote (a . b)))</tt>; 
-<b>eval</b> then evaluates its <i>argument</i>, <tt>(cdr (quote (a . b)))</tt>, to produce <tt>b</tt>.
+<a href="eval.html">eval</a> then evaluates its <i>argument</i>, <tt>(cdr (quote (a . b)))</tt>, to produce <tt>b</tt>.
 Since a single <i>evaluation</i> already occurs for any <i>argument</i> <i>form</i>
 in any <i>function form</i>,
-<b>eval</b> is sometimes said to perform &ldquo;an extra level of evaluation.&rdquo;
+<a href="eval.html">eval</a> is sometimes said to perform &ldquo;an extra level of evaluation.&rdquo;
 </p>
 
 
@@ -130,7 +133,7 @@ in any <i>function form</i>,
 
                     <div class="section">
                         <h3>Backlinks</h3>
-                        <a href="load_002dtime_002dvalue.html">load-time-value</a>
+                        <a href="Deprecated-Argument-Conventions.html">Deprecated Argument Conventions</a>, <a href="eval.html">eval</a>, <a href="Evaluation.html">Evaluation</a>, <a href="eval_002dwhen.html">eval-when</a>, <a href="function_002dlambda_002dexpression.html">function-lambda-expression</a>, <a href="Literal-Objects-in-Compiled-Files.html">Literal Objects in Compiled Files</a>, <a href="load_002dtime_002dvalue.html">load-time-value</a>, <a href="make_002dload_002dform.html">make-load-form</a>, <a href="Notes-about-the-Implementation-of-Compiler-Macros.html">Notes about the Implementation of Compiler Macros</a>, <a href="When-Compiler-Macros-Are-Used.html">When Compiler Macros Are Used</a>
                     </div>
                 
 </body>

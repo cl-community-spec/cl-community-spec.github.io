@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="stylesheet" href="/styles.css">
 <link rel="stylesheet" href="/highlight-lisp/themes/github.css">
@@ -17,15 +18,17 @@
 
 <body lang="en">
 
-                        <div class="top">
-                            <div class="search">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
-                                <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
-                                <div id="search__drop" onblur="hideSearch()"></div>
+                        <div class="top-wrapper">
+                            <div class="top">
+                                <div class="search">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+                                    <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
+                                    <div id="search__drop" onblur="hideSearch()"></div>
+                                </div>
+                                <a class="index-btn" href="index.html">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                                </a>
                             </div>
-                            <a class="index-btn" href="index.html">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-                            </a>
                         </div>
                         <div class="nav">
                             <a href="concatenate.html" class="nav-btn nav__prev ">
@@ -62,7 +65,7 @@
   a <i>function</i> of two arguments that returns a <i>generalized boolean</i>.
 </p>
 <p><i>key</i>&mdash;a <i>designator</i> for a <i>function</i> of one argument,
-  or <b>nil</b>.
+  or <a href="NILv.html">nil</a>.
 </p>
 <p><i>result-sequence</i>&mdash;a <i>proper sequence</i> of <i>type</i> <i>result-type</i>.
 </p>
@@ -91,7 +94,7 @@ considers two elements <tt>x</tt> and <tt>y</tt> to be equal if
 <p>The argument to the <i>key</i> is the <i>sequence</i> element.
 Typically, the return value of the <i>key</i> 
 becomes the argument to <i>predicate</i>.
-If <i>key</i> is not supplied or <b>nil</b>, the sequence element itself is used.
+If <i>key</i> is not supplied or <a href="NILv.html">nil</a>, the sequence element itself is used.
 The <i>key</i> may be executed more than once for each <i>sequence</i> <i>element</i>,
 and its side effects may occur in any order.
 </p>
@@ -124,7 +127,7 @@ then if the implementation can determine the element type specified
 for the <i>result-type</i>, the element type of the resulting array 
 is the result of <i>upgrading</i> that element type; or, if the
 implementation can determine that the element type is unspecified (or <tt>*</tt>),
-the element type of the resulting array is <b>t</b>;
+the element type of the resulting array is <a href="t.html">t</a>;
 otherwise, an error is signaled.
 </p>
 </div>

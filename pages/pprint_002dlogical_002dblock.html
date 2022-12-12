@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="stylesheet" href="/styles.css">
 <link rel="stylesheet" href="/highlight-lisp/themes/github.css">
@@ -17,15 +18,17 @@
 
 <body lang="en">
 
-                        <div class="top">
-                            <div class="search">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
-                                <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
-                                <div id="search__drop" onblur="hideSearch()"></div>
+                        <div class="top-wrapper">
+                            <div class="top">
+                                <div class="search">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+                                    <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
+                                    <div id="search__drop" onblur="hideSearch()"></div>
+                                </div>
+                                <a class="index-btn" href="index.html">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                                </a>
                             </div>
-                            <a class="index-btn" href="index.html">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-                            </a>
                         </div>
                         <div class="nav">
                             <a href="pprint_002dindent.html" class="nav-btn nav__prev ">
@@ -49,7 +52,7 @@
 <p><code>pprint-logical-block</code>  <i><span class="roman">(</span>stream-symbol object 
 					     &amp;key</i> prefix per-line-prefix suffix<span class="roman">)</span>
 				{<i>declaration</i>}* {<i>form</i>}*<br>
-   &rArr;  <i><b>nil</b></i>
+   &rArr;  <i><a href="NILv.html">nil</a></i>
 </p>
 </div>
 <div class="section">
@@ -115,7 +118,7 @@ is <i>non-nil</i> and <i>object</i> is a circular (or shared) reference to a <i>
 then an appropriate &ldquo;<tt>#<i>n</i>#</tt>&rdquo; marker is printed.  (This
 makes it easy to write printing functions that provide full support
 for circularity and sharing abbreviation.)  If <b>*print-level*</b> is not
-<b>nil</b> and the logical block is at a dynamic nesting depth of greater
+<a href="NILv.html">nil</a> and the logical block is at a dynamic nesting depth of greater
 than <b>*print-level*</b> in logical blocks, &ldquo;<tt>#</tt>&rdquo; is printed.
 (This makes easy to write printing functions that provide full support for depth
 abbreviation.)
@@ -124,7 +127,7 @@ abbreviation.)
 printed on <i>stream-symbol</i> and the body <i>forms</i> are skipped 
 along with the printing of the <tt>:prefix</tt> and <tt>:suffix</tt>.
 (If the body <i>forms</i> are not to be responsible for printing a list,
-then the first two tests above can be turned off by supplying <b>nil</b> for
+then the first two tests above can be turned off by supplying <a href="NILv.html">nil</a> for
 the <i>object</i> argument.)
 </p>
 <p>In addition to the <i>object</i> argument of <b>pprint-logical-block</b>,
@@ -173,10 +176,10 @@ sent directly to the underlying destination stream.
 <div class="section">
 <h4 class="subsubheading">See Also</h4>
 
-<p><a href="pprint_002dpop.html#pprint_002dpop">pprint-pop</a>
-,
-<a href="pprint_002dexit_002dif_002dlist_002dexhausted.html#pprint_002dexit_002dif_002dlist_002dexhausted">pprint-exit-if-list-exhausted</a>
-,
+<p><a href="pprint_002dpop.html#pprint_002dpop">pprint-pop</a>, 
+
+<a href="pprint_002dexit_002dif_002dlist_002dexhausted.html#pprint_002dexit_002dif_002dlist_002dexhausted">pprint-exit-if-list-exhausted</a>, 
+
 <a href="Tilde-Less_002dThan_002dSign_002d_003e-Logical-Block.html#Tilde-Less_002dThan_002dSign_002d_003e-Logical-Block">Tilde Less-Than-Sign-&gt; Logical Block</a>
 </p>
 </div>
@@ -184,7 +187,7 @@ sent directly to the underlying destination stream.
 <h4 class="subsubheading">Notes</h4>
 
 <p>One reason for using the <b>pprint-logical-block</b> <i>macro</i> when the <i>value</i> of <b>*print-pretty*</b>
-is <b>nil</b> would be to allow it to perform checking for <i>dotted lists</i>, 
+is <a href="NILv.html">nil</a> would be to allow it to perform checking for <i>dotted lists</i>, 
 as well as (in conjunction with <b>pprint-pop</b>) 
 checking for <b>*print-level*</b> or <b>*print-length*</b> being exceeded.
 </p>

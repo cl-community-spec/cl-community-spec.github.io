@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="stylesheet" href="/styles.css">
 <link rel="stylesheet" href="/highlight-lisp/themes/github.css">
@@ -17,15 +18,17 @@
 
 <body lang="en">
 
-                        <div class="top">
-                            <div class="search">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
-                                <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
-                                <div id="search__drop" onblur="hideSearch()"></div>
+                        <div class="top-wrapper">
+                            <div class="top">
+                                <div class="search">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+                                    <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
+                                    <div id="search__drop" onblur="hideSearch()"></div>
+                                </div>
+                                <a class="index-btn" href="index.html">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                                </a>
                             </div>
-                            <a class="index-btn" href="index.html">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-                            </a>
                         </div>
                         <div class="nav">
                             <a href="compute_002drestarts.html" class="nav-btn nav__prev ">
@@ -55,9 +58,9 @@
 
 <p><i>identifier</i>&mdash;a <i>non-nil</i> <i>symbol</i>, or a <i>restart</i>.
 </p>
-<p><i>condition</i>&mdash;a <i>condition</i> <i>object</i>, or <b>nil</b>.
+<p><i>condition</i>&mdash;a <i>condition</i> <i>object</i>, or <a href="NILv.html">nil</a>.
 </p>
-<p><i>restart</i>&mdash;a <i>restart</i> or <b>nil</b>.
+<p><i>restart</i>&mdash;a <i>restart</i> or <a href="NILv.html">nil</a>.
 </p>
 </div>
 <div class="section">
@@ -71,14 +74,14 @@ are considered that are either explicitly associated with that <i>condition</i>,
 or not associated with any <i>condition</i>; that is, the excluded <i>restarts</i> 
 are those that are associated with a non-empty set of <i>conditions</i> of 
 which the given <i>condition</i> is not an <i>element</i>.
-If <i>condition</i> is <b>nil</b>, all <i>restarts</i> are considered.
+If <i>condition</i> is <a href="NILv.html">nil</a>, all <i>restarts</i> are considered.
 </p>
 <p>If <i>identifier</i> is a <i>symbol</i>, then the innermost 
 (most recently established) <i>applicable restart</i> with that <i>name</i> is returned.
-<b>nil</b> is returned if no such restart is found.
+<a href="NILv.html">nil</a> is returned if no such restart is found.
 </p>
 <p>If <i>identifier</i> is a currently active restart, then it is returned.
-Otherwise, <b>nil</b> is returned.
+Otherwise, <a href="NILv.html">nil</a> is returned.
 </p>
 </div>
 <div class="section">
@@ -120,9 +123,9 @@ Otherwise, <b>nil</b> is returned.
 </code>
 </pre></div>
 
-<p>Although anonymous restarts have a name of <b>nil</b>,
-the consequences are unspecified if <b>nil</b> is given as an <i>identifier</i>.  
-Occasionally, programmers lament that <b>nil</b> is not permissible as an
+<p>Although anonymous restarts have a name of <a href="NILv.html">nil</a>,
+the consequences are unspecified if <a href="NILv.html">nil</a> is given as an <i>identifier</i>.  
+Occasionally, programmers lament that <a href="NILv.html">nil</a> is not permissible as an
 <i>identifier</i> argument.  In most such cases, <b>compute-restarts</b>
 can probably be used to simulate the desired effect.
 </p>

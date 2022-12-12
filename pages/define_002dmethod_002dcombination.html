@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="stylesheet" href="/styles.css">
 <link rel="stylesheet" href="/highlight-lisp/themes/github.css">
@@ -17,15 +18,17 @@
 
 <body lang="en">
 
-                        <div class="top">
-                            <div class="search">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
-                                <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
-                                <div id="search__drop" onblur="hideSearch()"></div>
+                        <div class="top-wrapper">
+                            <div class="top">
+                                <div class="search">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+                                    <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
+                                    <div id="search__drop" onblur="hideSearch()"></div>
+                                </div>
+                                <a class="index-btn" href="index.html">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                                </a>
                             </div>
-                            <a class="index-btn" href="index.html">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-                            </a>
                         </div>
                         <div class="nav">
                             <a href="compute_002dapplicable_002dmethods.html" class="nav-btn nav__prev ">
@@ -121,7 +124,7 @@ of method combination.
 <p>There are two forms of <b>define-method-combination</b>.  The short
 form is a simple facility for the cases that are expected
 to be most commonly needed.  The long form is more powerful but more
-verbose.  It resembles <b>defmacro</b> in that the body is an
+verbose.  It resembles <a href="defmacro.html">defmacro</a> in that the body is an
 expression, usually using backquote, that computes a <i>form</i>.  Thus
 arbitrary control structures can be implemented.  The long form also
 allows arbitrary processing of method <i>qualifiers</i>.
@@ -254,7 +257,7 @@ is called with one argument, the method&rsquo;s <i>qualifier</i> <i>list</i>.
 The <i>predicate</i> should return true if the method is to be a member of the
 method group.  A <i>predicate</i> can be distinguished from a 
 <i>qualifier-pattern</i>
-because it is a <i>symbol</i> other than <b>nil</b> or <b>*</b>.
+because it is a <i>symbol</i> other than <a href="NILv.html">nil</a> or <b>*</b>.
 </p>
 <p>If there is an applicable method that does not fall into any method group,
 the <i>function</i> <b>invalid-method-error</b> is called.
@@ -298,7 +301,7 @@ If its value is <i>true</i> and the method group is empty
 or satisfy the predicate), 
 an error is signaled.  
 If <tt>:required</tt> is not supplied,
-it defaults to <b>nil</b>.  
+it defaults to <a href="NILv.html">nil</a>.  
 </p>
 </dd>
 </dl>
@@ -336,7 +339,7 @@ single method directly as the effective method, thus avoiding the need
 to create a new effective method.  This optimization is active when
 the effective method form consists entirely of an invocation of
 the <b>call-method</b> macro whose first <i>subform</i> is a method object and
-whose second <i>subform</i> is <b>nil</b> or unsupplied.  Each
+whose second <i>subform</i> is <a href="NILv.html">nil</a> or unsupplied.  Each
 <b>define-method-combination</b> body is responsible for stripping off
 redundant invocations of <b>progn</b>, <b>and</b>,
 <b>multiple-value-prog1</b>, and the like, if this optimization is desired.
@@ -370,7 +373,7 @@ in the corresponding section of the <i>arguments</i>.
 If the section of the <tt>:arguments</tt> <i>lambda-list</i> is shorter,
  extra <i>arguments</i> are ignored. 
 If the section of the <tt>:arguments</tt> <i>lambda-list</i> is longer,
- excess <i>required parameters</i> are bound to forms that evaluate to <b>nil</b> 
+ excess <i>required parameters</i> are bound to forms that evaluate to <a href="NILv.html">nil</a> 
  and excess <i>optional parameters</i> are <i>bound</i> to their initforms.
 The <i>keyword parameters</i> and <i>rest parameters</i> in the <tt>:arguments</tt>
 <i>lambda-list</i> access the keyword/rest section of the <i>arguments</i>.
@@ -610,18 +613,18 @@ an error of <i>type</i> <b>error</b> is signaled.
 
 <p>&lsquo;call-method; make-method&rsquo;
 ,
-<a href="call_002dnext_002dmethod.html#call_002dnext_002dmethod">call-next-method</a>
-,
-<a href="documentation.html">documentation; (setf documentation)</a>
-,
-<a href="method_002dqualifiers.html#method_002dqualifiers">method-qualifiers</a>
-,
-<a href="method_002dcombination_002derror.html#method_002dcombination_002derror">method-combination-error</a>
-,
-<a href="invalid_002dmethod_002derror.html#invalid_002dmethod_002derror">invalid-method-error</a>
-,
-<a href="defgeneric.html#defgeneric">defgeneric</a>
-,
+<a href="call_002dnext_002dmethod.html#call_002dnext_002dmethod">call-next-method</a>, 
+
+<a href="documentation.html">documentation; (setf documentation)</a>, 
+
+<a href="method_002dqualifiers.html#method_002dqualifiers">method-qualifiers</a>, 
+
+<a href="method_002dcombination_002derror.html#method_002dcombination_002derror">method-combination-error</a>, 
+
+<a href="invalid_002dmethod_002derror.html#invalid_002dmethod_002derror">invalid-method-error</a>, 
+
+<a href="defgeneric.html#defgeneric">defgeneric</a>, 
+
 <a href="Method-Selection-and-Combination.html#Method-Selection-and-Combination">Method Selection and Combination</a>,
 <a href="Built_002din-Method-Combination-Types.html#Built_002din-Method-Combination-Types">Built-in Method Combination Types</a>,
 <a href="Syntactic-Interaction-of-Documentation-Strings-and-Declarations.html#Syntactic-Interaction-of-Documentation-Strings-and-Declarations">Syntactic Interaction of Documentation Strings and Declarations</a>

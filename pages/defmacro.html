@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="stylesheet" href="/styles.css">
 <link rel="stylesheet" href="/highlight-lisp/themes/github.css">
@@ -17,15 +18,17 @@
 
 <body lang="en">
 
-                        <div class="top">
-                            <div class="search">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
-                                <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
-                                <div id="search__drop" onblur="hideSearch()"></div>
+                        <div class="top-wrapper">
+                            <div class="top">
+                                <div class="search">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+                                    <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
+                                    <div id="search__drop" onblur="hideSearch()"></div>
+                                </div>
+                                <a class="index-btn" href="index.html">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                                </a>
                             </div>
-                            <a class="index-btn" href="index.html">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-                            </a>
                         </div>
                         <div class="nav">
                             <a href="define_002dcompiler_002dmacro.html" class="nav-btn nav__prev ">
@@ -72,7 +75,7 @@ by associating a <i>macro function</i> with that <i>name</i>
 in the global environment.
 </p>
 <p>The <i>macro function</i> is defined in the same <i>lexical environment</i>
-in which the <b>defmacro</b> <i>form</i> appears.
+in which the <a href="defmacro.html">defmacro</a> <i>form</i> appears.
 </p>
 <p>The parameter variables in <i>lambda-list</i> are bound to
 destructured portions of the macro call.
@@ -95,7 +98,7 @@ last <i>form</i> executed is returned as the expansion of the
     to <i>name</i> (as kind <b>function</b>)
 and to the <i>macro function</i>.
 </p>
-<p><b>defmacro</b> can be used to redefine a <i>macro</i> or to replace
+<p><a href="defmacro.html">defmacro</a> can be used to redefine a <i>macro</i> or to replace
 a <i>function</i> definition with a <i>macro</i> definition.
 </p>
 <p>Recursive expansion of the <i>form</i> returned must terminate,
@@ -106,7 +109,7 @@ of other <i>forms</i> returned.
 a <i>form</i>
 contains any <i>circular</i> <i>list structure</i> except in <i>literal objects</i>.
 </p>
-<p>If a <b>defmacro</b> <i>form</i> appears as a <i>top level form</i>,
+<p>If a <a href="defmacro.html">defmacro</a> <i>form</i> appears as a <i>top level form</i>,
 the <i>compiler</i> must store the <i>macro</i> definition at compile time,
 so that occurrences of the macro later on in the file can be expanded correctly.
 Users must ensure that the body of the <i>macro</i> can be evaluated at 
@@ -160,9 +163,9 @@ correct way to express this is
 definition is now incorrect because a macro call such as <tt>(loser (car pool))</tt>
 would not provide any argument form for the lambda list <tt>(a b &amp;rest c)</tt>,
 and so the default value against which to match the <i>lambda list</i> would be
-<b>nil</b> because no explicit default value was specified.  
+<a href="NILv.html">nil</a> because no explicit default value was specified.  
 The consequences of this are  unspecified
-since the empty list, <b>nil</b>, does not have <i>forms</i> to satisfy the
+since the empty list, <a href="NILv.html">nil</a>, does not have <i>forms</i> to satisfy the
 parameters <tt>a</tt> and <tt>b</tt>.  The fully correct definition would be either
 </p>
 <div class="example">
@@ -231,19 +234,19 @@ whereas the second does not have this requirement.  For example,
 <div class="section">
 <h4 class="subsubheading">See Also</h4>
 
-<p><a href="define_002dcompiler_002dmacro.html#define_002dcompiler_002dmacro">define-compiler-macro</a>
-,
+<p><a href="define_002dcompiler_002dmacro.html#define_002dcompiler_002dmacro">define-compiler-macro</a>, 
+
 </p>
-<p><a href="destructuring_002dbind.html#destructuring_002dbind">destructuring-bind</a>
-, 
-<a href="documentation.html">documentation; (setf documentation)</a>
-,
-<a href="macroexpand.html">macroexpand; macroexpand-1</a>
-,
+<p><a href="destructuring_002dbind.html#destructuring_002dbind">destructuring-bind</a>, 
+ 
+<a href="documentation.html">documentation; (setf documentation)</a>, 
+
+<a href="macroexpand.html">macroexpand; macroexpand-1</a>, 
+
 <b>*macroexpand-hook*</b>,
-<b>macrolet</b>, 
-<a href="macro_002dfunction.html#macro_002dfunction">macro-function</a>
-, 
+<a href="flet.html">macrolet</a>, 
+<a href="macro_002dfunction.html#macro_002dfunction">macro-function</a>, 
+ 
 <a href="Evaluation.html#Evaluation">Evaluation</a>,
 <a href="Compilation.html#Compilation">Compilation</a>,
 <a href="Syntactic-Interaction-of-Documentation-Strings-and-Declarations.html#Syntactic-Interaction-of-Documentation-Strings-and-Declarations">Syntactic Interaction of Documentation Strings and Declarations</a>
@@ -255,7 +258,7 @@ whereas the second does not have this requirement.  For example,
 
                     <div class="section">
                         <h3>Backlinks</h3>
-                        <a href="define_002dcompiler_002dmacro.html">define-compiler-macro</a>, <a href="deftype.html">deftype</a>, <a href="destructuring_002dbind.html">destructuring-bind</a>, <a href="Evaluation-and-Compilation-Dictionary.html">Evaluation and Compilation Dictionary</a>, <a href="find_002dclass.html">find-class</a>, <a href="flet.html">flet; labels; macrolet</a>, <a href="lambda_002dlist_002dkeywords.html">lambda-list-keywords</a>, <a href="macroexpand.html">macroexpand; macroexpand-1</a>, <a href="macro_002dfunction.html">macro-function</a>
+                        <a href="Declarative-Method-Combination.html">Declarative Method Combination</a>, <a href="define_002dcompiler_002dmacro.html">define-compiler-macro</a>, <a href="define_002dmethod_002dcombination.html">define-method-combination</a>, <a href="define_002dsetf_002dexpander.html">define-setf-expander</a>, <a href="defmacro.html">defmacro</a>, <a href="defsetf.html">defsetf</a>, <a href="deftype.html">deftype</a>, <a href="destructuring_002dbind.html">destructuring-bind</a>, <a href="Evaluation-and-Compilation-Dictionary.html">Evaluation and Compilation Dictionary</a>, <a href="Evaluation-of-Subforms-to-Places.html">Evaluation of Subforms to Places</a>, <a href="eval_002dwhen.html">eval-when</a>, <a href="find_002dclass.html">find-class</a>, <a href="flet.html">macrolet</a>, <a href="Glossary.html">Glossary</a>, <a href="Lambda-Lists.html">Lambda Lists</a>, <a href="lambda_002dlist_002dkeywords.html">lambda-list-keywords</a>, <a href="macroexpand.html">macroexpand-1</a>, <a href="macro_002dfunction.html">macro-function</a>, <a href="Processing-of-Defining-Macros.html">Processing of Defining Macros</a>
                     </div>
                 
 </body>

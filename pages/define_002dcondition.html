@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="stylesheet" href="/styles.css">
 <link rel="stylesheet" href="/highlight-lisp/themes/github.css">
@@ -17,15 +18,17 @@
 
 <body lang="en">
 
-                        <div class="top">
-                            <div class="search">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
-                                <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
-                                <div id="search__drop" onblur="hideSearch()"></div>
+                        <div class="top-wrapper">
+                            <div class="top">
+                                <div class="search">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+                                    <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
+                                    <div id="search__drop" onblur="hideSearch()"></div>
+                                </div>
+                                <a class="index-btn" href="index.html">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                                </a>
                             </div>
-                            <a class="index-btn" href="index.html">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-                            </a>
                         </div>
                         <div class="nav">
                             <a href="ignore_002derrors.html" class="nav-btn nav__prev ">
@@ -107,7 +110,7 @@ the <i>list</i> of a slot name, or the
 <dl compact="compact">
 <dt><tt>:reader</tt></dt>
 <dd><p><tt>:reader</tt> can be supplied more than once for a given <i>slot</i> 
-and cannot be <b>nil</b>.
+and cannot be <a href="NILv.html">nil</a>.
 </p>
 </dd>
 <dt><tt>:writer</tt></dt>
@@ -117,7 +120,7 @@ and must name a <i>generic function</i>.
 </dd>
 <dt><tt>:accessor</tt></dt>
 <dd><p><tt>:accessor</tt> can be supplied more than once for a given <i>slot</i>
-and cannot be <b>nil</b>.
+and cannot be <a href="NILv.html">nil</a>.
 </p>
 </dd>
 <dt><tt>:allocation</tt></dt>
@@ -258,7 +261,7 @@ for the <i>slot</i>.
 </p>
 <p><i>Condition</i> reporting is mediated through the <b>print-object</b>
 method for the <i>condition</i> type in question, with <b>*print-escape*</b>
-always being <b>nil</b>. Specifying <tt>(:report <i>report-name</i>)</tt> 
+always being <a href="NILv.html">nil</a>. Specifying <tt>(:report <i>report-name</i>)</tt> 
 in the definition of a condition type <tt>C</tt> is equivalent to:
 </p>
 <div class="example">
@@ -279,7 +282,7 @@ of two
 that prints on the <i>stream</i> a
      description of the <i>condition</i>. 
  This <i>function</i> is called whenever the
-     <i>condition</i> is printed while <b>*print-escape*</b> is <b>nil</b>.
+     <i>condition</i> is printed while <b>*print-escape*</b> is <a href="NILv.html">nil</a>.
 </p>
 <p>If <i>report-name</i> is a <i>string</i>, it is a shorthand for 
 </p>
@@ -411,10 +414,10 @@ report this type of condition.
 <div class="section">
 <h4 class="subsubheading">See Also</h4>
 
-<p><a href="make_002dcondition.html#make_002dcondition">make-condition</a>
-, 
-<a href="defclass.html#defclass">defclass</a>
-, <a href="Condition-System-Concepts.html#Condition-System-Concepts">Condition System Concepts</a>
+<p><a href="make_002dcondition.html#make_002dcondition">make-condition</a>, 
+ 
+<a href="defclass.html#defclass">defclass</a>, 
+ <a href="Condition-System-Concepts.html#Condition-System-Concepts">Condition System Concepts</a>
 </p>
 
 

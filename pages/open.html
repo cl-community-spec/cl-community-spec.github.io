@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="stylesheet" href="/styles.css">
 <link rel="stylesheet" href="/highlight-lisp/themes/github.css">
@@ -17,15 +18,17 @@
 
 <body lang="en">
 
-                        <div class="top">
-                            <div class="search">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
-                                <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
-                                <div id="search__drop" onblur="hideSearch()"></div>
+                        <div class="top-wrapper">
+                            <div class="top">
+                                <div class="search">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+                                    <input type="text" oninput="search(event)" onkeydown="searchKeydown(event)" placeholder="Search for pages">
+                                    <div id="search__drop" onblur="hideSearch()"></div>
+                                </div>
+                                <a class="index-btn" href="index.html">
+                                    <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                                </a>
                             </div>
-                            <a class="index-btn" href="index.html">
-                                <svg height="20" width="20" viewBox="0 0 512 512"><title>Index</title><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-                            </a>
                         </div>
                         <div class="nav">
                             <a href="file_002dstring_002dlength.html" class="nav-btn nav__prev ">
@@ -72,21 +75,21 @@
 </p>
 <p><i>if-exists</i>&mdash;one of <tt>:error</tt>, <tt>:new-version</tt>, <tt>:rename</tt>,
 		  <tt>:rename-and-delete</tt>, <tt>:overwrite</tt>, <tt>:append</tt>,
-		  <tt>:supersede</tt>, or <b>nil</b>.
+		  <tt>:supersede</tt>, or <a href="NILv.html">nil</a>.
  The default is <tt>:new-version</tt> if the version component of <i>filespec</i> is <tt>:newest</tt>,
           or <tt>:error</tt> otherwise.
 </p>
-<p><i>if-does-not-exist</i>&mdash;one of <tt>:error</tt>, <tt>:create</tt>, or <b>nil</b>.
+<p><i>if-does-not-exist</i>&mdash;one of <tt>:error</tt>, <tt>:create</tt>, or <a href="NILv.html">nil</a>.
  The default is <tt>:error</tt> if <i>direction</i> is <tt>:input</tt> 
 		      or <i>if-exists</i> is <tt>:overwrite</tt> or <tt>:append</tt>;
 	  <tt>:create</tt> if <i>direction</i> is <tt>:output</tt> or <tt>:io</tt>,
 		      and <i>if-exists</i> is neither <tt>:overwrite</tt> nor <tt>:append</tt>;
-       or <b>nil</b> when <i>direction</i> is <tt>:probe</tt>.
+       or <a href="NILv.html">nil</a> when <i>direction</i> is <tt>:probe</tt>.
 </p>
 <p><i>external-format</i>&mdash;an <i>external file format designator</i>.
   The default is <tt>:default</tt>.
 </p>
-<p><i>stream</i>&mdash;a <i>file stream</i> or <b>nil</b>.
+<p><i>stream</i>&mdash;a <i>file stream</i> or <a href="NILv.html">nil</a>.
 </p>
 </div>
 <div class="section">
@@ -202,9 +205,9 @@ If possible, the implementation should not destroy the old file until the new
 <i>stream</i> is closed.
 </p>
 </dd>
-<dt><b>nil</b></dt>
+<dt><a href="NILv.html">nil</a></dt>
 <dd><p>No file or <i>stream</i> is created;
-instead, <b>nil</b> is returned to indicate failure.
+instead, <a href="NILv.html">nil</a> is returned to indicate failure.
 </p>
 </dd>
 </dl>
@@ -228,9 +231,9 @@ had already existed but no processing as
 directed by <i>if-exists</i> is performed.
 </p>
 </dd>
-<dt><b>nil</b></dt>
+<dt><a href="NILv.html">nil</a></dt>
 <dd><p>No file or <i>stream</i> is created;
-instead, <b>nil</b> is returned to indicate failure.
+instead, <a href="NILv.html">nil</a> is returned to indicate failure.
 </p>
 </dd>
 </dl>
@@ -333,10 +336,10 @@ should work compatibly.
 <div class="section">
 <h4 class="subsubheading">See Also</h4>
 
-<p><a href="with_002dopen_002dfile.html#with_002dopen_002dfile">with-open-file</a>
-,
-<a href="close.html#close">close</a>
-,
+<p><a href="with_002dopen_002dfile.html#with_002dopen_002dfile">with-open-file</a>, 
+
+<a href="close.html#close">close</a>, 
+
 <b>pathname</b>,
 <b>logical-pathname</b>,
 </p>
