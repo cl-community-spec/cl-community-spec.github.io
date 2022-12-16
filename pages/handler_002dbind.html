@@ -11,7 +11,7 @@
 <link href="index.html#Top" rel="start" title="Top">
 <link href="Conditions-Dictionary.html#Conditions-Dictionary" rel="up" title="Conditions Dictionary">
 <link href="handler_002dcase.html#handler_002dcase" rel="next" title="handler-case">
-<link href="_002abreak_002don_002dsignals_002a.html#g_t_002abreak_002don_002dsignals_002a" rel="prev" title="*break-on-signals*">
+<link href="002abreak_002don_002dsignals_002a.html#g_t_002abreak_002don_002dsignals_002a" rel="prev" title="*break-on-signals*">
 
 
 </head>
@@ -31,7 +31,7 @@
                             </div>
                         </div>
                         <div class="nav">
-                            <a href="_002abreak_002don_002dsignals_002a.html" class="nav-btn nav__prev ">
+                            <a href="002abreak_002don_002dsignals_002a.html" class="nav-btn nav__prev ">
                                 <svg height="14" width="14" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M328 112L184 256l144 144"/></svg>
                                 *break-on-signals*
                             </a>
@@ -83,7 +83,7 @@ take a single argument, the <i>condition</i> being signaled.
 </p>
 <p>If more than one <i>handler</i> <i>binding</i> is supplied, 
 the <i>handler</i> <i>bindings</i> are searched sequentially from 
-top to bottom in search of a match (by visual analogy with <b>typecase</b>).  
+top to bottom in search of a match (by visual analogy with <b><a href="typecase.html">typecase</a></b>).  
 If an appropriate <i>type</i> is found, 
 the associated handler is run in a <i>dynamic environment</i> where none of these
 <i>handler</i> bindings are visible (to avoid recursive errors).  
@@ -91,7 +91,7 @@ If the <i>handler</i> <i>declines</i>, the search continues for another <i>handl
 </p>
 <p>If no appropriate <i>handler</i> is found, other <i>handlers</i> are sought
 from dynamically enclosing contours.  If no <i>handler</i> is found outside, 
-then <b>signal</b> returns or <b>error</b> enters the debugger. 
+then <b><a href="signal.html">signal</a></b> returns or <b><a href="error.html">error</a></b> enters the debugger. 
 </p>
 </div>
 <div class="section">
@@ -131,8 +131,8 @@ in the associated function.
 </pre></div>
 
 <p>Note that &ldquo;Foo.&rdquo; is not printed because the condition made
-by <b>signal</b> is a <i>simple condition</i>, which is not of <i>type</i> <b>error</b>, 
-so it doesn&rsquo;t trigger the handler for <b>error</b> set up by <tt>trap-errors</tt>.
+by <b><a href="signal.html">signal</a></b> is a <i>simple condition</i>, which is not of <i>type</i> <b><a href="error.html">error</a></b>, 
+so it doesn&rsquo;t trigger the handler for <b><a href="error.html">error</a></b> set up by <tt>trap-errors</tt>.
 </p>
 </div>
 <div class="section">
