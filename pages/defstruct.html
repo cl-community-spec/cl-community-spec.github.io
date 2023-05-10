@@ -818,24 +818,21 @@ these options may be used only if <tt>:type</tt> is not supplied.
 then when a structure of type <i>structure-name</i> is to be printed,
 the designated printer function is called on three <i>arguments</i>:
 </p>
-<dl compact="compact">
-<dt>&ndash;</dt>
-<dd><p>the structure to be printed
+<ul>
+	<li><p>the structure to be printed
 	      (a <i>generalized instance</i> of <i>structure-name</i>).
 </p>
-</dd>
-<dt>&ndash;</dt>
-<dd><p>a <i>stream</i> to print to.
+</li>
+<li><p>a <i>stream</i> to print to.
 </p>
-</dd>
-<dt>&ndash;</dt>
-<dd><p>an <i>integer</i> indicating the current depth.
+</li>
+<li><p>an <i>integer</i> indicating the current depth.
 	      The magnitude of this integer may vary between <i>implementations</i>;
 	      however, it can reliably be compared against <a href="002aprint_002dlevel_002a.html">*print-level*</a>
 	      to determine whether depth abbreviation is appropriate.
 </p>
-</dd>
-</dl>
+</li>
+</ul>
 
 <p>Specifying <tt>(:print-function <i>printer-name</i>)</tt>
 is approximately equivalent to specifying:
@@ -858,16 +855,14 @@ constant during the same traversal.
 when a structure of type <i>structure-name</i> is to be printed,
 the designated printer function is called on two arguments:
 </p>
-<dl compact="compact">
-<dt>&ndash;</dt>
-<dd><p>the structure to be printed.
+<ul>
+	<li><p>the structure to be printed.
 </p>
-</dd>
-<dt>&ndash;</dt>
-<dd><p>the stream to print to.
+</li>
+<li><p>the stream to print to.
 </p>
-</dd>
-</dl>
+</li>
+</ul>
 
 <p>Specifying <tt>(:print-object <i>printer-name</i>)</tt> is equivalent to specifying:
 </p>
@@ -1067,31 +1062,27 @@ The <tt>#S</tt> <i>reader macro</i> might or might not recognize the newly defin
 with five named components.
 The evaluation of this form does the following:
 </p>
-<dl compact="compact">
-<dt>1.</dt>
-<dd><p>It defines <tt>ship-x-position</tt> to be a function
+<ol>
+	<li><p>It defines <tt>ship-x-position</tt> to be a function
 of one argument, a ship, that returns the <tt>x-position</tt>
 of the ship; <tt>ship-y-position</tt>
 and the other components are given similar function definitions.
 These functions are called the <i>access</i> functions, as they
 are used to <i>access</i> elements of the structure.
 </p>
-</dd>
-<dt>2.</dt>
-<dd><p><tt>ship</tt> becomes the name of a <i>type</i> of which instances
+</li>
+<li><p><tt>ship</tt> becomes the name of a <i>type</i> of which instances
 of ships are elements.  <tt>ship</tt> becomes acceptable to <b><a href="typep.html">typep</a></b>,
 for example; <tt>(typep x 'ship)</tt> is <i>true</i> if <tt>x</tt> is a ship
 and false if <tt>x</tt> is any <i>object</i> other than a ship.
 </p>
-</dd>
-<dt>3.</dt>
-<dd><p>A function named <tt>ship-p</tt> of 
+</li>
+<li><p>A function named <tt>ship-p</tt> of 
 one argument is defined; it is a predicate
 that is <i>true</i> if its argument is a ship and is <i>false</i> otherwise.
 </p>
-</dd>
-<dt>4.</dt>
-<dd><p>A function called <tt>make-ship</tt> is defined that, when invoked,
+</li>
+<li><p>A function called <tt>make-ship</tt> is defined that, when invoked,
 creates a data structure with five components, suitable for use with
 the <i>access</i> functions.  Thus executing
 </p>
@@ -1115,14 +1106,13 @@ to <tt>make-ship</tt> by using keyword arguments in this way:
 This function is called the "constructor function"
 because it constructs a new structure.
 </p>
-</dd>
-<dt>5.</dt>
-<dd><p>A function called <tt>copy-ship</tt> of one argument
+</li>
+<li><p>A function called <tt>copy-ship</tt> of one argument
 is defined that, when given a <tt>ship</tt> <i>object</i>,
 creates a new <tt>ship</tt> <i>object</i> that is a copy of the given one.
 This function is called the "copier function."
-</p></dd>
-</dl>
+</p></li>
+</ol>
 
 <p><b><a href="setf.html">setf</a></b> can be used to alter the components of a <tt>ship</tt>:
 </p>
