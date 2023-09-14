@@ -113,7 +113,7 @@ and <a href="002aprint_002dcircle_002a.html">*print-circle*</a> as described bel
 However, before doing this, it performs three tests:
 </p>
 <ul><li><p>If the remaining ‘list’ is not a <i><a href="Glossary.html#list">list</a></i>, 
-    "<tt>. </tt>" is printed followed by the remaining ‘list.’ 
+    "<code class="no-highlight">. </code>" is printed followed by the remaining ‘list.’ 
     (This makes it easier to write printing functions that 
     are robust in the face of malformed arguments.)
 </p>
@@ -121,15 +121,15 @@ However, before doing this, it performs three tests:
 <li><p>If <b>*print-length*</b> is <i><a href="Glossary.html#non_002dnil">non-nil</a></i>,
     and <a href="pprint_002dpop.html">pprint-pop</a> has already been called <b>*print-length*</b> times 
     within the immediately containing logical block,
-    "<tt>...</tt>" is printed.
+    "<code class="no-highlight">...</code>" is printed.
     (This makes it easy to write printing functions that properly handle
     <b>*print-length*</b>.)
 </p>
 </li>
 <li><p>If <a href="002aprint_002dcircle_002a.html">*print-circle*</a> is
     <i><a href="Glossary.html#non_002dnil">non-nil</a></i>, and the remaining list is a circular (or shared) reference,
-    then "<tt>. </tt>" is printed followed by an appropriate
-    "<tt>#<i>n</i>#</tt>" marker.
+    then "<code class="no-highlight">. </code>" is printed followed by an appropriate
+    "<code class="no-highlight">#<i>n</i>#</code>" marker.
     (This catches instances of <i><a href="Glossary.html#cdr">cdr</a></i> circularity and sharing in lists.)
 </p></li></ul>
 <p>If either of the three conditions above occurs, the indicated output is
@@ -147,7 +147,7 @@ See <a href="Examples-of-using-the-Pretty-Printer.html#Examples-of-using-the-Pre
 <p>Whether or not <a href="pprint_002dpop.html">pprint-pop</a> is <i><a href="Glossary.html#fbound">fbound</a></i> in the
 <i><a href="Glossary.html#global-environment">global environment</a></i> is <i><a href="Glossary.html#implementation_002ddependent">implementation-dependent</a></i>;
 however, the restrictions on redefinition and <i>shadowing</i> of
-<a href="pprint_002dpop.html">pprint-pop</a> are the same as for <i><a href="Glossary.html#symbol">symbols</a></i> in the <tt>COMMON-LISP</tt> <i><a href="Glossary.html#package">package</a></i>
+<a href="pprint_002dpop.html">pprint-pop</a> are the same as for <i><a href="Glossary.html#symbol">symbols</a></i> in the <code class="no-highlight">COMMON-LISP</code> <i><a href="Glossary.html#package">package</a></i>
 which are <i><a href="Glossary.html#fbound">fbound</a></i> in the <i><a href="Glossary.html#global-environment">global environment</a></i>.
 The consequences of attempting to use <a href="pprint_002dpop.html">pprint-pop</a> outside
 of <a href="pprint_002dlogical_002dblock.html">pprint-logical-block</a> are undefined.
@@ -188,10 +188,8 @@ of the <i><a href="Glossary.html#dynamic-extent">dynamic extent</a></i> of this 
 before calling <a href="pprint_002dpop.html">pprint-pop</a>.
 </p>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="Format-Directive-Interface.html">Format-Directive-Interface</a>, <a href="pprint_002dexit_002dif_002dlist_002dexhausted.html">pprint-exit-if-list-exhausted</a>, <a href="pprint_002dlogical_002dblock.html">pprint-logical-block</a>, <a href="pprint_002dpop.html">pprint-pop</a>, <a href="print_002dobject.html">print-object</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="Tilde-Less_002dThan_002dSign_002d_003e-Logical-Block.html">Tilde Less-Than-Sign-&gt; Logical Block</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="Format-Directive-Interface.html">Format Directive Interface</a>, <a href="pprint_002dexit_002dif_002dlist_002dexhausted.html">pprint-exit-if-list-exhausted</a>, <a href="pprint_002dlogical_002dblock.html">pprint-logical-block</a>, <a href="print_002dobject.html">print-object</a>, <a href="Printer-Dictionary.html">Printer Dictionary</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="Tilde-Less_002dThan_002dSign_002d_003e-Logical-Block.html">Tilde Less-Than-Sign: Logical Block</a> </div>
 </div>
 </div>
 </div>

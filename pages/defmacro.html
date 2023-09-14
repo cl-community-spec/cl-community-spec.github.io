@@ -181,11 +181,11 @@ the following is not valid:
 </code>
 </pre></div>
 <p>because <i><a href="Glossary.html#ordinary-lambda-list">ordinary lambda list</a></i> syntax does permit a 
-<i><a href="Glossary.html#list">list</a></i> following <tt>&amp;optional</tt>;
-the list <tt>(a b &amp;rest c)</tt> would be interpreted as describing an
-optional parameter named <tt>a</tt> whose default value is that of the
-form <tt>b</tt>, with a supplied-p parameter named <b>&amp;rest</b> (not valid),
-and an extraneous symbol <tt>c</tt> in the list (also not valid).  An almost
+<i><a href="Glossary.html#list">list</a></i> following <code class="no-highlight">&amp;optional</code>;
+the list <code class="no-highlight">(a b &amp;rest c)</code> would be interpreted as describing an
+optional parameter named <code class="no-highlight">a</code> whose default value is that of the
+form <code class="no-highlight">b</code>, with a supplied-p parameter named <b>&amp;rest</b> (not valid),
+and an extraneous symbol <code class="no-highlight">c</code> in the list (also not valid).  An almost
 correct way to express this is
 </p>
 <div class="example">
@@ -194,13 +194,13 @@ correct way to express this is
 </code>
 </pre></div>
 <p>The extra set of parentheses removes the ambiguity.  However, the
-definition is now incorrect because a macro call such as <tt>(loser (car pool))</tt>
-would not provide any argument form for the lambda list <tt>(a b &amp;rest c)</tt>,
+definition is now incorrect because a macro call such as <code class="no-highlight">(loser (car pool))</code>
+would not provide any argument form for the lambda list <code class="no-highlight">(a b &amp;rest c)</code>,
 and so the default value against which to match the <i><a href="Glossary.html#lambda-list">lambda list</a></i> would be
 <a href="NILv.html">nil</a> because no explicit default value was specified.  
 The consequences of this are  unspecified
 since the empty list, <a href="NILv.html">nil</a>, does not have <i><a href="Glossary.html#form">forms</a></i> to satisfy the
-parameters <tt>a</tt> and <tt>b</tt>.  The fully correct definition would be either
+parameters <code class="no-highlight">a</code> and <code class="no-highlight">b</code>.  The fully correct definition would be either
 </p>
 <div class="example">
 <pre class="example"><code> (defmacro loser (x &amp;optional ((a b &amp;rest c) '(nil nil)) &amp;rest z)
@@ -215,7 +215,7 @@ parameters <tt>a</tt> and <tt>b</tt>.  The fully correct definition would be eit
 </code>
 </pre></div>
 <p>These differ slightly: the first requires that if the macro call
-specifies <tt>a</tt> explicitly then it must also specify <tt>b</tt> explicitly,
+specifies <code class="no-highlight">a</code> explicitly then it must also specify <code class="no-highlight">b</code> explicitly,
 whereas the second does not have this requirement.  For example,
 </p>
 <div class="example">
@@ -280,10 +280,8 @@ whereas the second does not have this requirement.  For example,
 <a href="Syntactic-Interaction-of-Documentation-Strings-and-Declarations.html#Syntactic-Interaction-of-Documentation-Strings-and-Declarations">Syntactic Interaction of Documentation Strings and Declarations</a>
 </p>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="Declarative-Method-Combination.html">Declarative-Method-Combination</a>, <a href="declare.html">declare</a>, <a href="define_002dcompiler_002dmacro.html">define-compiler-macro</a>, <a href="define_002dmethod_002dcombination.html">define-method-combination</a>, <a href="define_002dsetf_002dexpander.html">define-setf-expander</a>, <a href="defmacro.html">defmacro</a>, <a href="defsetf.html">defsetf</a>, <a href="deftype.html">deftype</a>, <a href="destructuring_002dbind.html">destructuring-bind</a>, <a href="eval_002dwhen.html">eval-when</a>, <a href="Evaluation-of-Subforms-to-Places.html">Evaluation of Subforms to Places</a>, <a href="Evaluation-and-Compilation-Dictionary.html">Evaluation-and-Compilation-Dictionary</a>, <a href="find_002dclass.html">find-class</a>, <a href="Glossary.html">Glossary</a>, <a href="Lambda-Lists.html">Lambda Lists</a>, <a href="lambda_002dlist_002dkeywords.html">lambda-list-keywords</a>, <a href="Macro-Lambda-Lists.html">Macro Lambda Lists</a>, <a href="Macro-Forms.html">Macro-Forms</a>, <a href="macro_002dfunction.html">macro-function</a>, <a href="macroexpand.html">macroexpand</a>, <a href="flet.html">macrolet</a>, <a href="Processing-of-Defining-Macros.html">Processing-of-Defining-Macros</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="Declarative-Method-Combination.html">Declarative Method Combination</a>, <a href="declare.html">declare</a>, <a href="define_002dcompiler_002dmacro.html">define-compiler-macro</a>, <a href="define_002dmethod_002dcombination.html">define-method-combination</a>, <a href="define_002dsetf_002dexpander.html">define-setf-expander</a>, <a href="defsetf.html">defsetf</a>, <a href="deftype.html">deftype</a>, <a href="destructuring_002dbind.html">destructuring-bind</a>, <a href="eval_002dwhen.html">eval-when</a>, <a href="Evaluation-and-Compilation-Dictionary.html">Evaluation and Compilation Dictionary</a>, <a href="Evaluation-of-Subforms-to-Places.html">Evaluation of Subforms to Places</a>, <a href="find_002dclass.html">find-class</a>, <a href="flet.html">flet, labels, macrolet</a>, <a href="Lambda-Lists.html">Lambda Lists</a>, <a href="lambda_002dlist_002dkeywords.html">lambda-list-keywords</a>, <a href="Macro-Forms.html">Macro Forms</a>, <a href="Macro-Lambda-Lists.html">Macro Lambda Lists</a>, <a href="macro_002dfunction.html">macro-function</a>, <a href="macroexpand.html">macroexpand, macroexpand-1</a>, <a href="Processing-of-Defining-Macros.html">Processing of Defining Macros</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a> </div>
 </div>
 </div>
 </div>

@@ -159,7 +159,7 @@ is reached before the beginning of an <i><a href="Glossary.html#object">object</
 <h4 class="subsubheading">Examples</h4>
 <div class="example">
 <pre class="example"><code> (read)
-<tt> |&gt; </tt> <b>|&gt;&gt;</b><tt>'a</tt><b>&lt;&lt;|</b>
+<code class="no-highlight"> |&gt; </code> <b>|&gt;&gt;</b><code class="no-highlight">'a</code><b>&lt;&lt;|</b>
 ⇒  (QUOTE A)
  (with-input-from-string (is " ") (read is nil 'the-end)) ⇒  THE-END
  (defun skip-then-read-char (s c n)
@@ -191,8 +191,8 @@ is reached before the beginning of an <i><a href="Glossary.html#object">object</
 <pre class="example"><code> (zyedh /usr/games/zork /usr/games/boggle)
 </code>
 </pre></div>
-<p>The <tt>/</tt> macro reads objects separated by more <tt>/</tt> characters;
-thus <tt>/usr/games/zork</tt> is intended to read as <tt>(path usr games zork)</tt>.
+<p>The <code class="no-highlight">/</code> macro reads objects separated by more <code class="no-highlight">/</code> characters;
+thus <code class="no-highlight">/usr/games/zork</code> is intended to read as <code class="no-highlight">(path usr games zork)</code>.
 The entire example expression should therefore be read as
 </p>
 <div class="example">
@@ -201,8 +201,8 @@ The entire example expression should therefore be read as
 </pre></div>
 <p>However, if <b><a href="read.html">read</a></b> had been used instead of
 <b>read-preserving-whitespace</b>, then after the reading of the symbol
-<tt>zork</tt>, the following space would be discarded; the next call
-to <a href="peek_002dchar.html">peek-char</a> would see the following <tt>/</tt>, and the loop would
+<code class="no-highlight">zork</code>, the following space would be discarded; the next call
+to <a href="peek_002dchar.html">peek-char</a> would see the following <code class="no-highlight">/</code>, and the loop would
 continue, producing this interpretation:
 </p>
 <div class="example">
@@ -263,10 +263,8 @@ is signaled at the end of file.
 <a href="Reader-Concepts.html#Reader-Concepts">Reader Concepts</a>
 </p>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="002adebug_002dio_002a.html">*debug-io*</a>, <a href="002aprint_002dcase_002a.html">*print-case*</a>, <a href="002aread_002dbase_002a.html">*read-base*</a>, <a href="002aread_002dsuppress_002a.html">*read-suppress*</a>, <a href="002aterminal_002dio_002a.html">*terminal-io*</a>, <a href="Condition-Types.html">Condition-Types</a>, <a href="Definition-of-Similarity.html">Definition-of-Similarity</a>, <a href="Documentation-of-Implementation_002dDefined-Scripts.html">Documentation of Implementation-Defined Scripts</a>, <a href="Glossary.html">Glossary</a>, <a href="graphic_002dchar_002dp.html">graphic-char-p</a>, <a href="Input.html">Input</a>, <a href="Left_002dParenthesis.html">Left-Parenthesis</a>, <a href="peek_002dchar.html">peek-char</a>, <a href="Potential-Numbers-as-Tokens.html">Potential Numbers as Tokens</a>, <a href="write.html">prin1</a>, <a href="Printing-Random-States.html">Printing Random States</a>, <a href="Printing-Symbols.html">Printing Symbols</a>, <a href="read_002dchar_002dno_002dhang.html">read-char-no-hang</a>, <a href="read_002dchar.html">read-char</a>, <a href="read_002ddelimited_002dlist.html">read-delimited-list</a>, <a href="read_002dfrom_002dstring.html">read-from-string</a>, <a href="read_002dline.html">read-line</a>, <a href="read.html">read; read-preserving-whitespace</a>, <a href="Reader-Algorithm.html">Reader Algorithm</a>, <a href="reader_002derror.html">reader-error</a>, <a href="Sharpsign-Backslash.html">Sharpsign Backslash</a>, <a href="Sharpsign-Dot.html">Sharpsign Dot</a>, <a href="Sharpsign-Equal_002dSign.html">Sharpsign Equal-Sign</a>, <a href="Sharpsign-Plus.html">Sharpsign Plus</a>, <a href="Special-Symbols.html">Special-Symbols</a>, <a href="Stream-Arguments-to-Standardized-Functions.html">Stream Arguments to Standardized Functions</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="The-EOF_002dERROR_002dP-argument.html">The-EOF-ERROR-P-argument</a>, <a href="The-RECURSIVE_002dP-argument.html">The-RECURSIVE-P-argument</a>, <a href="Tilde-S_002d_003e-Standard.html">Tilde-S-&gt;-Standard</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="002adebug_002dio_002a.html">*debug-io*, *error-output*, *query-io*, *standard-input*, *standard-output*, *trace-output*</a>, <a href="002aprint_002dcase_002a.html">*print-case*</a>, <a href="002aread_002dbase_002a.html">*read-base*</a>, <a href="002aread_002dsuppress_002a.html">*read-suppress*</a>, <a href="002aterminal_002dio_002a.html">*terminal-io*</a>, <a href="Condition-Types.html">Condition Types</a>, <a href="Definition-of-Similarity.html">Definition of Similarity</a>, <a href="Documentation-of-Implementation_002dDefined-Scripts.html">Documentation of Implementation-Defined Scripts</a>, <a href="graphic_002dchar_002dp.html">graphic-char-p</a>, <a href="Input.html">Input, Output, and Bidirectional Streams</a>, <a href="Left_002dParenthesis.html">Left-Parenthesis</a>, <a href="peek_002dchar.html">peek-char</a>, <a href="Potential-Numbers-as-Tokens.html">Potential Numbers as Tokens</a>, <a href="Printing-Random-States.html">Printing Random States</a>, <a href="Printing-Symbols.html">Printing Symbols</a>, <a href="read_002dchar_002dno_002dhang.html">read-char-no-hang</a>, <a href="read_002dchar.html">read-char</a>, <a href="read_002ddelimited_002dlist.html">read-delimited-list</a>, <a href="read_002dfrom_002dstring.html">read-from-string</a>, <a href="read_002dline.html">read-line</a>, <a href="Reader-Algorithm.html">Reader Algorithm</a>, <a href="Reader-Dictionary.html">Reader Dictionary</a>, <a href="reader_002derror.html">reader-error</a>, <a href="Sharpsign-Backslash.html">Sharpsign Backslash</a>, <a href="Sharpsign-Dot.html">Sharpsign Dot</a>, <a href="Sharpsign-Equal_002dSign.html">Sharpsign Equal-Sign</a>, <a href="Sharpsign-Plus.html">Sharpsign Plus</a>, <a href="Special-Symbols.html">Special Symbols</a>, <a href="Stream-Arguments-to-Standardized-Functions.html">Stream Arguments to Standardized Functions</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="The-EOF_002dERROR_002dP-argument.html">The EOF-ERROR-P argument</a>, <a href="The-RECURSIVE_002dP-argument.html">The RECURSIVE-P argument</a>, <a href="Tilde-S_002d_003e-Standard.html">Tilde S: Standard</a>, <a href="write.html">write, prin1, print, pprint, princ</a> </div>
 </div>
 </div>
 </div>

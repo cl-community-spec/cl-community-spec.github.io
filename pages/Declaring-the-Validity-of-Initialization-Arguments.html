@@ -97,8 +97,8 @@ not declared as valid in that situation.
 <p>There are two means for declaring initialization arguments valid.
 </p>
 <ul><li><p>Initialization arguments that fill <i><a href="Glossary.html#slot">slots</a></i> are declared as valid
-by the <tt>:initarg</tt> slot option to <b><a href="defclass.html">defclass</a></b>.  The
-<tt>:initarg</tt> slot option is inherited from <i><a href="Glossary.html#superclass">superclasses</a></i>.  Thus
+by the <code class="no-highlight">:initarg</code> slot option to <b><a href="defclass.html">defclass</a></b>.  The
+<code class="no-highlight">:initarg</code> slot option is inherited from <i><a href="Glossary.html#superclass">superclasses</a></i>.  Thus
 the set of valid initialization arguments that fill <i><a href="Glossary.html#slot">slots</a></i> for a
 <i><a href="Glossary.html#class">class</a></i> is the union of the initialization arguments that fill
 <i><a href="Glossary.html#slot">slots</a></i> declared as valid by that <i><a href="Glossary.html#class">class</a></i> and its
@@ -158,17 +158,15 @@ of a different <i><a href="Glossary.html#class">class</a></i>.
 <p>The set of valid initialization arguments for a <i><a href="Glossary.html#class">class</a></i> is the set of
 valid initialization arguments that either fill <i><a href="Glossary.html#slot">slots</a></i> or supply
 arguments to <i><a href="Glossary.html#method">methods</a></i>, along with the predefined initialization
-argument <tt>:allow-other-keys</tt>.  The default value for 
-<tt>:allow-other-keys</tt> is <a href="NILv.html">nil</a>.
+argument <code class="no-highlight">:allow-other-keys</code>.  The default value for 
+<code class="no-highlight">:allow-other-keys</code> is <a href="NILv.html">nil</a>.
 </p>
 <p>Validity checking of initialization arguments is disabled if the value of
-the initialization argument <tt>:allow-other-keys</tt> is <i><a href="Glossary.html#true">true</a></i>.
+the initialization argument <code class="no-highlight">:allow-other-keys</code> is <i><a href="Glossary.html#true">true</a></i>.
 </p>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="Initialize_002dInstance.html">Initialize-Instance</a>, <a href="Initializing-Newly-Added-Local-Slots-_0028Changing-the-Class-of-an-Instance_0029.html">Initializing-Newly-Added-Local-Slots-(Changing-the-Class-of-an-Instance)</a>, <a href="Initializing-Newly-Added-Local-Slots-_0028Redefining-Classes_0029.html">Initializing-Newly-Added-Local-Slots-(Redefining-Classes)</a>, <a href="reinitialize_002dinstance.html">reinitialize-instance</a>, <a href="Reinitializing-an-Instance.html">Reinitializing an Instance</a>, <a href="Shared_002dInitialize.html">shared-initialize</a>, <a href="update_002dinstance_002dfor_002ddifferent_002dclass.html">update-instance-for-different-class</a>, <a href="update_002dinstance_002dfor_002dredefined_002dclass.html">update-instance-for-redefined-class</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="Initialize_002dInstance.html">initialize-instance</a>, <a href="Initializing-Newly-Added-Local-Slots-_0028Redefining-Classes_0029.html">Initializing Newly Added Local Slots</a>, <a href="Initializing-Newly-Added-Local-Slots-_0028Changing-the-Class-of-an-Instance_0029.html">Initializing Newly Added Local Slots</a>, <a href="Object-Creation-and-Initialization.html">Object Creation and Initialization</a>, <a href="reinitialize_002dinstance.html">reinitialize-instance</a>, <a href="Reinitializing-an-Instance.html">Reinitializing an Instance</a>, <a href="Shared_002dInitialize.html">shared-initialize</a>, <a href="update_002dinstance_002dfor_002ddifferent_002dclass.html">update-instance-for-different-class</a>, <a href="update_002dinstance_002dfor_002dredefined_002dclass.html">update-instance-for-redefined-class</a> </div>
 </div>
 </div>
 </div>

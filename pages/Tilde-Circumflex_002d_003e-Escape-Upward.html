@@ -86,104 +86,105 @@
 </div>
 <div class="section top-most">
 <h4 class="subsubsection">Tilde Circumflex: Escape Upward</h4>
-<p><tt>~<tt>^</tt> </tt>
+<p><code class="no-highlight">~<code class="no-highlight">^</code> </code>
 </p>
 <p>This is an escape construct.  If there are no more arguments remaining to
 be processed, then the immediately           
-enclosing <tt>~{  </tt> or <tt>~&lt;</tt> construct
+enclosing <code class="no-highlight">~{  </code> or <code class="no-highlight">~&lt;</code> construct
 is terminated.  If there is no such enclosing construct, then the entire
 formatting operation is terminated.  
-In the <tt>~&lt;</tt> case, the formatting
+In the <code class="no-highlight">~&lt;</code> case, the formatting
 is performed, but no more segments are processed before doing the
 justification.     
-<tt>~<tt>^</tt> </tt> may appear anywhere in a <tt>~{  </tt>
+<code class="no-highlight">~<code class="no-highlight">^</code> </code> may appear anywhere in a <code class="no-highlight">~{  </code>
 construct.
 </p>
 <div class="example">
-<pre class="example"><code> (setq donestr "Done.~<tt>^</tt> ~D warning~:P.~<tt>^</tt> ~D error~:P.")
-⇒  "Done.~<tt>^</tt> ~D warning~:P.~<tt>^</tt> ~D error~:P."
+<pre class="example"><code> (setq donestr "Done.~<code class="no-highlight">^</code> ~D warning~:P.~<code class="no-highlight">^</code> ~D error~:P.")
+⇒  "Done.~<code class="no-highlight">^</code> ~D warning~:P.~<code class="no-highlight">^</code> ~D error~:P."
  (format nil donestr) ⇒  "Done."
  (format nil donestr 3) ⇒  "Done. 3 warnings."
  (format nil donestr 1 5) ⇒  "Done. 1 warning. 5 errors."
 </code>
 </pre></div>
 <p>If a prefix parameter is given, then termination occurs if the parameter
-is zero.  (Hence <tt>~<tt>^</tt></tt> is equivalent to 
-<tt>~#<tt>^</tt></tt>.)  If two
+is zero.  (Hence <code class="no-highlight">~<code class="no-highlight">^</code></code> is equivalent to 
+<code class="no-highlight">~#<code class="no-highlight">^</code></code>.)  If two
 parameters are given, termination occurs if they are equal.
 </p>
 <p>[Reviewer Note by Barmar: Which equality predicate?]  If three
 parameters are given, termination occurs if the first is less than or
 equal to the second and the second is less than or equal to the third.
 Of course, this is useless if all the prefix parameters are constants; at
-least one of them should be a <tt>#</tt> or a <tt>V</tt> parameter.
+least one of them should be a <code class="no-highlight">#</code> or a <code class="no-highlight">V</code> parameter.
 </p>
-<p>If <tt>~<tt>^</tt></tt> is used within a <tt>~:{  </tt> 
+<p>If <code class="no-highlight">~<code class="no-highlight">^</code></code> is used within a <code class="no-highlight">~:{  </code> 
 construct, then it terminates
 the current iteration step because in the standard case it tests for
 remaining arguments of the current step only; the next iteration step
-commences immediately.  <tt>~:<tt>^</tt></tt> is used to terminate
+commences immediately.  <code class="no-highlight">~:<code class="no-highlight">^</code></code> is used to terminate
 the iteration process.
 </p>
-<p><tt>~:<tt>^</tt></tt> 
+<p><code class="no-highlight">~:<code class="no-highlight">^</code></code> 
 may be used only if the command it would terminate is 
-<tt>~:{  </tt> or <tt>~:@{  </tt>.
+<code class="no-highlight">~:{  </code> or <code class="no-highlight">~:@{  </code>.
 The entire iteration process is terminated if and only if the sublist that is
 supplying the arguments for the current iteration step is the last sublist in
-the case of <tt>~:{ </tt>, 
+the case of <code class="no-highlight">~:{ </code>, 
 or the last <b><a href="format.html">format</a></b>        
-argument in the case of <tt>~:@{  </tt>. 
-<tt>~:<tt>^</tt></tt> is not
-equivalent to <tt>~#:<tt>^</tt></tt>; 
+argument in the case of <code class="no-highlight">~:@{  </code>. 
+<code class="no-highlight">~:<code class="no-highlight">^</code></code> is not
+equivalent to <code class="no-highlight">~#:<code class="no-highlight">^</code></code>; 
 the latter terminates the entire iteration if and only if no
 arguments remain for the current iteration step.
 For example:
 </p>
 <div class="example">
-<pre class="example"><code> (format nil "~:{ ~@?~:<tt>^</tt> ...~} " '(("a") ("b"))) ⇒  "a...b"
+<pre class="example"><code> (format nil "~:{ ~@?~:<code class="no-highlight">^</code> ...~} " '(("a") ("b"))) ⇒  "a...b"
 </code>
 </pre></div>
-<p>If <tt>~<tt>^</tt></tt> appears within a control string being processed
-under the control of a <tt>~?</tt> directive, but not within
-any <tt>~{  </tt> or <tt>~&lt;</tt> construct within that string,
+<p>If <code class="no-highlight">~<code class="no-highlight">^</code></code> appears within a control string being processed
+under the control of a <code class="no-highlight">~?</code> directive, but not within
+any <code class="no-highlight">~{  </code> or <code class="no-highlight">~&lt;</code> construct within that string,
 then the string being
 processed will be terminated, thereby ending processing
-of the <tt>~?</tt> directive.  Processing then
+of the <code class="no-highlight">~?</code> directive.  Processing then
 continues within the string   
-containing the <tt>~?</tt> directive at the point following that directive.
+containing the <code class="no-highlight">~?</code> directive at the point following that directive.
 </p>
-<p>If <tt>~<tt>^</tt></tt>                                          
-appears within a <tt>~[</tt> or <tt>~(</tt> construct,
-then all the commands up to the <tt>~<tt>^</tt></tt> are properly selected
+<p>If <code class="no-highlight">~<code class="no-highlight">^</code></code>                                          
+appears within a <code class="no-highlight">~[</code> or <code class="no-highlight">~(</code> construct,
+then all the commands up to the <code class="no-highlight">~<code class="no-highlight">^</code></code> are properly selected
 or case-converted,                   
-the <tt>~[</tt> or <tt>~(</tt> processing is terminated,
+the <code class="no-highlight">~[</code> or <code class="no-highlight">~(</code> processing is terminated,
 and the outward search continues         
-for a <tt>~{  </tt> or <tt>~&lt;</tt> construct
+for a <code class="no-highlight">~{  </code> or <code class="no-highlight">~&lt;</code> construct
 to be terminated.  For example:
 </p>
 <div class="example">
-<pre class="example"><code> (setq tellstr "~@(~@[~R~]~<tt>^</tt> ~A!~)")
-⇒  "~@(~@[~R~]~<tt>^</tt> ~A!~)"
+<pre class="example"><code> (setq tellstr "~@(~@[~R~]~<code class="no-highlight">^</code> ~A!~)")
+⇒  "~@(~@[~R~]~<code class="no-highlight">^</code> ~A!~)"
  (format nil tellstr 23) ⇒  "Twenty-three!"
  (format nil tellstr nil "losers") ⇒  " Losers!"
  (format nil tellstr 23 "losers") ⇒  "Twenty-three losers!"
 </code>
 </pre></div>
-<p>Following are examples of the use of <tt>~<tt>^</tt></tt> 
-within a <tt>~&lt;</tt> construct.
+<p>Following are examples of the use of <code class="no-highlight">~<code class="no-highlight">^</code></code> 
+within a <code class="no-highlight">~&lt;</code> construct.
 </p>
 <div class="example">
-<pre class="example"><code> (format nil "~15&lt;~S~;~<tt>^</tt>~S~;~<tt>^</tt>~S~&gt;" 'foo)
+<pre class="example"><code> (format nil "~15&lt;~S~;~<code class="no-highlight">^</code>~S~;~<code class="no-highlight">^</code>~S~&gt;" 'foo)
 ⇒   "            FOO"
- (format nil "~15&lt;~S~;~<tt>^</tt>~S~;~<tt>^</tt>~S~&gt;" 'foo 'bar)
+ (format nil "~15&lt;~S~;~<code class="no-highlight">^</code>~S~;~<code class="no-highlight">^</code>~S~&gt;" 'foo 'bar)
 ⇒   "FOO         BAR"
- (format nil "~15&lt;~S~;~<tt>^</tt>~S~;~<tt>^</tt>~S~&gt;" 'foo 'bar 'baz)
+ (format nil "~15&lt;~S~;~<code class="no-highlight">^</code>~S~;~<code class="no-highlight">^</code>~S~&gt;" 'foo 'bar 'baz)
 ⇒   "FOO   BAR   BAZ"
 </code>
 </pre></div>
 </div>
 <div class="bl-placeholder"></div>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="FORMAT-Miscellaneous-Pseudo_002dOperations.html">FORMAT Miscellaneous Pseudo-Operations</a> </div></div>
 </div>
 </div>
 </body>

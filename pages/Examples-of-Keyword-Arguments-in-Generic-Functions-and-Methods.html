@@ -86,7 +86,7 @@
 </div>
 <div class="section top-most">
 <h4 class="subsubsection">Examples of Keyword Arguments in Generic Functions and Methods</h4>
-<p>For example, suppose there are two methods defined for <tt>width</tt>
+<p>For example, suppose there are two methods defined for <code class="no-highlight">width</code>
 as follows:
 </p>
 <div class="example">
@@ -96,9 +96,9 @@ as follows:
 </code>
 </pre></div>
 <p>Assume that there are no other methods and no generic
-function definition for <tt>width</tt>. The evaluation of the
+function definition for <code class="no-highlight">width</code>. The evaluation of the
 following form should signal an error because 
-the keyword argument <tt>:pixel-size</tt> is not accepted by the applicable method.
+the keyword argument <code class="no-highlight">:pixel-size</code> is not accepted by the applicable method.
 </p>
 <div class="example">
 <pre class="example"><code> (width (make-instance `character-class :char #\Q) 
@@ -113,8 +113,8 @@ the keyword argument <tt>:pixel-size</tt> is not accepted by the applicable meth
 </code>
 </pre></div>
 <p>The evaluation of the following form will not signal an error
-if the class named <tt>character-picture-class</tt> is a subclass of
-both <tt>picture-class</tt> and <tt>character-class</tt>.
+if the class named <code class="no-highlight">character-picture-class</code> is a subclass of
+both <code class="no-highlight">picture-class</code> and <code class="no-highlight">character-class</code>.
 </p>
 <div class="example">
 <pre class="example"><code> (width (make-instance `character-picture-class :char #\Q)
@@ -123,7 +123,8 @@ both <tt>picture-class</tt> and <tt>character-class</tt>.
 </pre></div>
 </div>
 <div class="bl-placeholder"></div>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="Keyword-Arguments-in-Generic-Functions-and-Methods.html">Keyword Arguments in Generic Functions and Methods</a> </div></div>
 </div>
 </div>
 </body>

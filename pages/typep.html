@@ -113,25 +113,25 @@ whose first element is either <b>function</b> or <b><a href="values.html">values
 <p>Returns <i><a href="Glossary.html#true">true</a></i> if <i><a href="Glossary.html#object">object</a></i> is of the <i><a href="Glossary.html#type">type</a></i> specified by <i>type-specifier</i>;
 otherwise, returns <i><a href="Glossary.html#false">false</a></i>.
 </p>
-<p>A <i>type-specifier</i> of the form <tt>(satisfies fn)</tt> 
-is handled by applying the function <tt>fn</tt> to <i><a href="Glossary.html#object">object</a></i>.
+<p>A <i>type-specifier</i> of the form <code class="no-highlight">(satisfies fn)</code> 
+is handled by applying the function <code class="no-highlight">fn</code> to <i><a href="Glossary.html#object">object</a></i>.
 </p>
-<p><tt>(typep <i><a href="Glossary.html#object">object</a></i> '(array <i>type-specifier</i>))</tt>, 
-where <i>type-specifier</i> is not <tt>*</tt>,   
+<p><code class="no-highlight">(typep <i><a href="Glossary.html#object">object</a></i> '(array <i>type-specifier</i>))</code>, 
+where <i>type-specifier</i> is not <code class="no-highlight">*</code>,   
 returns <i><a href="Glossary.html#true">true</a></i> if and only if <i><a href="Glossary.html#object">object</a></i> is an <i><a href="Glossary.html#array">array</a></i> 
 that could be the result 
 of supplying <i>type-specifier</i> 
-as the <tt>:element-type</tt> argument to <a href="make_002darray.html">make-array</a>.
-<tt>(array *)</tt> refers to all <i><a href="Glossary.html#array">arrays</a></i> 
-regardless of element type, while <tt>(array <i>type-specifier</i>)</tt>
+as the <code class="no-highlight">:element-type</code> argument to <a href="make_002darray.html">make-array</a>.
+<code class="no-highlight">(array *)</code> refers to all <i><a href="Glossary.html#array">arrays</a></i> 
+regardless of element type, while <code class="no-highlight">(array <i>type-specifier</i>)</code>
 refers only to those <i><a href="Glossary.html#array">arrays</a></i> 
 that can result from giving <i>type-specifier</i> as the
-<tt>:element-type</tt> argument to <a href="make_002darray.html">make-array</a>.  
-A similar interpretation applies to <tt>(simple-array <i>type-specifier</i>)</tt> 
-and <tt>(vector <i>type-specifier</i>)</tt>.
+<code class="no-highlight">:element-type</code> argument to <a href="make_002darray.html">make-array</a>.  
+A similar interpretation applies to <code class="no-highlight">(simple-array <i>type-specifier</i>)</code> 
+and <code class="no-highlight">(vector <i>type-specifier</i>)</code>.
 See <a href="Array-Upgrading.html#Array-Upgrading">Array Upgrading</a>.
 </p>
-<p><tt>(typep <i><a href="Glossary.html#object">object</a></i> '(complex <i>type-specifier</i>))</tt>
+<p><code class="no-highlight">(typep <i><a href="Glossary.html#object">object</a></i> '(complex <i>type-specifier</i>))</code>
 returns <i><a href="Glossary.html#true">true</a></i> for all <i><a href="Glossary.html#complex">complex</a></i> numbers that can result from 
 giving <i><a href="Glossary.html#number">numbers</a></i> of type <i>type-specifier</i>
 to the <i><a href="Glossary.html#function">function</a></i> <b><a href="complex.html">complex</a></b>, plus all other <i><a href="Glossary.html#complex">complex</a></i> numbers 
@@ -161,7 +161,7 @@ Both the real and the imaginary parts of any such
  (typep #c(0 0) '(complex (eql 0))) ⇒  <i>false</i>
 </code>
 </pre></div>
-<p>Let <tt>A</tt>_x and <tt>A</tt>_y be two <i><a href="Glossary.html#type-specifier">type specifiers</a></i> that 
+<p>Let <code class="no-highlight">A</code>_x and <code class="no-highlight">A</code>_y be two <i><a href="Glossary.html#type-specifier">type specifiers</a></i> that 
 denote different <i><a href="Glossary.html#type">types</a></i>, but for which
 </p>
 <div class="example">
@@ -186,7 +186,7 @@ denote different <i><a href="Glossary.html#type">types</a></i>, but for which
 </div>
 <div class="section">
 <h4 class="subsubheading">Exceptional Situations</h4>
-<p>An error of <i><a href="Glossary.html#type">type</a></i> <b><a href="error.html">error</a></b> is signaled if <i>type-specifier</i> is <tt>values</tt>, 
+<p>An error of <i><a href="Glossary.html#type">type</a></i> <b><a href="error.html">error</a></b> is signaled if <i>type-specifier</i> is <code class="no-highlight">values</code>, 
 or a <i><a href="Glossary.html#type-specifier">type specifier</a></i> list whose first element is either
 <b>function</b> or <b><a href="values.html">values</a></b>.
 </p>
@@ -208,15 +208,13 @@ the <i>type-specifier</i> is not a <i><a href="Glossary.html#type-specifier">typ
 <div class="section">
 <h4 class="subsubheading">Notes</h4>
 <p><i><a href="Glossary.html#implementation">Implementations</a></i> are encouraged to recognize and optimize the case of 
-<tt>(typep <i>x</i> (the class <i>y</i>))</tt>,
+<code class="no-highlight">(typep <i>x</i> (the class <i>y</i>))</code>,
 since it does not involve any need for expansion 
 of <b><a href="deftype.html">deftype</a></b> information at runtime.
 </p>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="002abreak_002don_002dsignals_002a.html">*break-on-signals*</a>, <a href="arrayp.html">arrayp</a>, <a href="bit_002dvector_002dp.html">bit-vector-p</a>, <a href="characterp.html">characterp</a>, <a href="complexp.html">complexp</a>, <a href="defstruct.html">defstruct</a>, <a href="Introduction-to-Methods.html">Introduction to Methods</a>, <a href="Introduction-_0028Types-and-Classes_0029.html">Introduction-(Types-and-Classes)</a>, <a href="stringp.html">stringp</a>, <a href="symbolp.html">symbolp</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="Type-Specifiers.html">Type Specifiers</a>, <a href="type_002dof.html">type-of</a>, <a href="Types-and-Classes-Dictionary.html">Types-and-Classes-Dictionary</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="002abreak_002don_002dsignals_002a.html">*break-on-signals*</a>, <a href="arrayp.html">arrayp</a>, <a href="bit_002dvector_002dp.html">bit-vector-p</a>, <a href="characterp.html">characterp</a>, <a href="complexp.html">complexp</a>, <a href="defstruct.html">defstruct</a>, <a href="Introduction-to-Methods.html">Introduction to Methods</a>, <a href="Introduction-_0028Types-and-Classes_0029.html">Introduction</a>, <a href="stringp.html">stringp</a>, <a href="symbolp.html">symbolp</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="Type-Specifiers.html">Type Specifiers</a>, <a href="type_002dof.html">type-of</a>, <a href="Types-and-Classes-Dictionary.html">Types and Classes Dictionary</a> </div>
 </div>
 </div>
 </div>

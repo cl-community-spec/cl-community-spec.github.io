@@ -136,11 +136,11 @@ output file is being written, and control leaves abnormally, the file is
 aborted and the file system is left, so far as possible, as if the file
 had never been opened.  
 </p>
-<p>It is possible by the use of <tt>:if-exists nil</tt> 
-or <tt>:if-does-not-exist nil</tt> for
+<p>It is possible by the use of <code class="no-highlight">:if-exists nil</code> 
+or <code class="no-highlight">:if-does-not-exist nil</code> for
 <i>stream</i> to be bound to <a href="NILv.html">nil</a>.
 </p>
-<p>Users of <tt>:if-does-not-exist nil</tt> should check for a valid <i>stream</i>.
+<p>Users of <code class="no-highlight">:if-does-not-exist nil</code> should check for a valid <i>stream</i>.
 </p>
 <p>The consequences are undefined if an attempt is made to <i><a href="Glossary.html#assign">assign</a></i> the 
 <i>stream</i> <i><a href="Glossary.html#variable">variable</a></i>.  The compiler may choose to issue a
@@ -159,8 +159,8 @@ warning if such an attempt is detected.
     (do ((l (read-line s) (read-line s nil 'eof)))
         ((eq l 'eof) "Reached end of file.")
      (format t "~&amp;*** ~A~
-<tt> |&gt; </tt> *** Here are a couple
-<tt> |&gt; </tt> *** of test data lines
+<code class="no-highlight"> |&gt; </code> *** Here are a couple
+<code class="no-highlight"> |&gt; </code> *** of test data lines
 ⇒  "Reached end of file."
 </code>
 </pre></div>
@@ -170,7 +170,7 @@ warning if such an attempt is detected.
 ;; that this doesn't happen to you accidentally...
  (with-open-file (foo "no-such-file" :if-does-not-exist nil)
    (read foo))
-<tt> |&gt; </tt> <b>|&gt;&gt;</b><tt>hello?</tt><b>&lt;&lt;|</b>
+<code class="no-highlight"> |&gt; </code> <b>|&gt;&gt;</b><code class="no-highlight">hello?</code><b>&lt;&lt;|</b>
 ⇒  HELLO? ;This value was read from the terminal, not a file!
 
 ;; Here's another bug to avoid...
@@ -212,10 +212,8 @@ a <i><a href="Glossary.html#file">file</a></i> might be created.
 <p><a href="Pathnames-as-Filenames.html#Pathnames-as-Filenames">Pathnames as Filenames</a>
 </p>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="declare.html">declare</a>, <a href="File-System-Concepts.html">File System Concepts</a>, <a href="file_002dstream.html">file-stream</a>, <a href="File-Streams.html">File-Streams</a>, <a href="ignore.html">ignore</a>, <a href="open_002dstream_002dp.html">open-stream-p</a>, <a href="open.html">open</a>, <a href="Stream-Arguments-to-Standardized-Functions.html">Stream Arguments to Standardized Functions</a>, <a href="stream_002dexternal_002dformat.html">stream-external-format</a>, <a href="Streams-Dictionary.html">Streams-Dictionary</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="with_002dopen_002dfile.html">with-open-file</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="declare.html">declare</a>, <a href="File-Streams.html">File Streams</a>, <a href="File-System-Concepts.html">File System Concepts</a>, <a href="file_002dstream.html">file-stream</a>, <a href="ignore.html">ignore, ignorable</a>, <a href="open_002dstream_002dp.html">open-stream-p</a>, <a href="open.html">open</a>, <a href="Stream-Arguments-to-Standardized-Functions.html">Stream Arguments to Standardized Functions</a>, <a href="stream_002dexternal_002dformat.html">stream-external-format</a>, <a href="Streams-Dictionary.html">Streams Dictionary</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a> </div>
 </div>
 </div>
 </div>

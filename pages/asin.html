@@ -118,9 +118,9 @@ functions can be defined mathematically for
 <i><a href="Glossary.html#number">number</a></i> or <i>number1</i> specified as <i>x</i> as in Figure 12–13.
 </p>
 <p>  Function     Definition                            
-  Arc sine      <span class="nolinebreak">-i</span> <tt>log</tt>  (ix+ <span class="nolinebreak">\sqrt1-x^2</span> )          
-  Arc cosine    (\pi/2) <a href="002d.html">-</a> <tt>arcsin</tt>  x                  
-  Arc tangent   <span class="nolinebreak">-i</span> <tt>log</tt>  ((1+ix) \sqrt1/(1+x^2) )   
+  Arc sine      <span class="nolinebreak">-i</span> <code class="no-highlight">log</code>  (ix+ <span class="nolinebreak">\sqrt1-x^2</span> )          
+  Arc cosine    (\pi/2) <a href="002d.html">-</a> <code class="no-highlight">arcsin</code>  x                  
+  Arc tangent   <span class="nolinebreak">-i</span> <code class="no-highlight">log</code>  ((1+ix) \sqrt1/(1+x^2) )   
 </p>
 <div class="table-subcaption"> Figure 12–13: Mathematical definition of arc sine, arc cosine, and arc tangent</div>
 <p>These formulae are mathematically correct, assuming
@@ -159,7 +159,7 @@ is not supplied. If both are supplied, <i>number2</i> can be zero provided
 <p>The following definition for arc sine determines the range and
 branch cuts:
 </p>
-<div align="center"><tt>arcsin</tt>  z = -i <tt>log</tt>  (iz+\sqrt1-z^2\Bigr)
+<div align="center"><code class="no-highlight">arcsin</code>  z = -i <code class="no-highlight">log</code>  (iz+\sqrt1-z^2\Bigr)
 </div>
 <p>The branch cut for the arc sine function is in two pieces:
 one along the negative real axis to the left of~-1
@@ -174,13 +174,13 @@ the range if and only if its imaginary part is non-positive.
 <p>The following definition for arc cosine determines the range and
 branch cuts:
 </p>
-<div align="center"><tt>arccos</tt>  z = \pi\over2- <tt>arcsin</tt>  z
+<div align="center"><code class="no-highlight">arccos</code>  z = \pi\over2- <code class="no-highlight">arcsin</code>  z
 </div>
 <p>or, which are equivalent,
 </p>
-<div align="center"><tt>arccos</tt>  z = -i <tt>log</tt>  (z+i \sqrt1-z^2\Bigr)
+<div align="center"><code class="no-highlight">arccos</code>  z = -i <code class="no-highlight">log</code>  (z+i \sqrt1-z^2\Bigr)
 </div>
-<div align="center"><tt>arccos</tt>  z = 2 <tt>log</tt>  (\sqrt(1+z)/2 + i \sqrt(1-z)/2)\overi
+<div align="center"><code class="no-highlight">arccos</code>  z = 2 <code class="no-highlight">log</code>  (\sqrt(1+z)/2 + i \sqrt(1-z)/2)\overi
 </div>
 <p>The branch cut for the arc cosine function is in two pieces:
 one along the negative real axis to the left of~-1
@@ -196,7 +196,7 @@ the range if and only if its imaginary part is non-positive.
 <p>The following definition for (one-argument) arc tangent determines the
 range and branch cuts:
 </p>
-<div align="center"><tt>arctan</tt>  z = <tt>log</tt>  (1+iz) - <tt>log</tt>  (1-iz)\over2i
+<div align="center"><code class="no-highlight">arctan</code>  z = <code class="no-highlight">log</code>  (1+iz) - <code class="no-highlight">log</code>  (1-iz)\over2i
 </div>
 <p>Beware of simplifying this formula; "obvious" simplifications are likely
 to alter the branch cuts or the values on the branch cuts incorrectly.
@@ -278,10 +278,8 @@ even if <i><a href="Glossary.html#number">number</a></i> is not a <i><a href="Gl
 absolute value of <i><a href="Glossary.html#number">number</a></i> is greater than one.
 </p>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="asin.html">asin; acos; atan</a>, <a href="Numbers-Dictionary.html">Numbers-Dictionary</a>, <a href="Numeric-Operations.html">Numeric Operations</a>, <a href="Rule-of-Float-Substitutability.html">Rule of Float Substitutability</a>, <a href="sin.html">sin</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="Numbers-Dictionary.html">Numbers Dictionary</a>, <a href="Numeric-Operations.html">Numeric Operations</a>, <a href="Rule-of-Float-Substitutability.html">Rule of Float Substitutability</a>, <a href="sin.html">sin, cos, tan</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a> </div>
 </div>
 </div>
 </div>

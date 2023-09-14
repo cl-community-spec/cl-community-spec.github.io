@@ -87,44 +87,42 @@
 <div class="section top-most">
 <h4 class="subsubsection">Examples of Feature Expressions</h4>
 <p>For example, suppose that
- in <i><a href="Glossary.html#implementation">implementation</a></i> A, the <i><a href="Glossary.html#feature">features</a></i> <tt>spice</tt> and <tt>perq</tt> are <i><a href="Glossary.html#present">present</a></i>,
-			     but the <i><a href="Glossary.html#feature">feature</a></i> <tt>lispm</tt> is not <i><a href="Glossary.html#present">present</a></i>;
- in <i><a href="Glossary.html#implementation">implementation</a></i> B, the feature <tt>lispm</tt> is <i><a href="Glossary.html#present">present</a></i>,
-			     but the <i><a href="Glossary.html#feature">features</a></i> <tt>spice</tt> and <tt>perq</tt> are
+ in <i><a href="Glossary.html#implementation">implementation</a></i> A, the <i><a href="Glossary.html#feature">features</a></i> <code class="no-highlight">spice</code> and <code class="no-highlight">perq</code> are <i><a href="Glossary.html#present">present</a></i>,
+			     but the <i><a href="Glossary.html#feature">feature</a></i> <code class="no-highlight">lispm</code> is not <i><a href="Glossary.html#present">present</a></i>;
+ in <i><a href="Glossary.html#implementation">implementation</a></i> B, the feature <code class="no-highlight">lispm</code> is <i><a href="Glossary.html#present">present</a></i>,
+			     but the <i><a href="Glossary.html#feature">features</a></i> <code class="no-highlight">spice</code> and <code class="no-highlight">perq</code> are
 			      not <i><a href="Glossary.html#present">present</a></i>;
  and 
- in <i><a href="Glossary.html#implementation">implementation</a></i> C, none of the features <tt>spice</tt>, <i>lispm</i>, or <tt>perq</tt> are
+ in <i><a href="Glossary.html#implementation">implementation</a></i> C, none of the features <code class="no-highlight">spice</code>, <i>lispm</i>, or <code class="no-highlight">perq</code> are
 			     <i><a href="Glossary.html#present">present</a></i>.
 Figure 24–1 shows some sample <i><a href="Glossary.html#expression">expressions</a></i>, and how they would be 
 <i><a href="Glossary.html#read">read</a></i>_2 in these <i><a href="Glossary.html#implementation">implementations</a></i>.
 </p>
-<p>  <tt>(cons #+spice "Spice" <span class="nolinebreak">#-spice</span> "Lispm" x)</tt> 
-  in <i><a href="Glossary.html#implementation">implementation</a></i> A ...    <tt>(CONS "Spice" X)</tt>             
-    in <i><a href="Glossary.html#implementation">implementation</a></i> B ...  <tt>(CONS "Lispm" X)</tt>             
-    in <i><a href="Glossary.html#implementation">implementation</a></i> C ...  <tt>(CONS "Lispm" X)</tt>             
-  <tt>(cons #+spice "Spice" #+LispM "Lispm" x)</tt> 
-  in <i><a href="Glossary.html#implementation">implementation</a></i> A ...    <tt>(CONS "Spice" X)</tt>             
-    in <i><a href="Glossary.html#implementation">implementation</a></i> B ...  <tt>(CONS "Lispm" X)</tt>             
-    in <i><a href="Glossary.html#implementation">implementation</a></i> C ...  <tt>(CONS X)</tt>                     
-  <tt>(setq a '(1 2 #+perq 43 #+(not perq) 27))</tt> 
-  in <i><a href="Glossary.html#implementation">implementation</a></i> A ...    <tt>(SETQ A '(1 2 43))</tt>           
-    in <i><a href="Glossary.html#implementation">implementation</a></i> B ...  <tt>(SETQ A '(1 2 27))</tt>           
-    in <i><a href="Glossary.html#implementation">implementation</a></i> C ...  <tt>(SETQ A '(1 2 27))</tt>           
-  <tt>(let ((a 3) #+(or spice lispm) (b 3)) (foo a))</tt> 
-  in <i><a href="Glossary.html#implementation">implementation</a></i> A ...    <tt>(LET ((A 3) (B 3)) (FOO A))</tt>  
-    in <i><a href="Glossary.html#implementation">implementation</a></i> B ...  <tt>(LET ((A 3) (B 3)) (FOO A))</tt>  
-    in <i><a href="Glossary.html#implementation">implementation</a></i> C ...  <tt>(LET ((A 3)) (FOO A))</tt>        
-  <tt>(cons #+Lispm "#+Spice" #+Spice "foo" <span class="nolinebreak">#-(or</span> Lispm Spice) 7 x)</tt> 
-  in <i><a href="Glossary.html#implementation">implementation</a></i> A ...    <tt>(CONS "foo" X)</tt>               
-    in <i><a href="Glossary.html#implementation">implementation</a></i> B ...  <tt>(CONS "#+Spice" X)</tt>           
-    in <i><a href="Glossary.html#implementation">implementation</a></i> C ...  <tt>(CONS 7 X)</tt>                   
+<p>  <code class="no-highlight">(cons #+spice "Spice" <span class="nolinebreak">#-spice</span> "Lispm" x)</code> 
+  in <i><a href="Glossary.html#implementation">implementation</a></i> A ...    <code class="no-highlight">(CONS "Spice" X)</code>             
+    in <i><a href="Glossary.html#implementation">implementation</a></i> B ...  <code class="no-highlight">(CONS "Lispm" X)</code>             
+    in <i><a href="Glossary.html#implementation">implementation</a></i> C ...  <code class="no-highlight">(CONS "Lispm" X)</code>             
+  <code class="no-highlight">(cons #+spice "Spice" #+LispM "Lispm" x)</code> 
+  in <i><a href="Glossary.html#implementation">implementation</a></i> A ...    <code class="no-highlight">(CONS "Spice" X)</code>             
+    in <i><a href="Glossary.html#implementation">implementation</a></i> B ...  <code class="no-highlight">(CONS "Lispm" X)</code>             
+    in <i><a href="Glossary.html#implementation">implementation</a></i> C ...  <code class="no-highlight">(CONS X)</code>                     
+  <code class="no-highlight">(setq a '(1 2 #+perq 43 #+(not perq) 27))</code> 
+  in <i><a href="Glossary.html#implementation">implementation</a></i> A ...    <code class="no-highlight">(SETQ A '(1 2 43))</code>           
+    in <i><a href="Glossary.html#implementation">implementation</a></i> B ...  <code class="no-highlight">(SETQ A '(1 2 27))</code>           
+    in <i><a href="Glossary.html#implementation">implementation</a></i> C ...  <code class="no-highlight">(SETQ A '(1 2 27))</code>           
+  <code class="no-highlight">(let ((a 3) #+(or spice lispm) (b 3)) (foo a))</code> 
+  in <i><a href="Glossary.html#implementation">implementation</a></i> A ...    <code class="no-highlight">(LET ((A 3) (B 3)) (FOO A))</code>  
+    in <i><a href="Glossary.html#implementation">implementation</a></i> B ...  <code class="no-highlight">(LET ((A 3) (B 3)) (FOO A))</code>  
+    in <i><a href="Glossary.html#implementation">implementation</a></i> C ...  <code class="no-highlight">(LET ((A 3)) (FOO A))</code>        
+  <code class="no-highlight">(cons #+Lispm "#+Spice" #+Spice "foo" <span class="nolinebreak">#-(or</span> Lispm Spice) 7 x)</code> 
+  in <i><a href="Glossary.html#implementation">implementation</a></i> A ...    <code class="no-highlight">(CONS "foo" X)</code>               
+    in <i><a href="Glossary.html#implementation">implementation</a></i> B ...  <code class="no-highlight">(CONS "#+Spice" X)</code>           
+    in <i><a href="Glossary.html#implementation">implementation</a></i> C ...  <code class="no-highlight">(CONS 7 X)</code>                   
 </p>
 <div class="table-subcaption"> Figure 24–1: <a href="Features.html">Features</a> examples </div>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="Sharpsign-Minus.html">Sharpsign Minus</a>, <a href="Sharpsign-Plus.html">Sharpsign Plus</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="Features.html">Features</a>, <a href="Sharpsign-Minus.html">Sharpsign Minus</a>, <a href="Sharpsign-Plus.html">Sharpsign Plus</a> </div>
 </div>
 </div>
 </div>

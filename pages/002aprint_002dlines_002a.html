@@ -103,7 +103,7 @@
 <p>When the <i><a href="Glossary.html#value">value</a></i> of <a href="002aprint_002dlines_002a.html">*print-lines*</a> is other than <a href="NILv.html">nil</a>,
 it is a limit on the number of output lines produced when something is pretty
 printed.  If an attempt is made to go beyond that many lines,
-"<tt>..</tt>" is printed at the end of the last line followed by all of the
+"<code class="no-highlight">..</code>" is printed at the end of the last line followed by all of the
 suffixes (closing delimiters) that are pending to be printed.
 </p>
 </div>
@@ -112,30 +112,28 @@ suffixes (closing delimiters) that are pending to be printed.
 <div class="example">
 <pre class="example"><code> (let ((*print-right-margin* 25) (*print-lines* 3))
    (pprint '(progn (setq a 1 b 2 c 3 d 4))))
-<tt> |&gt; </tt> (PROGN (SETQ A 1
-<tt> |&gt; </tt>              B 2
-<tt> |&gt; </tt>              C 3 ..))
+<code class="no-highlight"> |&gt; </code> (PROGN (SETQ A 1
+<code class="no-highlight"> |&gt; </code>              B 2
+<code class="no-highlight"> |&gt; </code>              C 3 ..))
 ⇒  &lt;<i>no <i>values</i></i>&gt;
 </code>
 </pre></div>
 </div>
 <div class="section">
 <h4 class="subsubheading">Notes</h4>
-<p>The "<tt>..</tt>" notation is intentionally different than
-the "<tt>...</tt>" notation used for level abbreviation, so that the two
+<p>The "<code class="no-highlight">..</code>" notation is intentionally different than
+the "<code class="no-highlight">...</code>" notation used for level abbreviation, so that the two
 different situations can be visually distinguished.
 </p>
 <p>This notation is used to increase the likelihood that the <i><a href="Glossary.html#Lisp-reader">Lisp reader</a></i>
 will signal an error if an attempt is later made to read the abbreviated output.
 Note however that if the truncation occurs in a <i><a href="Glossary.html#string">string</a></i>, 
-as in <tt>"This string has been trunc.."</tt>, the problem situation cannot be
+as in <code class="no-highlight">"This string has been trunc.."</code>, the problem situation cannot be
 detected later and no such error will be signaled.
 </p>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="002aprint_002dlines_002a.html">*print-lines*</a>, <a href="002aprint_002dreadably_002a.html">*print-readably*</a>, <a href="Examples-of-using-the-Pretty-Printer.html">Examples of using the Pretty Printer</a>, <a href="Format-Directive-Interface.html">Format-Directive-Interface</a>, <a href="Multiple-Possible-Textual-Representations.html">Multiple-Possible-Textual-Representations</a>, <a href="write.html">prin1</a>, <a href="Printer-Dictionary.html">Printer-Dictionary</a>, <a href="Re_002dReading-Abbreviated-Expressions.html">Re-Reading-Abbreviated-Expressions</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="with_002dstandard_002dio_002dsyntax.html">with-standard-io-syntax</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="002aprint_002dreadably_002a.html">*print-readably*</a>, <a href="Examples-of-using-the-Pretty-Printer.html">Examples of using the Pretty Printer</a>, <a href="Format-Directive-Interface.html">Format Directive Interface</a>, <a href="Multiple-Possible-Textual-Representations.html">Multiple Possible Textual Representations</a>, <a href="Printer-Dictionary.html">Printer Dictionary</a>, <a href="Re_002dReading-Abbreviated-Expressions.html">Re-Reading Abbreviated Expressions</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="with_002dstandard_002dio_002dsyntax.html">with-standard-io-syntax</a>, <a href="write.html">write, prin1, print, pprint, princ</a> </div>
 </div>
 </div>
 </div>

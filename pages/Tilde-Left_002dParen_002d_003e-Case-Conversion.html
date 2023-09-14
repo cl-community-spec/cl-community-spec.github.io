@@ -86,7 +86,7 @@
 </div>
 <div class="section top-most">
 <h4 class="subsubsection">Tilde Left-Paren: Case Conversion</h4>
-<p><tt>~(<i>str</i>~)</tt>
+<p><code class="no-highlight">~(<i>str</i>~)</code>
 </p>
 <p>The contained control string <i>str</i> is processed, and what it produces
 is subject to case conversion.
@@ -94,17 +94,17 @@ is subject to case conversion.
 <p>With no flags, every <i><a href="Glossary.html#uppercase">uppercase</a></i> <i><a href="Glossary.html#character">character</a></i>
 is converted to the corresponding <i><a href="Glossary.html#lowercase">lowercase</a></i> <i><a href="Glossary.html#character">character</a></i>.
 </p>
-<p><tt>~:(</tt> capitalizes all words, as if by <b>string-capitalize</b>.
+<p><code class="no-highlight">~:(</code> capitalizes all words, as if by <b>string-capitalize</b>.
 </p>
-<p><tt>~@(</tt> 
+<p><code class="no-highlight">~@(</code> 
 capitalizes just the first word and forces the rest to lower
 case.
 </p>
-<p><tt>~:@(</tt> converts every lowercase character
+<p><code class="no-highlight">~:@(</code> converts every lowercase character
 to the corresponding uppercase character.
 </p>
-<p>In this example <tt>~@(</tt> is used to cause the first word
-produced by <tt>~@R</tt> to be capitalized:
+<p>In this example <code class="no-highlight">~@(</code> is used to cause the first word
+produced by <code class="no-highlight">~@R</code> to be capitalized:
 </p>
 <div class="example">
 <pre class="example"><code> (format nil "~@R ~(~@R~)" 14 14) 
@@ -126,7 +126,8 @@ as illustrated in the following example:
 </pre></div>
 </div>
 <div class="bl-placeholder"></div>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="FORMAT-Miscellaneous-Operations.html">FORMAT Miscellaneous Operations</a> </div></div>
 </div>
 </div>
 </body>

@@ -116,7 +116,7 @@ Otherwise, the result is a <i><a href="Glossary.html#complex">complex</a></i>.
 the non-<i><a href="Glossary.html#float">float</a></i> is converted to a <i><a href="Glossary.html#float">float</a></i> 
 before the <i><a href="Glossary.html#complex">complex</a></i> is created.
 If <i>imagpart</i> is not supplied, the imaginary part is a 
-zero of the same <i><a href="Glossary.html#type">type</a></i> as <i>realpart</i>; <i>i.e.</i>, <tt>(coerce 0 (type-of <i>realpart</i>))</tt> is
+zero of the same <i><a href="Glossary.html#type">type</a></i> as <i>realpart</i>; <i>i.e.</i>, <code class="no-highlight">(coerce 0 (type-of <i>realpart</i>))</code> is
 effectively used.  
 </p>
 <p>Type upgrading implies a movement upwards in the type 
@@ -125,11 +125,11 @@ In the case of <i><a href="Glossary.html#complex">complexes</a></i>, the <i>type
 </p>
 <p>[Reviewer Note by Barmar: What type specifier?]
 must be a subtype of 
-<tt>(upgraded-complex-part-type <i>type-specifier</i>)</tt>.
+<code class="no-highlight">(upgraded-complex-part-type <i>type-specifier</i>)</code>.
 If <i>type-specifier1</i> is a subtype of <i>type-specifier2</i>, then
-<tt>(upgraded-complex-element-type '<i>type-specifier1</i>)</tt>
+<code class="no-highlight">(upgraded-complex-element-type '<i>type-specifier1</i>)</code>
 must also be a subtype of
-<tt>(upgraded-complex-element-type '<i>type-specifier2</i>)</tt>.  
+<code class="no-highlight">(upgraded-complex-element-type '<i>type-specifier2</i>)</code>.  
 Two disjoint types can be upgraded into 
 the same thing.
 </p>
@@ -158,10 +158,8 @@ the same thing.
 </code>
 </pre></div>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="coerce.html">coerce</a>, <a href="complex-_0028System-Class_0029.html">complex-(System-Class)</a>, <a href="complex.html">complex</a>, <a href="complexp.html">complexp</a>, <a href="Glossary.html">Glossary</a>, <a href="Integrating-Types-and-Classes.html">Integrating Types and Classes</a>, <a href="number.html">number</a>, <a href="Numbers-Dictionary.html">Numbers-Dictionary</a>, <a href="Numeric-Operations.html">Numeric Operations</a>, <a href="realpart.html">realpart</a>, <a href="Sharpsign-C.html">Sharpsign C</a>, <a href="Sharpsign.html">Sharpsign</a>, <a href="subtypep.html">subtypep</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="Type-Specifiers.html">Type Specifiers</a>, <a href="typep.html">typep</a>, <a href="upgraded_002dcomplex_002dpart_002dtype.html">upgraded-complex-part-type</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="coerce.html">coerce</a>, <a href="complex-_0028System-Class_0029.html">complex</a>, <a href="complexp.html">complexp</a>, <a href="Integrating-Types-and-Classes.html">Integrating Types and Classes</a>, <a href="number.html">number</a>, <a href="Numbers-Dictionary.html">Numbers Dictionary</a>, <a href="Numeric-Operations.html">Numeric Operations</a>, <a href="realpart.html">realpart, imagpart</a>, <a href="Sharpsign-C.html">Sharpsign C</a>, <a href="Sharpsign.html">Sharpsign</a>, <a href="subtypep.html">subtypep</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="Type-Specifiers.html">Type Specifiers</a>, <a href="typep.html">typep</a>, <a href="upgraded_002dcomplex_002dpart_002dtype.html">upgraded-complex-part-type</a> </div>
 </div>
 </div>
 </div>

@@ -152,18 +152,16 @@ For example:
 <pre class="example"><code> (eval (list 'cdr (car '((quote (a . b)) c)))) ⇒  b
 </code>
 </pre></div>
-<p>The <i><a href="Glossary.html#argument">argument</a></i> <i><a href="Glossary.html#form">form</a></i> <tt>(list 'cdr (car '((quote (a . b)) c)))</tt> is evaluated
-in the usual way to produce the <i><a href="Glossary.html#argument">argument</a></i> <tt>(cdr (quote (a . b)))</tt>; 
-<a href="eval.html">eval</a> then evaluates its <i><a href="Glossary.html#argument">argument</a></i>, <tt>(cdr (quote (a . b)))</tt>, to produce <tt>b</tt>.
+<p>The <i><a href="Glossary.html#argument">argument</a></i> <i><a href="Glossary.html#form">form</a></i> <code class="no-highlight">(list 'cdr (car '((quote (a . b)) c)))</code> is evaluated
+in the usual way to produce the <i><a href="Glossary.html#argument">argument</a></i> <code class="no-highlight">(cdr (quote (a . b)))</code>; 
+<a href="eval.html">eval</a> then evaluates its <i><a href="Glossary.html#argument">argument</a></i>, <code class="no-highlight">(cdr (quote (a . b)))</code>, to produce <code class="no-highlight">b</code>.
 Since a single <i><a href="Glossary.html#evaluation">evaluation</a></i> already occurs for any <i><a href="Glossary.html#argument">argument</a></i> <i><a href="Glossary.html#form">form</a></i>
 in any <i><a href="Glossary.html#function-form">function form</a></i>,
 <a href="eval.html">eval</a> is sometimes said to perform "an extra level of evaluation."
 </p>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="Deprecated-Argument-Conventions.html">Deprecated-Argument-Conventions</a>, <a href="eval_002dwhen.html">eval-when</a>, <a href="eval.html">eval</a>, <a href="Evaluation.html">Evaluation</a>, <a href="function_002dlambda_002dexpression.html">function-lambda-expression</a>, <a href="Literal-Objects-in-Compiled-Files.html">Literal Objects in Compiled Files</a>, <a href="load_002dtime_002dvalue.html">load-time-value</a>, <a href="make_002dload_002dform.html">make-load-form</a>, <a href="Notes-about-the-Implementation-of-Compiler-Macros.html">Notes-about-the-Implementation-of-Compiler-Macros</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="When-Compiler-Macros-Are-Used.html">When-Compiler-Macros-Are-Used</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="Deprecated-Argument-Conventions.html">Deprecated Argument Conventions</a>, <a href="eval_002dwhen.html">eval-when</a>, <a href="Evaluation-and-Compilation-Dictionary.html">Evaluation and Compilation Dictionary</a>, <a href="Evaluation.html">Evaluation</a>, <a href="function_002dlambda_002dexpression.html">function-lambda-expression</a>, <a href="Literal-Objects-in-Compiled-Files.html">Literal Objects in Compiled Files</a>, <a href="load_002dtime_002dvalue.html">load-time-value</a>, <a href="make_002dload_002dform.html">make-load-form</a>, <a href="Notes-about-the-Implementation-of-Compiler-Macros.html">Notes about the Implementation of Compiler Macros</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="When-Compiler-Macros-Are-Used.html">When Compiler Macros Are Used</a> </div>
 </div>
 </div>
 </div>

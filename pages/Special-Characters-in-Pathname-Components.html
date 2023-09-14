@@ -99,15 +99,16 @@ it must arrange to properly "quote" the character for the
 For example,
 </p>
 <div class="example">
-<pre class="example"><code> ;; In a TOPS-20 implementation, which uses <tt>^</tt>V to quote 
+<pre class="example"><code> ;; In a TOPS-20 implementation, which uses <code class="no-highlight">^</code>V to quote 
  (NAMESTRING (MAKE-PATHNAME :HOST "OZ" :NAME "&lt;TEST&gt;"))
-⇒  #P"OZ:PS:<tt>^</tt>V&lt;TEST<tt>^</tt>V&gt;"
+⇒  #P"OZ:PS:<code class="no-highlight">^</code>V&lt;TEST<code class="no-highlight">^</code>V&gt;"
 <i>NOT</i>⇒ #P"OZ:PS:&lt;TEST&gt;"
 </code>
 </pre></div>
 </div>
 <div class="bl-placeholder"></div>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="Interpreting-Pathname-Component-Values.html">Interpreting Pathname Component Values</a> </div></div>
 </div>
 </div>
 </body>

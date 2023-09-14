@@ -115,11 +115,11 @@ passing <i><a href="Glossary.html#argument">arguments</a></i> to it.
 <pre class="example"><code> (defun add3 (x) (check-type x number) (+ x 3))
 
  (foo 'seven)
-<tt> |&gt; </tt> Error: The value SEVEN was not of type NUMBER.
-<tt> |&gt; </tt> To continue, type :CONTINUE followed by an option number:
-<tt> |&gt; </tt>  1: Specify a different value to use.
-<tt> |&gt; </tt>  2: Return to Lisp Toplevel.
-<tt> |&gt; </tt> Debug&gt; <b>|&gt;&gt;</b><tt>(invoke-restart 'store-value 7)</tt><b>&lt;&lt;|</b>
+<code class="no-highlight"> |&gt; </code> Error: The value SEVEN was not of type NUMBER.
+<code class="no-highlight"> |&gt; </code> To continue, type :CONTINUE followed by an option number:
+<code class="no-highlight"> |&gt; </code>  1: Specify a different value to use.
+<code class="no-highlight"> |&gt; </code>  2: Return to Lisp Toplevel.
+<code class="no-highlight"> |&gt; </code> Debug&gt; <b>|&gt;&gt;</b><code class="no-highlight">(invoke-restart 'store-value 7)</code><b>&lt;&lt;|</b>
 ⇒  10
 </code>
 </pre></div>
@@ -161,10 +161,8 @@ or a <i><a href="Glossary.html#restart-function">restart function</a></i>.
 are non-essential "syntactic sugar."
 </p>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="f_abort.html">abort (Function)</a>, <a href="abort.html">abort</a>, <a href="compute_002drestarts.html">compute-restarts</a>, <a href="Condition-System-Concepts.html">Condition System Concepts</a>, <a href="Conditions-Dictionary.html">Conditions-Dictionary</a>, <a href="continue.html">continue</a>, <a href="Glossary.html">Glossary</a>, <a href="Interactive-Use-of-Restarts.html">Interactive-Use-of-Restarts</a>, <a href="Interfaces-to-Restarts.html">Interfaces to Restarts</a>, <a href="invoke_002drestart_002dinteractively.html">invoke-restart-interactively</a>, <a href="invoke_002drestart.html">invoke-restart</a>, <a href="muffle_002dwarning.html">muffle-warning</a>, <a href="restart_002dbind.html">restart-bind</a>, <a href="restart_002dcase.html">restart-case</a>, <a href="Restarts.html">Restarts</a>, <a href="store_002dvalue.html">store-value</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="use_002dvalue.html">use-value</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="f_abort.html">abort, continue, muffle-warning, store-value, use-value</a>, <a href="abort.html">abort</a>, <a href="compute_002drestarts.html">compute-restarts</a>, <a href="Condition-System-Concepts.html">Condition System Concepts</a>, <a href="Conditions-Dictionary.html">Conditions Dictionary</a>, <a href="continue.html">continue</a>, <a href="Interactive-Use-of-Restarts.html">Interactive Use of Restarts</a>, <a href="Interfaces-to-Restarts.html">Interfaces to Restarts</a>, <a href="invoke_002drestart_002dinteractively.html">invoke-restart-interactively</a>, <a href="muffle_002dwarning.html">muffle-warning</a>, <a href="restart_002dbind.html">restart-bind</a>, <a href="restart_002dcase.html">restart-case</a>, <a href="Restarts.html">Restarts</a>, <a href="store_002dvalue.html">store-value</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="use_002dvalue.html">use-value</a> </div>
 </div>
 </div>
 </div>

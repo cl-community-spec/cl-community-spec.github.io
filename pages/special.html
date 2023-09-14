@@ -90,7 +90,7 @@
 </div>
 <div class="section">
 <h4 class="subsubheading">Syntax</h4>
-<p><tt>(special {<i>var</i>}*</tt>)
+<p><code class="no-highlight">(special {<i>var</i>}*</code>)
 </p>
 </div>
 <div class="section">
@@ -158,7 +158,7 @@ mentioned variables.  For example, after
 <pre class="example"><code> (defun example (x) ...)
 </code>
 </pre></div>
-<p>the parameter <tt>x</tt> is bound as a dynamic variable
+<p>the parameter <code class="no-highlight">x</code> is bound as a dynamic variable
 rather than as a lexical variable.  
 </p>
 </div>
@@ -187,8 +187,8 @@ rather than as a lexical variable.
   (print (locally (declare (special x))
            x)))
 (foo 10) 
-<tt> |&gt; </tt> 10
-<tt> |&gt; </tt> 11
+<code class="no-highlight"> |&gt; </code> 10
+<code class="no-highlight"> |&gt; </code> 11
 ⇒  11
 </code>
 </pre></div>
@@ -208,7 +208,7 @@ rather than as a lexical variable.
    ...)
 </code>
 </pre></div>
-<p>The reference to <tt>*foo*</tt>
+<p>The reference to <code class="no-highlight">*foo*</code>
 in the first line of this example is not <b><a href="special.html">special</a></b>
 even though there is a <b><a href="special.html">special</a></b> declaration in the second line.
 </p>
@@ -230,16 +230,16 @@ even though there is a <b><a href="special.html">special</a></b> declaration in 
 </code>
 </pre></div>
 <p>In the contorted code above, the outermost and innermost <i><a href="Glossary.html#binding">bindings</a></i> of
-<tt>y</tt> are dynamic,
+<code class="no-highlight">y</code> are dynamic,
 but the middle
-binding is lexical. The two arguments to <tt>+</tt> are different,
-one being the value, which is <tt>3</tt>, of the lexical variable
-<tt>y</tt>, and the other being the value of the dynamic variable named <tt>y</tt>
+binding is lexical. The two arguments to <code class="no-highlight">+</code> are different,
+one being the value, which is <code class="no-highlight">3</code>, of the lexical variable
+<code class="no-highlight">y</code>, and the other being the value of the dynamic variable named <code class="no-highlight">y</code>
 (a <i><a href="Glossary.html#binding">binding</a></i> 
 of which happens, coincidentally, to lexically surround it at
 an outer level).  All the <i><a href="Glossary.html#binding">bindings</a></i> 
-of <tt>x</tt> and references to <tt>x</tt>
-are dynamic, however, because of the proclamation that <tt>x</tt> is
+of <code class="no-highlight">x</code> and references to <code class="no-highlight">x</code>
+are dynamic, however, because of the proclamation that <code class="no-highlight">x</code> is
 always <b><a href="special.html">special</a></b>.
 </p>
 </div>
@@ -249,10 +249,8 @@ always <b><a href="special.html">special</a></b>.
 <b>defvar</b>
 </p>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="Closures-and-Lexical-Binding.html">Closures-and-Lexical-Binding</a>, <a href="Constraints-on-the-COMMON_002dLISP-Package-for-Conforming-Implementations.html">Constraints-on-the-COMMON-LISP-Package-for-Conforming-Implementations</a>, <a href="Constraints-on-the-COMMON_002dLISP-Package-for-Conforming-Programs.html">Constraints-on-the-COMMON-LISP-Package-for-Conforming-Programs</a>, <a href="Declaration-Identifiers.html">Declaration-Identifiers</a>, <a href="declare.html">declare</a>, <a href="defgeneric.html">defgeneric</a>, <a href="define_002dsymbol_002dmacro.html">define-symbol-macro</a>, <a href="defparameter.html">defparameter</a>, <a href="defstruct.html">defstruct</a>, <a href="Dynamic-Variables.html">Dynamic-Variables</a>, <a href="Evaluation-and-Compilation-Dictionary.html">Evaluation-and-Compilation-Dictionary</a>, <a href="Examples-of-Declaration-Scope.html">Examples-of-Declaration-Scope</a>, <a href="gentemp.html">gentemp</a>, <a href="Glossary.html">Glossary</a>, <a href="ignore.html">ignore</a>, <a href="Iteration-Control.html">Iteration-Control</a>, <a href="let.html">let</a>, <a href="Lexical-Variables.html">Lexical-Variables</a>, <a href="locally.html">locally</a>, <a href="Minimal-Declaration-Processing-Requirements.html">Minimal-Declaration-Processing-Requirements</a>, <a href="multiple_002dvalue_002dbind.html">multiple-value-bind</a>, <a href="proclaim.html">proclaim</a>, <a href="Semantic-Constraints.html">Semantic Constraints</a>, <a href="special.html">special</a>, <a href="Specifiers-for-the-required-parameters.html">Specifiers-for-the-required-parameters</a>, <a href="symbol_002dmacrolet.html">symbol-macrolet</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="Transfer-of-Control-to-an-Exit-Point.html">Transfer of Control to an Exit Point</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="Closures-and-Lexical-Binding.html">Closures and Lexical Binding</a>, <a href="Constraints-on-the-COMMON_002dLISP-Package-for-Conforming-Implementations.html">Constraints on the COMMON-LISP Package for Conforming Implementations</a>, <a href="Constraints-on-the-COMMON_002dLISP-Package-for-Conforming-Programs.html">Constraints on the COMMON-LISP Package for Conforming Programs</a>, <a href="Declaration-Identifiers.html">Declaration Identifiers</a>, <a href="declare.html">declare</a>, <a href="defgeneric.html">defgeneric</a>, <a href="define_002dsymbol_002dmacro.html">define-symbol-macro</a>, <a href="defparameter.html">defparameter, defvar</a>, <a href="defstruct.html">defstruct</a>, <a href="Dynamic-Variables.html">Dynamic Variables</a>, <a href="Evaluation-and-Compilation-Dictionary.html">Evaluation and Compilation Dictionary</a>, <a href="Examples-of-Declaration-Scope.html">Examples of Declaration Scope</a>, <a href="gentemp.html">gentemp</a>, <a href="ignore.html">ignore, ignorable</a>, <a href="Iteration-Control.html">Iteration Control</a>, <a href="let.html">let, let*</a>, <a href="Lexical-Variables.html">Lexical Variables</a>, <a href="locally.html">locally</a>, <a href="Minimal-Declaration-Processing-Requirements.html">Minimal Declaration Processing Requirements</a>, <a href="multiple_002dvalue_002dbind.html">multiple-value-bind</a>, <a href="proclaim.html">proclaim</a>, <a href="Semantic-Constraints.html">Semantic Constraints</a>, <a href="Specifiers-for-the-required-parameters.html">Specifiers for the required parameters</a>, <a href="symbol_002dmacrolet.html">symbol-macrolet</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="Transfer-of-Control-to-an-Exit-Point.html">Transfer of Control to an Exit Point</a> </div>
 </div>
 </div>
 </div>

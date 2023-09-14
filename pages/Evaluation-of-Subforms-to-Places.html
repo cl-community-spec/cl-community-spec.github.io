@@ -113,8 +113,8 @@ For example, consider the following:
 <pre class="example"><code> (defmacro wrong-order (x y) `(getf ,y ,x))
 </code>
 </pre></div>
-<p>This following <i><a href="Glossary.html#form">form</a></i> evaluates <tt>place2</tt> first and
-then <tt>place1</tt> because that is the order they are evaluated in
+<p>This following <i><a href="Glossary.html#form">form</a></i> evaluates <code class="no-highlight">place2</code> first and
+then <code class="no-highlight">place1</code> because that is the order they are evaluated in
 the macro expansion:
 </p>
 <div class="example">
@@ -149,10 +149,10 @@ performs its operation on each pair in sequence. For example, in
 <pre class="example"><code> (setf place1 value1 place2 value2 ...)
 </code>
 </pre></div>
-<p>the <i><a href="Glossary.html#subform">subforms</a></i> of <tt>place1</tt> and <tt>value1</tt> are evaluated, the location
+<p>the <i><a href="Glossary.html#subform">subforms</a></i> of <code class="no-highlight">place1</code> and <code class="no-highlight">value1</code> are evaluated, the location
 specified by 
-<tt>place1</tt> is modified to contain the value returned by 
-<tt>value1</tt>, and
+<code class="no-highlight">place1</code> is modified to contain the value returned by 
+<code class="no-highlight">value1</code>, and
 then the rest of the <b><a href="setf.html">setf</a></b> form is processed in a like manner.
 </p>
 </li>
@@ -172,10 +172,8 @@ references is not specified.
 <p>Rules 2, 3 and 4 cover all <i><a href="Glossary.html#standardized">standardized</a></i> <i><a href="Glossary.html#macro">macros</a></i> that manipulate <i><a href="Glossary.html#place">places</a></i>.
 </p>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="assert.html">assert</a>, <a href="check_002dtype.html">check-type</a>, <a href="define_002dmodify_002dmacro.html">define-modify-macro</a>, <a href="incf.html">incf</a>, <a href="pop.html">pop</a>, <a href="push.html">push</a>, <a href="pushnew.html">pushnew</a>, <a href="remf.html">remf</a>, <a href="rotatef.html">rotatef</a>, <a href="shiftf.html">shiftf</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="assert.html">assert</a>, <a href="check_002dtype.html">check-type</a>, <a href="define_002dmodify_002dmacro.html">define-modify-macro</a>, <a href="incf.html">incf, decf</a>, <a href="Overview-of-Places-and-Generalized-Reference.html">Overview of Places and Generalized Reference</a>, <a href="pop.html">pop</a>, <a href="push.html">push</a>, <a href="pushnew.html">pushnew</a>, <a href="remf.html">remf</a>, <a href="rotatef.html">rotatef</a>, <a href="shiftf.html">shiftf</a> </div>
 </div>
 </div>
 </div>

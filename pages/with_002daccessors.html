@@ -149,8 +149,8 @@ and <b><a href="setq.html">setq</a></b> can be used to set the value of the <i><
            (setf (thing-x thing2) (list x1))
            (list x1 (thing-x thing1) y1 (thing-y thing1)
                  x2 (thing-x thing2) y2 (thing-y thing2)))))
-<tt> |&gt; </tt> Changing X from 1 to 9 in #&lt;THING 43135676&gt;.
-<tt> |&gt; </tt> Changing X from 7 to (9) in #&lt;THING 43147374&gt;.
+<code class="no-highlight"> |&gt; </code> Changing X from 1 to 9 in #&lt;THING 43135676&gt;.
+<code class="no-highlight"> |&gt; </code> Changing X from 7 to (9) in #&lt;THING 43147374&gt;.
 ⇒  ((1 1 2 2 7 7 8 8)
      9
      (9 9 2 2 7 7 8 8) 
@@ -184,7 +184,7 @@ of an accessor for the <i><a href="Glossary.html#instance">instance</a></i>.
 <div class="example">
 <pre class="example"><code>
 
-<tt>(with-accessors</tt> (slot-entry_1 ...slot-entry_n) <i>instance-form</i> form_1 ...form_k)
+<code class="no-highlight">(with-accessors</code> (slot-entry_1 ...slot-entry_n) <i>instance-form</i> form_1 ...form_k)
 
 </code>
 </pre></div>
@@ -193,24 +193,22 @@ of an accessor for the <i><a href="Glossary.html#instance">instance</a></i>.
 <div class="example">
 <pre class="example"><code>
 
-<tt>(</tt><tt>let ((</tt>in <i>instance-form</i><tt>))</tt>
+<code class="no-highlight">(</code><code class="no-highlight">let ((</code>in <i>instance-form</i><code class="no-highlight">))</code>
 
- <tt>(symbol-macrolet (</tt>Q_1... Q_n<tt>)</tt> form_1 ...form_k<tt>))</tt>
+ <code class="no-highlight">(symbol-macrolet (</code>Q_1... Q_n<code class="no-highlight">)</code> form_1 ...form_k<code class="no-highlight">))</code>
 
 </code>
 </pre></div>
 <p>where Q_i is 
 </p>
 <div class="example">
-<pre class="example"><code><tt>(</tt>variable-name_i () 
-<tt>(accessor-name</tt>_i in))
+<pre class="example"><code><code class="no-highlight">(</code>variable-name_i () 
+<code class="no-highlight">(accessor-name</code>_i in))
 </code>
 </pre></div>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="Accessing-Slots.html">Accessing-Slots</a>, <a href="declare.html">declare</a>, <a href="Objects-Dictionary.html">Objects-Dictionary</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="with_002daccessors.html">with-accessors</a>, <a href="with_002dslots.html">with-slots</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="Accessing-Slots.html">Accessing Slots</a>, <a href="declare.html">declare</a>, <a href="Objects-Dictionary.html">Objects Dictionary</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="with_002dslots.html">with-slots</a> </div>
 </div>
 </div>
 </div>

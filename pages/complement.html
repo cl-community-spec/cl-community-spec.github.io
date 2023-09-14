@@ -136,8 +136,8 @@
 <pre class="example"><code> (complement <i>x</i>) ≡ #'(lambda (&amp;rest arguments) (not (apply <i>x</i> arguments)))
 </code>
 </pre></div>
-<p>In <span class="roman">Common Lisp</span>, functions with names like "<tt><i>xxx</i>-if-not</tt>"
-are related to functions with names like "<tt><i>xxx</i>-if</tt>" 
+<p>In <span class="roman">Common Lisp</span>, functions with names like "<code class="no-highlight"><i>xxx</i>-if-not</code>"
+are related to functions with names like "<code class="no-highlight"><i>xxx</i>-if</code>" 
 in that
 </p>
 <div class="example">
@@ -151,16 +151,14 @@ in that
  (find-if (complement #'zerop) '(0 0 3)) ⇒  3
 </code>
 </pre></div>
-<p>Note that since the "<tt><i>xxx</i>-if-not</tt>" <i><a href="Glossary.html#function">functions</a></i>
-and the <tt>:test-not</tt> arguments have been deprecated,
-uses of "<tt><i>xxx</i>-if</tt>" <i><a href="Glossary.html#function">functions</a></i> or 
-<tt>:test</tt> arguments with <b><a href="complement.html">complement</a></b> are preferred.
+<p>Note that since the "<code class="no-highlight"><i>xxx</i>-if-not</code>" <i><a href="Glossary.html#function">functions</a></i>
+and the <code class="no-highlight">:test-not</code> arguments have been deprecated,
+uses of "<code class="no-highlight"><i>xxx</i>-if</code>" <i><a href="Glossary.html#function">functions</a></i> or 
+<code class="no-highlight">:test</code> arguments with <b><a href="complement.html">complement</a></b> are preferred.
 </p>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="bit_002dand.html">bit-and</a>, <a href="boole.html">boole</a>, <a href="boolean.html">boolean</a>, <a href="complement.html">complement</a>, <a href="Data-and-Control-Flow-Dictionary.html">Data-and-Control-Flow-Dictionary</a>, <a href="Function-Forms.html">Function Forms</a>, <a href="logand.html">logand; logandc1; logandc2; logeqv; logior; lognand; lognor; lognot; logorc1; logorc2; logxor</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="bit_002dand.html">bit-and, bit-andc1, bit-andc2, bit-eqv, bit-ior, bit-nand, bit-nor, bit-not, bit-orc1, bit-orc2, bit-xor</a>, <a href="boole.html">boole</a>, <a href="boolean.html">boolean</a>, <a href="Data-and-Control-Flow-Dictionary.html">Data and Control Flow Dictionary</a>, <a href="Function-Forms.html">Function Forms</a>, <a href="logand.html">logand, logandc1, logandc2, logeqv, logior, lognand, lognor,  lognot,  logorc1, logorc2, logxor</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a> </div>
 </div>
 </div>
 </div>

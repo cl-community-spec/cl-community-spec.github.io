@@ -122,21 +122,21 @@ it is prepended to the <i><a href="Glossary.html#list">list</a></i>, and the new
 <p><b><a href="pushnew.html">pushnew</a></b> returns the new <i><a href="Glossary.html#list">list</a></i> that is stored in <i><a href="Glossary.html#place">place</a></i>.
 </p>
 <p>Whether or not <i>item</i> is already a member of the <i><a href="Glossary.html#list">list</a></i> that is
-in <i><a href="Glossary.html#place">place</a></i> is determined by comparisons using <tt>:test</tt> or <tt>:test-not</tt>.
-The first argument to the <tt>:test</tt> or <tt>:test-not</tt>
+in <i><a href="Glossary.html#place">place</a></i> is determined by comparisons using <code class="no-highlight">:test</code> or <code class="no-highlight">:test-not</code>.
+The first argument to the <code class="no-highlight">:test</code> or <code class="no-highlight">:test-not</code>
 function is <i>item</i>; the second argument is
 an element of the <i><a href="Glossary.html#list">list</a></i> in <i><a href="Glossary.html#place">place</a></i> as returned by
-the <tt>:key</tt> function (if supplied).
+the <code class="no-highlight">:key</code> function (if supplied).
 </p>
-<p>If <tt>:key</tt> is supplied, it is used to extract the part to be tested from
+<p>If <code class="no-highlight">:key</code> is supplied, it is used to extract the part to be tested from
 both <i>item</i> and the <i><a href="Glossary.html#list">list</a></i> element,
 as for <b><a href="adjoin.html">adjoin</a></b>.
 </p>
-<p>The argument to the <tt>:key</tt> function 
+<p>The argument to the <code class="no-highlight">:key</code> function 
 is an element of the <i><a href="Glossary.html#list">list</a></i> stored in 
-<i><a href="Glossary.html#place">place</a></i>. The <tt>:key</tt> function typically returns part
+<i><a href="Glossary.html#place">place</a></i>. The <code class="no-highlight">:key</code> function typically returns part
 part of the element of the <i><a href="Glossary.html#list">list</a></i>.
-If <tt>:key</tt> is not supplied or <a href="NILv.html">nil</a>, the <i><a href="Glossary.html#list">list</a></i> 
+If <code class="no-highlight">:key</code> is not supplied or <a href="NILv.html">nil</a>, the <i><a href="Glossary.html#list">list</a></i> 
 element is used.
 </p>
 <p>For information about the <i><a href="Glossary.html#evaluation">evaluation</a></i> of <i><a href="Glossary.html#subform">subforms</a></i> of <i><a href="Glossary.html#place">place</a></i>,
@@ -190,14 +190,12 @@ held by <i><a href="Glossary.html#place">place</a></i>.
 <pre class="example"><code> (setf place (adjoin item place :test p))
 </code>
 </pre></div>
-<p>except that the <i><a href="Glossary.html#subform">subforms</a></i> of <tt>place</tt> are evaluated only once, 
-and <tt>item</tt> is evaluated before <tt>place</tt>.
+<p>except that the <i><a href="Glossary.html#subform">subforms</a></i> of <code class="no-highlight">place</code> are evaluated only once, 
+and <code class="no-highlight">item</code> is evaluated before <code class="no-highlight">place</code>.
 </p>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="adjoin.html">adjoin</a>, <a href="Conses-as-Lists.html">Conses-as-Lists</a>, <a href="Conses-Dictionary.html">Conses-Dictionary</a>, <a href="Evaluation-of-Subforms-to-Places.html">Evaluation of Subforms to Places</a>, <a href="pop.html">pop</a>, <a href="push.html">push</a>, <a href="pushnew.html">pushnew</a>, <a href="Satisfying-a-Two_002dArgument-Test.html">Satisfying a Two-Argument Test</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="Treatment-of-Other-Macros-Based-on-SETF.html">Treatment-of-Other-Macros-Based-on-SETF</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="adjoin.html">adjoin</a>, <a href="Conses-as-Lists.html">Conses as Lists</a>, <a href="Conses-Dictionary.html">Conses Dictionary</a>, <a href="Evaluation-of-Subforms-to-Places.html">Evaluation of Subforms to Places</a>, <a href="pop.html">pop</a>, <a href="push.html">push</a>, <a href="Satisfying-a-Two_002dArgument-Test.html">Satisfying a Two-Argument Test</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="Treatment-of-Other-Macros-Based-on-SETF.html">Treatment of Other Macros Based on SETF</a> </div>
 </div>
 </div>
 </div>

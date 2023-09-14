@@ -104,7 +104,7 @@
 <div class="section">
 <h4 class="subsubheading">Description</h4>
 <p>Returns a <i><a href="Glossary.html#list">list</a></i> that is the concatenation of <i><a href="Glossary.html#list">lists</a></i>.
-If no <i><a href="Glossary.html#list">lists</a></i> are supplied, <tt>(nconc)</tt> returns <a href="NILv.html">nil</a>.
+If no <i><a href="Glossary.html#list">lists</a></i> are supplied, <code class="no-highlight">(nconc)</code> returns <a href="NILv.html">nil</a>.
 </p>
 <p><b><a href="nconc.html">nconc</a></b> is defined using the following recursive relationship:
 </p>
@@ -127,15 +127,15 @@ If no <i><a href="Glossary.html#list">lists</a></i> are supplied, <tt>(nconc)</t
  x ⇒  (A B C D E F)
 </code>
 </pre></div>
-<p>Note, in the example, that the value of <tt>x</tt> is now different,
+<p>Note, in the example, that the value of <code class="no-highlight">x</code> is now different,
 since its last <i><a href="Glossary.html#cons">cons</a></i> 
-has been <b>rplacd</b>’d to the value of <tt>y</tt>.
-If <tt>(nconc x y)</tt> were evaluated again,
+has been <b>rplacd</b>’d to the value of <code class="no-highlight">y</code>.
+If <code class="no-highlight">(nconc x y)</code> were evaluated again,
 it would yield a piece of a <i><a href="Glossary.html#circular-list">circular list</a></i>,
 whose printed representation would be
-<tt>(A B C D E F D E F D E F ...)</tt>, repeating forever;
+<code class="no-highlight">(A B C D E F D E F D E F ...)</code>, repeating forever;
 if the <a href="002aprint_002dcircle_002a.html">*print-circle*</a> switch were <i><a href="Glossary.html#non_002dnil">non-nil</a></i>,
-it would be printed as <tt>(A B C . #1=(D E F . #1#))</tt>.
+it would be printed as <code class="no-highlight">(A B C . #1=(D E F . #1#))</code>.
 </p>
 <div class="example">
 <pre class="example"><code> (setq foo (list 'a 'b 'c 'd 'e)
@@ -168,10 +168,8 @@ it would be printed as <tt>(A B C . #1=(D E F . #1#))</tt>.
 <a href="concatenate.html#concatenate">concatenate</a>
 </p>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="append.html">append</a>, <a href="Backquote.html">Backquote</a>, <a href="Built_002din-Method-Combination-Types.html">Built-in Method Combination Types</a>, <a href="Conses-as-Lists.html">Conses-as-Lists</a>, <a href="Conses-Dictionary.html">Conses-Dictionary</a>, <a href="mapc.html">mapc</a>, <a href="nconc.html">nconc</a>, <a href="revappend.html">revappend</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="Value-Accumulation-Clauses.html">Value Accumulation Clauses</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="append.html">append</a>, <a href="Backquote.html">Backquote</a>, <a href="Built_002din-Method-Combination-Types.html">Built-in Method Combination Types</a>, <a href="Conses-as-Lists.html">Conses as Lists</a>, <a href="Conses-Dictionary.html">Conses Dictionary</a>, <a href="mapc.html">mapc, mapcar, mapcan, mapl, maplist, mapcon</a>, <a href="revappend.html">revappend, nreconc</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="Value-Accumulation-Clauses.html">Value Accumulation Clauses</a> </div>
 </div>
 </div>
 </div>

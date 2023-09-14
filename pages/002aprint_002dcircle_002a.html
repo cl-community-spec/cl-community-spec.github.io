@@ -110,7 +110,7 @@ to detect circularity and sharing.
 <p>If <i><a href="Glossary.html#true">true</a></i>,
 the printer will endeavor to detect cycles and sharing
 in the structure to be printed, 
-and to use <tt>#<i>n</i>=</tt> and <tt>#<i>n</i>#</tt>
+and to use <code class="no-highlight">#<i>n</i>=</code> and <code class="no-highlight">#<i>n</i>#</code>
 syntax to indicate the circularities or shared components.
 </p>
 <p>If <i><a href="Glossary.html#true">true</a></i>, a user-defined 
@@ -120,7 +120,7 @@ syntax to indicate the circularities or shared components.
 <p>can print
 <i><a href="Glossary.html#object">objects</a></i> to the supplied <i>stream</i> using <b><a href="write.html">write</a></b>, <b><a href="write.html">prin1</a></b>, 
 <b><a href="write.html">princ</a></b>, or <b><a href="format.html">format</a></b> and expect circularities and sharing
-to be detected and printed using the <tt>#<i>n</i>#</tt> syntax.
+to be detected and printed using the <code class="no-highlight">#<i>n</i>#</code> syntax.
 </p>
 <p>If a user-defined 
 </p>
@@ -129,7 +129,7 @@ to be detected and printed using the <tt>#<i>n</i>#</tt> syntax.
 <p>prints to a <i>stream</i> other than the one
 that was supplied, then circularity detection starts over for that <i>stream</i>. 
 </p>
-<p>Note that implementations should not use <tt>#<i>n</i>#</tt> notation 
+<p>Note that implementations should not use <code class="no-highlight">#<i>n</i>#</code> notation 
 when the <i><a href="Glossary.html#Lisp-reader">Lisp reader</a></i> would automatically assure sharing without it
 (<i>e.g.</i>, as happens with <i><a href="Glossary.html#interned">interned</a></i> <i><a href="Glossary.html#symbol">symbols</a></i>).
 </p>
@@ -142,7 +142,7 @@ when the <i><a href="Glossary.html#Lisp-reader">Lisp reader</a></i> would automa
    (let ((*print-circle* t))
      (write a)
      :done))
-<tt> |&gt; </tt> #1=(1 2 3 . #1#)
+<code class="no-highlight"> |&gt; </code> #1=(1 2 3 . #1#)
 ⇒  :DONE
 </code>
 </pre></div>
@@ -157,10 +157,8 @@ when the <i><a href="Glossary.html#Lisp-reader">Lisp reader</a></i> would automa
 set to <a href="NILv.html">nil</a> may lead to looping behavior and failure to terminate.
 </p>
 </div>
-<div class="section">
-<h3>Backlinks</h3>
-<a href="002aprint_002dcircle_002a.html">*print-circle*</a>, <a href="defstruct.html">defstruct</a>, <a href="Examples-of-using-the-Pretty-Printer.html">Examples of using the Pretty Printer</a>, <a href="format.html">format</a>, <a href="Multiple-Possible-Textual-Representations.html">Multiple-Possible-Textual-Representations</a>, <a href="nconc.html">nconc</a>, <a href="Package-Prefixes-for-Symbols.html">Package-Prefixes-for-Symbols</a>, <a href="pprint_002dlogical_002dblock.html">pprint-logical-block</a>, <a href="pprint_002dpop.html">pprint-pop</a>, <a href="write.html">prin1</a>, <a href="print_002dobject.html">print-object</a>, <a href="Printer-Dictionary.html">Printer-Dictionary</a>, <a href="Printing-Lists-and-Conses.html">Printing Lists and Conses</a>, <a href="Sharpsign-Sharpsign.html">Sharpsign Sharpsign</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="Tilde-W_002d_003e-Write.html">Tilde-W-&gt;-Write</a>, <a href="with_002dstandard_002dio_002dsyntax.html">with-standard-io-syntax</a>, <a href="write_002dto_002dstring.html">write-to-string</a>
-</div>
+<div class="section"><h3>Backlinks</h3>
+<a href="defstruct.html">defstruct</a>, <a href="Examples-of-using-the-Pretty-Printer.html">Examples of using the Pretty Printer</a>, <a href="format.html">format</a>, <a href="Multiple-Possible-Textual-Representations.html">Multiple Possible Textual Representations</a>, <a href="nconc.html">nconc</a>, <a href="Package-Prefixes-for-Symbols.html">Package Prefixes for Symbols</a>, <a href="pprint_002dlogical_002dblock.html">pprint-logical-block</a>, <a href="pprint_002dpop.html">pprint-pop</a>, <a href="print_002dobject.html">print-object</a>, <a href="Printer-Dictionary.html">Printer Dictionary</a>, <a href="Printing-Lists-and-Conses.html">Printing Lists and Conses</a>, <a href="Sharpsign-Sharpsign.html">Sharpsign Sharpsign</a>, <a href="Symbols-in-the-COMMON_002dLISP-Package.html">Symbols in the COMMON-LISP Package</a>, <a href="Tilde-W_002d_003e-Write.html">Tilde W: Write</a>, <a href="with_002dstandard_002dio_002dsyntax.html">with-standard-io-syntax</a>, <a href="write.html">write, prin1, print, pprint, princ</a>, <a href="write_002dto_002dstring.html">write-to-string, prin1-to-string, princ-to-string</a> </div>
 </div>
 </div>
 </div>
